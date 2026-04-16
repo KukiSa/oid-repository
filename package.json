@@ -1,0 +1,28 @@
+{
+  "name": "iks-oid-repo",
+  "version": "1.0.0",
+  "description": "Signaliks OID Repository",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "postbuild": "pagefind --site .next/server/app --output-path out/_pagefind"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "next": "^16.2.4",
+    "nextra": "^4.6.1",
+    "nextra-theme-docs": "^4.6.1",
+    "postcss": "^8.5.10",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "pagefind": "^1.5.2"
+  }
+}

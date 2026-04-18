@@ -20,7 +20,7 @@ This repository operates under a dual-licensing model as outlined in the `README
 We accept Pull Requests that modify the software source code and technical infrastructure of the site.
 * **Scope:** Configurations, component logic, scripts, and build tools.
 * **Condition:** By submitting a Pull Request to these areas, you agree that your contributions will be licensed under
-* the **MIT License**.
+the **MIT License**.
 
 ### Rejected Pull Requests (CC BY-SA 4.0)
 **We DO NOT accept Pull Requests for policy documents or textual content.**

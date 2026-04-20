@@ -4,9 +4,9 @@
   publish = "out/"
   [build.environment]
     NODE_VERSION = "24"
-    SHOW_HOSTING_BADGE=true
-    HOSTING_PLATFORM_NAME=Netlify
-    HOSTING_PLATFORM_URL=https://www.netlify.com/
+    SHOW_HOSTING_BADGE = "true"
+    HOSTING_PLATFORM_NAME = "Netlify"
+    HOSTING_PLATFORM_URL = "https://www.netlify.com/"
 
 [[headers]]
   for = "/*"

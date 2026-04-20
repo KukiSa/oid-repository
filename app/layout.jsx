@@ -45,10 +45,10 @@ export default async function RootLayout({children}) {
         <Footer className="py-4"><p className="text-xs">
             © {new Date().getFullYear()} Signaliks.
             {' '}
-            Powered by <Link href="https://nextra.site/" className="text-current hover:underline">Nextra</Link>
+            Powered by <Link href="https://nextra.site/" className="text-current no-underline hover:underline">Nextra</Link>
             {showBadge && platformName && (
                 <span>
-                    &amp; <Link href={platformUrl || '#'} className="text-current hover:underline">{platformName}</Link>
+                    &amp; <Link href={platformUrl || '#'} className="text-current no-underline hover:underline">{platformName}</Link>
                 </span>
             )}.
             {' '}

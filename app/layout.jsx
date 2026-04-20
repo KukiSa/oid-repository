@@ -21,6 +21,7 @@ export const metadata = {
         url: './',
         locale: 'en_US',
         type: 'website',
+        site_name: 'Signaliks OID Repository'
     },
     twitter: {
         site: 'https://oid.iks.moe',
@@ -30,18 +31,29 @@ export const metadata = {
     }
 }
 
-const navbar = (
-    <Navbar
-        logo={<><span>Signaliks OID Repository</span></>}
-    />
-)
 
-const footer =
-    <Footer className="py-4"><p className="text-xs">
-        © {new Date().getFullYear()} Signaliks. Powered by <Link href="https://nextra.site/" className="text-current hover:underline">Nextra</Link>. <Link href="/privacy-policy" className="text-current hover:underline">Privacy Policy</Link>
-    </p></Footer>
 
 export default async function RootLayout({children}) {
+    const showBadge = process.env.SHOW_HOSTING_BADGE === 'true';
+    const platformName = process.env.HOSTING_PLATFORM_NAME;
+    const platformUrl = process.env.HOSTING_PLATFORM_URL;
+    const navbar =
+        <Navbar
+            logo={<><span>Signaliks OID Repository</span></>}
+        />
+    const footer =
+        <Footer className="py-4"><p className="text-xs">
+            © {new Date().getFullYear()} Signaliks.
+            {' '}
+            Powered by <Link href="https://nextra.site/" className="text-current hover:underline">Nextra</Link>
+            {showBadge && platformName && (
+                <span>
+                    &amp; <Link href={platformUrl || '#'} className="text-current hover:underline">{platformName}</Link>
+                </span>
+            )}.
+            {' '}
+            <Link href="/privacy-policy" className="text-current hover:underline">Privacy Policy</Link>
+        </p></Footer>
     return (
         <html lang="en-US" dir="ltr" suppressHydrationWarning>
         <Head/>

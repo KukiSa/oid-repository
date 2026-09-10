@@ -2,25 +2,38 @@
   "name": "iks-oid-repo",
   "version": "1.0.0",
   "description": "Signaliks OID Repository",
-  "main": "index.js",
+  "private": true,
+  "packageManager": "pnpm@12.3.4",
+  "engines": {
+    "node": ">=24 <25"
+  },
   "scripts": {
+    "predev": "pnpm registry:generate",
     "dev": "next dev --turbopack",
-    "build": "next build",
-    "postbuild": "pagefind --site .next/server/app --output-path out/_pagefind"
+    "prebuild": "pnpm registry:validate && pnpm registry:check",
+    "build": "next build --turbopack",
+    "postbuild": "pagefind --site .next/server/app --output-path out/_pagefind",
+    "registry:validate": "node scripts/validate-registry.mjs",
+    "registry:generate": "node scripts/generate-registry.mjs",
+    "registry:check": "node scripts/generate-registry.mjs --check",
+    "registry:sign": "node scripts/sign-manifest.mjs",
+    "registry:verify-signature": "node scripts/verify-manifest.mjs",
+    "test": "node --test",
+    "check": "pnpm registry:validate && pnpm registry:check && pnpm test"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSES/",
   "type": "module",
   "dependencies": {
-    "@tailwindcss/postcss": "^4.2.2",
-    "next": "^16.2.4",
+    "@tailwindcss/postcss": "^4.3.3",
+    "next": "16.3.4",
     "nextra": "^4.6.1",
     "nextra-theme-docs": "^4.6.1",
-    "postcss": "^8.5.10",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "tailwindcss": "^4.2.2"
+    "postcss": "^8.5.28",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "pagefind": "^1.5.2"

@@ -1,0 +1,9 @@
+The policy documents, administrative prose, and descriptive content identified
+in LICENSES/README.md are licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International license.
+
+License text and terms:
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Human-readable summary:
+https://creativecommons.org/licenses/by-sa/4.0/

@@ -12,9 +12,17 @@ respective issue trackers.
 
 Please search existing issues before opening a new one to avoid duplicates.
 
-## 2. Pull Requests & Dual-Licensing Policy
+## 2. Registration and Policy Changes
 
-This repository operates under a dual-licensing model as outlined in the `README.md`. 
+An ordinary pull request is not a registration decision. Changes that allocate an OID, alter an identity-defining object binding, change a lifecycle state, amend a policy, or change a delegation require an approved decision under `GOVERNANCE.md` before they may be merged.
+
+Proposals may be submitted as Issues. Once approved, the canonical change is made in `registry/registry.json`; generated MDX, JSON, CSV, and manifest files are then regenerated with `pnpm registry:generate`.
+
+Generated files must not be edited directly.
+
+## 3. Pull Requests & Dual-Licensing Policy
+
+This repository operates under the dual-licensing model described in `LICENSES/README.md`.
 
 ### Accepted Pull Requests (MIT License)
 We accept Pull Requests that modify the software source code and technical infrastructure of the site.
@@ -22,30 +30,29 @@ We accept Pull Requests that modify the software source code and technical infra
 * **Condition:** By submitting a Pull Request to these areas, you agree that your contributions will be licensed under
 the **MIT License**.
 
-### Rejected Pull Requests (CC BY-SA 4.0)
-**We DO NOT accept Pull Requests for policy documents or textual content.**
-* **Scope:** All textual content, policy documents, and descriptive materials contained within `.md` and `.mdx` files.
-* **Condition:** These files are governed by the **CC BY-SA 4.0**. Any Pull Request attempting to modify, add,
-or delete `.md` or `.mdx` files will be rejected. If you have suggestions or corrections for the policy texts, please
-open an Issue instead.
+### Policy and Text Contributions (CC BY-SA 4.0)
 
-## 3. Development Workflow
+Policy changes require prior approval by the applicable Policy Authority. Descriptive-text corrections may be accepted when they do not alter a registered object's identity or policy semantics. By submitting an accepted contribution to these areas, you agree that it may be distributed under CC BY-SA 4.0.
+
+## 4. Development Workflow
 
 If your contribution falls under the accepted MIT scope, follow these steps:
 
 1.  **Fork** the repository and create your feature branch.
 2.  **Install dependencies:**
     ```bash
-    npm install
+    corepack enable
+    pnpm install --frozen-lockfile
     ```
 3.  **Start the development server:**
     ```bash
-    npm run dev
+    pnpm dev
     ```
     *This runs Next.js with Turbopack. You can view the site at `http://localhost:3000`.*
 4.  **Test your build:** Ensure the static export works before submitting your PR.
     ```bash
-    npm run build
+    pnpm check
+    pnpm build
     ```
 5.  **Commit and Push:** Write clear, concise commit messages.
-6.  **Submit your PR:** Ensure your PR description clearly states what code was changed and confirms no `.md`/`.mdx` files were altered.
+6.  **Submit your PR:** State whether the change is software-only, descriptive, or governed registry data. Include the registration decision reference for governed changes.

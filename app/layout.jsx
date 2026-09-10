@@ -23,9 +23,6 @@ export const metadata = {
         type: 'website',
         site_name: 'Signaliks OID Repository'
     },
-    twitter: {
-        site: 'https://oid.iks.moe',
-    },
     alternates: {
         canonical: './'
     }

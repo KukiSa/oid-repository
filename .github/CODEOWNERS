@@ -1,0 +1,6 @@
+# Registry, policy, and delegation changes require review by the repository owner.
+/registry/ @KukiSa
+/app/1.3.6.1.4.1.65553/0/ @KukiSa
+/app/1.3.6.1.4.1.65553/2/0/ @KukiSa
+/app/1.3.6.1.4.1.65553/2/2/0/ @KukiSa
+/scripts/registry-* @KukiSa

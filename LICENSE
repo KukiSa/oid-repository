@@ -1,3 +1,12 @@
+Repository licensing notice
+
+This repository contains material under two licenses. The MIT License below
+applies to software source code, JavaScript, JSON schemas, configuration, CI
+workflows, and build tooling. Policy documents, administrative prose, and
+descriptive Markdown/MDX content are licensed under Creative Commons
+Attribution-ShareAlike 4.0 International. See LICENSES/README.md and
+LICENSES/CC-BY-SA-4.0.txt for the path-level scope and CC license reference.
+
 MIT License
 
 Copyright (c) 2026 Signaliks

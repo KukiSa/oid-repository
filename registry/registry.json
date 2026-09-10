@@ -1,0 +1,666 @@
+{
+  "$schema": "./schema/registry.schema.json",
+  "schemaVersion": "1.0.0",
+  "registry": {
+    "name": "Signaliks OID Registry",
+    "rootOid": "1.3.6.1.4.1.65553",
+    "pen": 65553,
+    "canonicalBaseUrl": "https://oid.iks.moe",
+    "governingPolicyRef": "POL-ROOT-2.0.0"
+  },
+  "authorities": [
+    {
+      "id": "iana-pen-ra",
+      "name": "Internet Assigned Numbers Authority",
+      "type": "external-registration-authority",
+      "contactUri": "https://www.iana.org/assignments/enterprise-numbers"
+    },
+    {
+      "id": "signaliks-root-ra",
+      "name": "Signaliks",
+      "type": "root-registration-authority",
+      "contactRole": "Signaliks OID Registration Authority",
+      "contactEmail": "contact@iks.moe"
+    },
+    {
+      "id": "youngdo-pki-ra",
+      "name": "Youngdo Technologies Limited",
+      "type": "delegated-registration-authority",
+      "contactRole": "Youngdo PKI Registration Authority",
+      "contactEmail": "pki@youngdo.net"
+    }
+  ],
+  "policies": [
+    {
+      "id": "POL-ROOT-1.0.1",
+      "family": "root-registry-policy",
+      "revision": "1.0.1",
+      "status": "superseded",
+      "publishedAt": "2026-04-15T00:00:00+08:00",
+      "effectiveAt": "2026-04-15T00:00:00+08:00",
+      "supersededBy": "POL-ROOT-2.0.0",
+      "sourceCommit": "a53a12de6faa7b0db10dacf8cc26ed28028ed9bc",
+      "sha256": "bec3ec0f310f12a355edf74ed9283c874b3b49d95769e6702f8cc59e541c8207"
+    },
+    {
+      "id": "POL-ROOT-2.0.0",
+      "family": "root-registry-policy",
+      "revision": "2.0.0",
+      "status": "effective",
+      "publishedAt": "2026-09-10T00:00:00+08:00",
+      "effectiveAt": "2026-09-10T00:00:00+08:00",
+      "documentRoute": "/1.3.6.1.4.1.65553/0/",
+      "supersedes": "POL-ROOT-1.0.1"
+    },
+    {
+      "id": "POL-PKI-1.0.0",
+      "family": "pki-arc-policy",
+      "revision": "1.0.0",
+      "status": "superseded",
+      "publishedAt": "2026-04-16T00:00:00+08:00",
+      "effectiveAt": "2026-04-16T00:00:00+08:00",
+      "supersededBy": "POL-PKI-2.0.0",
+      "sourceCommit": "a53a12de6faa7b0db10dacf8cc26ed28028ed9bc",
+      "sha256": "e7135f6de5043e54a1fede4e624371c81ca7613c92365500663085aa3a7d3a28"
+    },
+    {
+      "id": "POL-PKI-2.0.0",
+      "family": "pki-arc-policy",
+      "revision": "2.0.0",
+      "status": "effective",
+      "publishedAt": "2026-09-10T00:00:00+08:00",
+      "effectiveAt": "2026-09-10T00:00:00+08:00",
+      "documentRoute": "/1.3.6.1.4.1.65553/2/0/",
+      "supersedes": "POL-PKI-1.0.0"
+    },
+    {
+      "id": "POL-TA-1.0.0",
+      "family": "trust-anchor-arc-policy",
+      "revision": "1.0.0",
+      "status": "superseded",
+      "publishedAt": "2026-04-16T00:00:00+08:00",
+      "effectiveAt": "2026-04-16T00:00:00+08:00",
+      "supersededBy": "POL-TA-2.0.0",
+      "sourceCommit": "a53a12de6faa7b0db10dacf8cc26ed28028ed9bc",
+      "sha256": "1efef6723dd8afe7eab414deecd1ebc26663c7e584c31968659522f136ce7c8a"
+    },
+    {
+      "id": "POL-TA-2.0.0",
+      "family": "trust-anchor-arc-policy",
+      "revision": "2.0.0",
+      "status": "effective",
+      "publishedAt": "2026-09-10T00:00:00+08:00",
+      "effectiveAt": "2026-09-10T00:00:00+08:00",
+      "documentRoute": "/1.3.6.1.4.1.65553/2/2/0/",
+      "supersedes": "POL-TA-1.0.0"
+    }
+  ],
+  "delegations": [
+    {
+      "id": "DLG-2026-0001",
+      "arc": "1.3.6.1.4.1.65553.2",
+      "delegatorRef": "signaliks-root-ra",
+      "delegateRef": "youngdo-pki-ra",
+      "status": "active",
+      "effectiveAt": "2026-04-16T00:00:00+08:00",
+      "ratifiedAt": "2026-09-10T00:00:00+08:00",
+      "governingPolicyRef": "POL-ROOT-2.0.0",
+      "decisionRef": "DLG-2026-0001-DECISION",
+      "permissions": [
+        "allocate-immediate-nodes",
+        "allocate-sub-arcs",
+        "adopt-subordinate-policies",
+        "publish-registration-records"
+      ],
+      "subdelegationAllowed": false,
+      "instrumentPath": "registry/instruments/DLG-2026-0001.md"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "IANA-PEN-65553",
+      "type": "external-assignment",
+      "status": "recorded",
+      "decidedAt": null,
+      "recordedAt": "2026-09-10T00:00:00+08:00",
+      "authorityRef": "iana-pen-ra",
+      "policyRef": null,
+      "affectedOids": ["1.3.6.1.4.1.65553"],
+      "approvals": [],
+      "publicRationale": "PEN 65553 is recorded in the IANA Private Enterprise Numbers registry."
+    },
+    {
+      "id": "MIG-2026-0001",
+      "type": "legacy-import",
+      "status": "approved",
+      "decidedAt": "2026-09-10T00:00:00+08:00",
+      "recordedAt": "2026-09-10T00:00:00+08:00",
+      "authorityRef": "signaliks-root-ra",
+      "policyRef": "POL-ROOT-2.0.0",
+      "affectedOids": [
+        "1.3.6.1.4.1.65553.0",
+        "1.3.6.1.4.1.65553.1",
+        "1.3.6.1.4.1.65553.2",
+        "1.3.6.1.4.1.65553.3",
+        "1.3.6.1.4.1.65553.4",
+        "1.3.6.1.4.1.65553.2.0",
+        "1.3.6.1.4.1.65553.2.1",
+        "1.3.6.1.4.1.65553.2.2",
+        "1.3.6.1.4.1.65553.2.3",
+        "1.3.6.1.4.1.65553.2.4",
+        "1.3.6.1.4.1.65553.2.2.0",
+        "1.3.6.1.4.1.65553.2.2.1",
+        "1.3.6.1.4.1.65553.2.2.2",
+        "1.3.6.1.4.1.65553.2.2.3",
+        "1.3.6.1.4.1.65553.2.2.4",
+        "1.3.6.1.4.1.65553.2.2.5",
+        "1.3.6.1.4.1.65553.2.2.6",
+        "1.3.6.1.4.1.65553.2.2.7",
+        "1.3.6.1.4.1.65553.2.2.8",
+        "1.3.6.1.4.1.65553.2.2.9",
+        "1.3.6.1.4.1.65553.2.2.10",
+        "1.3.6.1.4.1.65553.2.2.11",
+        "1.3.6.1.4.1.65553.2.2.12",
+        "1.3.6.1.4.1.65553.2.2.13"
+      ],
+      "approvals": [
+        {"authorityRef":"signaliks-root-ra","role":"root-registration-authority","approvedAt":"2026-09-10T00:00:00+08:00"},
+        {"authorityRef":"youngdo-pki-ra","role":"delegated-registration-authority","approvedAt":"2026-09-10T00:00:00+08:00"}
+      ],
+      "publicRationale": "Records already published before the structured registry was introduced were imported without changing their numeric OIDs or asserting unrecorded historical facts."
+    },
+    {
+      "id": "POL-2026-0001",
+      "type": "policy-adoption",
+      "status": "approved",
+      "decidedAt": "2026-09-10T00:00:00+08:00",
+      "recordedAt": "2026-09-10T00:00:00+08:00",
+      "authorityRef": "signaliks-root-ra",
+      "policyRef": "POL-ROOT-2.0.0",
+      "affectedOids": [
+        "1.3.6.1.4.1.65553.0",
+        "1.3.6.1.4.1.65553.2.0",
+        "1.3.6.1.4.1.65553.2.2.0"
+      ],
+      "approvals": [
+        {"authorityRef":"signaliks-root-ra","role":"root-policy-authority","approvedAt":"2026-09-10T00:00:00+08:00"},
+        {"authorityRef":"youngdo-pki-ra","role":"delegated-policy-authority","approvedAt":"2026-09-10T00:00:00+08:00"}
+      ],
+      "publicRationale": "Adopts the structured registry, immutable allocation records, explicit delegation records, and separate object lifecycle states."
+    },
+    {
+      "id": "DLG-2026-0001-DECISION",
+      "type": "delegation-ratification",
+      "status": "approved",
+      "decidedAt": "2026-09-10T00:00:00+08:00",
+      "recordedAt": "2026-09-10T00:00:00+08:00",
+      "authorityRef": "signaliks-root-ra",
+      "policyRef": "POL-ROOT-2.0.0",
+      "affectedOids": ["1.3.6.1.4.1.65553.2"],
+      "approvals": [
+        {"authorityRef":"signaliks-root-ra","role":"delegator","approvedAt":"2026-09-10T00:00:00+08:00"},
+        {"authorityRef":"youngdo-pki-ra","role":"delegate","approvedAt":"2026-09-10T00:00:00+08:00"}
+      ],
+      "publicRationale": "Ratifies the existing PKI arc delegation as an explicit, machine-readable administrative instrument."
+    },
+    {
+      "id": "ALLOC-2026-0001",
+      "type": "allocation",
+      "status": "approved",
+      "decidedAt": "2026-09-10T00:00:00+08:00",
+      "recordedAt": "2026-09-10T00:00:00+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "policyRef": "POL-PKI-2.0.0",
+      "affectedOids": ["1.3.6.1.4.1.65553.2.5"],
+      "approvals": [
+        {"authorityRef":"youngdo-pki-ra","role":"delegated-registration-authority","approvedAt":"2026-09-10T00:00:00+08:00"},
+        {"authorityRef":"signaliks-root-ra","role":"independent-reviewer","approvedAt":"2026-09-10T00:00:00+08:00"}
+      ],
+      "publicRationale": "Allocates a distinct arc for immutable, versioned trust-anchor groups."
+    }
+  ],
+  "nodes": [
+    {
+      "oid": "1.3.6.1.4.1.65553",
+      "parentOid": "1.3.6.1.4.1",
+      "arc": 65553,
+      "kind": "arc",
+      "secondaryIdentifier": "signaliks",
+      "title": "Signaliks",
+      "description": "Private Enterprise Number assigned to Signaliks.",
+      "route": "/1.3.6.1.4.1.65553/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": null,
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "iana-pen-ra",
+        "decisionRef": "IANA-PEN-65553",
+        "governingPolicyRef": "POL-ROOT-2.0.0"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.0",
+      "parentOid": "1.3.6.1.4.1.65553",
+      "arc": 0,
+      "kind": "policy-document",
+      "secondaryIdentifier": "policy",
+      "title": "Signaliks OID Registry Policy",
+      "description": "Legacy OID allocated to identify the root registry policy family.",
+      "route": "/1.3.6.1.4.1.65553/0/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-04-15T00:00:00+08:00",
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "signaliks-root-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-ROOT-2.0.0"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.1",
+      "parentOid": "1.3.6.1.4.1.65553",
+      "arc": 1,
+      "kind": "arc",
+      "secondaryIdentifier": "networkManagement",
+      "title": "Network Management Identifiers",
+      "description": "Identifiers used for network-management objects across OSI model layers.",
+      "route": "/1.3.6.1.4.1.65553/1/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": null,
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "signaliks-root-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-ROOT-2.0.0"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2",
+      "parentOid": "1.3.6.1.4.1.65553",
+      "arc": 2,
+      "kind": "arc",
+      "secondaryIdentifier": "pki",
+      "title": "Public Key Infrastructure",
+      "description": "PKI and trust-service identifiers administered by Youngdo Technologies Limited.",
+      "route": "/1.3.6.1.4.1.65553/2/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-04-15T00:00:00+08:00",
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-PKI-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.3",
+      "parentOid": "1.3.6.1.4.1.65553",
+      "arc": 3,
+      "kind": "arc",
+      "secondaryIdentifier": "private",
+      "title": "Private Identifiers",
+      "description": "Non-universal, scenario-specific logic and authentication identifiers.",
+      "route": "/1.3.6.1.4.1.65553/3/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": null,
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "signaliks-root-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-ROOT-2.0.0"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.4",
+      "parentOid": "1.3.6.1.4.1.65553",
+      "arc": 4,
+      "kind": "arc",
+      "secondaryIdentifier": "experimental",
+      "title": "Experimental Identifiers",
+      "description": "Identifiers allocated for experiments and non-production use.",
+      "route": "/1.3.6.1.4.1.65553/4/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": null,
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "signaliks-root-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-ROOT-2.0.0"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.0",
+      "parentOid": "1.3.6.1.4.1.65553.2",
+      "arc": 0,
+      "kind": "policy-document",
+      "secondaryIdentifier": "policy",
+      "title": "Youngdo PKI Arc Policy",
+      "description": "Legacy OID allocated to identify the PKI arc policy family.",
+      "route": "/1.3.6.1.4.1.65553/2/0/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-04-16T00:00:00+08:00",
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-PKI-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1",
+      "parentOid": "1.3.6.1.4.1.65553.2",
+      "arc": 1,
+      "kind": "arc",
+      "secondaryIdentifier": "certificatePolicies",
+      "title": "Certificate Policy Identifiers",
+      "description": "Stable identifiers for certificate-policy semantics; document revisions are managed separately.",
+      "route": "/1.3.6.1.4.1.65553/2/1/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": null,
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-PKI-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2",
+      "parentOid": "1.3.6.1.4.1.65553.2",
+      "arc": 2,
+      "kind": "arc",
+      "secondaryIdentifier": "trustAnchors",
+      "title": "Individual Trust Anchor Identifiers",
+      "description": "Identifiers for individual trust anchors, each bound to one public key and associated trust data.",
+      "route": "/1.3.6.1.4.1.65553/2/2/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": null,
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-TA-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.3",
+      "parentOid": "1.3.6.1.4.1.65553.2",
+      "arc": 3,
+      "kind": "arc",
+      "secondaryIdentifier": "validationProfiles",
+      "title": "Validation Profile Identifiers",
+      "description": "Identifiers for explicitly defined validation profiles; no profiles are currently allocated.",
+      "route": "/1.3.6.1.4.1.65553/2/3/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": null,
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-PKI-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.4",
+      "parentOid": "1.3.6.1.4.1.65553.2",
+      "arc": 4,
+      "kind": "arc",
+      "secondaryIdentifier": "private",
+      "title": "Youngdo Private Identifiers",
+      "description": "Private-use identifiers; allocation does not imply confidentiality.",
+      "route": "/1.3.6.1.4.1.65553/2/4/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": null,
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-PKI-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.5",
+      "parentOid": "1.3.6.1.4.1.65553.2",
+      "arc": 5,
+      "kind": "arc",
+      "secondaryIdentifier": "trustAnchorGroups",
+      "title": "Versioned Trust Anchor Groups",
+      "description": "Immutable, monotonically versioned groups of trust-anchor identifiers.",
+      "route": "/1.3.6.1.4.1.65553/2/5/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-09-10T00:00:00+08:00",
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-0001",
+        "governingPolicyRef": "POL-PKI-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.0",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 0,
+      "kind": "policy-document",
+      "secondaryIdentifier": "policy",
+      "title": "Trust Anchor Identifier Arc Policy",
+      "description": "Legacy OID allocated to identify the individual trust-anchor arc policy family.",
+      "route": "/1.3.6.1.4.1.65553/2/2/0/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-04-16T00:00:00+08:00",
+        "recordedAt": "2026-09-10T00:00:00+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "MIG-2026-0001",
+        "governingPolicyRef": "POL-TA-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.1",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 1,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "root-r1",
+      "title": "Youngdo Root CA",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/1/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.2",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 2,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g5-tls-r1",
+      "title": "Youngdo G5 TLS Root CA - R1",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/2/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.3",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 3,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g5-tls-e1",
+      "title": "Youngdo G5 TLS Root CA - E1",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/3/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.4",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 4,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g5-codesign-r1",
+      "title": "Youngdo G5 Code Signing Root CA - R1",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/4/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.5",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 5,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g5-codesign-e1",
+      "title": "Youngdo G5 Code Signing Root CA - E1",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/5/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.6",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 6,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g5-smime-r1",
+      "title": "Youngdo G5 S/MIME Root CA - R1",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/6/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.7",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 7,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g5-smime-e1",
+      "title": "Youngdo G5 S/MIME Root CA - E1",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/7/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.8",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 8,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "2026q1-tls-e1",
+      "title": "Youngdo G5 TLS E1 CA - 2026Q1",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/8/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.9",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 9,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "2026q1-tls-r1",
+      "title": "Youngdo G5 TLS R1 CA - 2026Q1",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/9/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.10",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 10,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "2026q1-codesign-e1",
+      "title": "Youngdo G5 Code Signing E1 CA - 2026Q1",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/10/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.11",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 11,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "2026q1-smime-e1",
+      "title": "Youngdo G5 S/MIME E1 CA - 2026Q1",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/11/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.12",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 12,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g5-iot-ec384",
+      "title": "Youngdo G5 IoT Root EC384",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/12/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.13",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 13,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g5-iot-rsa4096",
+      "title": "Youngdo G5 IoT Root RSA4096",
+      "description": "Legacy trust-anchor registration pending cryptographic binding verification.",
+      "route": "/1.3.6.1.4.1.65553/2/2/13/",
+      "allocation": {"status":"assigned","assignedAt":null,"recordedAt":"2026-09-10T00:00:00+08:00","authorityRef":"youngdo-pki-ra","decisionRef":"MIG-2026-0001","governingPolicyRef":"POL-TA-2.0.0","delegationRef":"DLG-2026-0001"}
+    }
+  ],
+  "trustAnchors": [
+    {"oid":"1.3.6.1.4.1.65553.2.2.1","subjectRfc4514":"CN=Youngdo Root CA,OU=Trust Services,O=Youngdo, Inc.,ST=Shanghai,C=CN","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.2","subjectRfc4514":"CN=Youngdo G5 TLS Root CA - R1,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.3","subjectRfc4514":"CN=Youngdo G5 TLS Root CA - E1,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.4","subjectRfc4514":"CN=Youngdo G5 Code Signing Root CA - R1,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.5","subjectRfc4514":"CN=Youngdo G5 Code Signing Root CA - E1,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.6","subjectRfc4514":"CN=Youngdo G5 SMIME Root CA - R1,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.7","subjectRfc4514":"CN=Youngdo G5 SMIME Root CA - E1,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.8","subjectRfc4514":"CN=Youngdo G5 TLS E1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.9","subjectRfc4514":"CN=Youngdo G5 TLS R1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.10","subjectRfc4514":"CN=Youngdo G5 Code Signing E1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.11","subjectRfc4514":"CN=Youngdo G5 SMIME E1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.12","subjectRfc4514":"CN=Youngdo G5 IoT Root EC384,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}},
+    {"oid":"1.3.6.1.4.1.65553.2.2.13","subjectRfc4514":"CN=Youngdo G5 IoT Root RSA4096,O=Youngdo Technologies Limited,C=GB","bindingStatus":"legacy-unverified","publicKey":null,"keyIdentifier":null,"constraints":null,"certificates":[],"lifecycle":{"operationalStatus":"unknown","activatedAt":null,"retiredAt":null,"supersededBy":null}}
+  ],
+  "trustAnchorGroups": [],
+  "events": [
+    {
+      "id": "EVT-2026-0001",
+      "type": "legacy-import",
+      "occurredAt": "2026-09-10T00:00:00+08:00",
+      "authorityRef": "signaliks-root-ra",
+      "decisionRef": "MIG-2026-0001",
+      "summary": "Imported all previously published allocations without renumbering or inferring missing cryptographic bindings."
+    },
+    {
+      "id": "EVT-2026-0002",
+      "type": "policy-change",
+      "occurredAt": "2026-09-10T00:00:00+08:00",
+      "authorityRef": "signaliks-root-ra",
+      "decisionRef": "POL-2026-0001",
+      "summary": "Adopted version 2 governance and data-model policies."
+    },
+    {
+      "id": "EVT-2026-0003",
+      "type": "delegation-ratification",
+      "occurredAt": "2026-09-10T00:00:00+08:00",
+      "authorityRef": "signaliks-root-ra",
+      "decisionRef": "DLG-2026-0001-DECISION",
+      "summary": "Ratified delegation DLG-2026-0001 as a structured administrative instrument."
+    },
+    {
+      "id": "EVT-2026-0004",
+      "type": "allocation",
+      "occurredAt": "2026-09-10T00:00:00+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "decisionRef": "ALLOC-2026-0001",
+      "summary": "Allocated 1.3.6.1.4.1.65553.2.5 for versioned trust-anchor groups."
+    }
+  ],
+  "release": {
+    "id": "2026-09-10.1",
+    "status": "candidate",
+    "publishedAt": "2026-09-10T00:00:00+08:00",
+    "signingRequiredForAuthoritativeRelease": true,
+    "signature": null
+  }
+}

@@ -21,6 +21,12 @@ export default {
         href: 'https://blog.iks.moe'
     },
 
+    registry: {
+        title: 'Registry Data',
+        type: 'page',
+        href: '/registry/'
+    },
+
     oids: {
         title: 'OIDs',
         type: 'menu',

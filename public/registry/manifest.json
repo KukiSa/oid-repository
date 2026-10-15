@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
-  "releaseId": "2026-09-10.1",
+  "releaseId": "2026-10-15.1",
   "releaseStatus": "candidate",
-  "publishedAt": "2026-09-10T00:00:00+08:00",
+  "publishedAt": "2026-10-15T10:23:16+08:00",
   "signatureRequiredForAuthoritativeRelease": true,
   "artifacts": [
     {
       "path": "registry.json",
-      "sha256": "435c6350a4fe3acc70b8cff344426f5a3320ae777452e94d871ee041890a379b",
-      "bytes": 33589
+      "sha256": "8f488d09ecbaa4ce7a94fb777a4c358623511a2630cb56bd7c9a78c7748d4743",
+      "bytes": 69832
     },
     {
       "path": "registry.csv",
-      "sha256": "96e5c7f93aa737f09d208fd1ccd6ed6492da7263127a23f476139aad2d1a067f",
-      "bytes": 4383
+      "sha256": "c25fedb00a4e398bf6cc64dd8e174372d4e33d8b3b3237ba1e878fd7e2ac545e",
+      "bytes": 8055
     },
     {
       "path": "schema/registry.schema.json",

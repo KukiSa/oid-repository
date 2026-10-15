@@ -93,6 +93,15 @@
       "effectiveAt": "2026-09-10T00:00:00+08:00",
       "documentRoute": "/1.3.6.1.4.1.65553/2/2/0/",
       "supersedes": "POL-TA-1.0.0"
+    },
+    {
+      "id": "POL-MANAGED-TRUST-1.0.0",
+      "family": "managed-trust-certificate-policies",
+      "revision": "1.0.0",
+      "status": "effective",
+      "publishedAt": "2026-10-15T10:23:16+08:00",
+      "effectiveAt": "2026-10-15T10:23:16+08:00",
+      "documentRoute": "/1.3.6.1.4.1.65553/2/1/10/policy/"
     }
   ],
   "delegations": [
@@ -255,6 +264,120 @@
         }
       ],
       "publicRationale": "Allocates a distinct arc for immutable, versioned trust-anchor groups."
+    },
+    {
+      "id": "POL-2026-1015-MANAGED-TRUST",
+      "type": "policy-adoption",
+      "status": "approved",
+      "decidedAt": "2026-10-15T10:23:16+08:00",
+      "recordedAt": "2026-10-15T10:23:16+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "policyRef": "POL-PKI-2.0.0",
+      "affectedOids": [
+        "1.3.6.1.4.1.65553.2.1.10",
+        "1.3.6.1.4.1.65553.2.1.10.1",
+        "1.3.6.1.4.1.65553.2.1.10.2",
+        "1.3.6.1.4.1.65553.2.1.10.3",
+        "1.3.6.1.4.1.65553.2.1.10.4",
+        "1.3.6.1.4.1.65553.2.1.10.5",
+        "1.3.6.1.4.1.65553.2.1.10.6",
+        "1.3.6.1.4.1.65553.2.1.10.7",
+        "1.3.6.1.4.1.65553.2.1.10.8",
+        "1.3.6.1.4.1.65553.2.1.10.9",
+        "1.3.6.1.4.1.65553.2.1.10.11"
+      ],
+      "approvals": [
+        {
+          "authorityRef": "youngdo-pki-ra",
+          "role": "delegated-registration-and-policy-authority",
+          "approvedAt": "2026-10-15T10:23:16+08:00"
+        }
+      ],
+      "reviewException": "Single-operator exception under POL-ROOT-2.0.0 section 5: the repository operator explicitly authorized G6 PKI creation and OID registration in the maintenance request of 2026-10-15. The same accountable operator exercises the naming-authority and delegated-PKI-RA roles. This record does not assert approval by a second person. Bouncy Castle issuance and separate cryptography/OpenSSL checks verify the published key bindings.",
+      "publicRationale": "Adopt stable private certificate-policy semantics for managed TLS, S/MIME, code signing, identity and timestamp signers, with 15-year roots, 5-year issuing CAs, 2-year leaf templates, soft keys and CRL-only status distribution."
+    },
+    {
+      "id": "ALLOC-2026-1015-G6-POLICIES",
+      "type": "allocation",
+      "status": "approved",
+      "decidedAt": "2026-10-15T10:23:16+08:00",
+      "recordedAt": "2026-10-15T10:23:16+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "policyRef": "POL-MANAGED-TRUST-1.0.0",
+      "affectedOids": [
+        "1.3.6.1.4.1.65553.2.1.10",
+        "1.3.6.1.4.1.65553.2.1.10.1",
+        "1.3.6.1.4.1.65553.2.1.10.2",
+        "1.3.6.1.4.1.65553.2.1.10.3",
+        "1.3.6.1.4.1.65553.2.1.10.4",
+        "1.3.6.1.4.1.65553.2.1.10.5",
+        "1.3.6.1.4.1.65553.2.1.10.6",
+        "1.3.6.1.4.1.65553.2.1.10.7",
+        "1.3.6.1.4.1.65553.2.1.10.8",
+        "1.3.6.1.4.1.65553.2.1.10.9",
+        "1.3.6.1.4.1.65553.2.1.10.11"
+      ],
+      "approvals": [
+        {
+          "authorityRef": "youngdo-pki-ra",
+          "role": "delegated-registration-and-policy-authority",
+          "approvedAt": "2026-10-15T10:23:16+08:00"
+        }
+      ],
+      "reviewException": "Single-operator exception under POL-ROOT-2.0.0 section 5: the repository operator explicitly authorized G6 PKI creation and OID registration in the maintenance request of 2026-10-15. The same accountable operator exercises the naming-authority and delegated-PKI-RA roles. This record does not assert approval by a second person. Bouncy Castle issuance and separate cryptography/OpenSSL checks verify the published key bindings.",
+      "publicRationale": "Allocate the managedTrust certificate-policy family and ten defined leaf identifiers, avoiding private identifiers already used by legacy profiles. The unallocated .10 value is not claimed by this decision."
+    },
+    {
+      "id": "ALLOC-2026-1015-G6-ANCHORS",
+      "type": "allocation",
+      "status": "approved",
+      "decidedAt": "2026-10-15T10:23:16+08:00",
+      "recordedAt": "2026-10-15T10:23:16+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "policyRef": "POL-TA-2.0.0",
+      "affectedOids": [
+        "1.3.6.1.4.1.65553.2.2.14",
+        "1.3.6.1.4.1.65553.2.2.15",
+        "1.3.6.1.4.1.65553.2.2.16",
+        "1.3.6.1.4.1.65553.2.2.17",
+        "1.3.6.1.4.1.65553.2.2.18",
+        "1.3.6.1.4.1.65553.2.5.1",
+        "1.3.6.1.4.1.65553.2.5.1.0"
+      ],
+      "approvals": [
+        {
+          "authorityRef": "youngdo-pki-ra",
+          "role": "delegated-registration-and-policy-authority",
+          "approvedAt": "2026-10-15T10:23:16+08:00"
+        }
+      ],
+      "reviewException": "Single-operator exception under POL-ROOT-2.0.0 section 5: the repository operator explicitly authorized G6 PKI creation and OID registration in the maintenance request of 2026-10-15. The same accountable operator exercises the naming-authority and delegated-PKI-RA roles. This record does not assert approval by a second person. Bouncy Castle issuance and separate cryptography/OpenSSL checks verify the published key bindings.",
+      "publicRationale": "Allocate five independently generated G6 roots and immutable trust-anchor group version 0. Code Signing and Timestamp use RSA4096; Server, Mail and Identity use P-384."
+    },
+    {
+      "id": "BIND-2026-1015-G6-ANCHORS",
+      "type": "trust-anchor-binding-verification",
+      "status": "approved",
+      "decidedAt": "2026-10-15T10:23:16+08:00",
+      "recordedAt": "2026-10-15T10:23:16+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "policyRef": "POL-TA-2.0.0",
+      "affectedOids": [
+        "1.3.6.1.4.1.65553.2.2.14",
+        "1.3.6.1.4.1.65553.2.2.15",
+        "1.3.6.1.4.1.65553.2.2.16",
+        "1.3.6.1.4.1.65553.2.2.17",
+        "1.3.6.1.4.1.65553.2.2.18"
+      ],
+      "approvals": [
+        {
+          "authorityRef": "youngdo-pki-ra",
+          "role": "delegated-registration-and-policy-authority",
+          "approvedAt": "2026-10-15T10:23:16+08:00"
+        }
+      ],
+      "reviewException": "Single-operator exception under POL-ROOT-2.0.0 section 5: the repository operator explicitly authorized G6 PKI creation and OID registration in the maintenance request of 2026-10-15. The same accountable operator exercises the naming-authority and delegated-PKI-RA roles. This record does not assert approval by a second person. Bouncy Castle issuance and separate cryptography/OpenSSL checks verify the published key bindings.",
+      "publicRationale": "Activate the five root bindings after validating exact SPKI DER, certificate signatures, key sizes/curves, SKI, names, constraints and certificate artifacts exported from the running EJBCA instance."
     }
   ],
   "nodes": [
@@ -746,6 +869,348 @@
         "governingPolicyRef": "POL-TA-2.0.0",
         "delegationRef": "DLG-2026-0001"
       }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10",
+      "parentOid": "1.3.6.1.4.1.65553.2.1",
+      "arc": 10,
+      "kind": "arc",
+      "secondaryIdentifier": "managedTrust",
+      "title": "Managed Private PKI Certificate Policies",
+      "description": "Stable certificate-policy semantics for managed TLS, S/MIME, code signing, identity and timestamp signer certificates. These policies are independent from CA generation and do not assert public trust.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-PKI-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10.1",
+      "parentOid": "1.3.6.1.4.1.65553.2.1.10",
+      "arc": 1,
+      "kind": "identifier",
+      "secondaryIdentifier": "server-domain",
+      "title": "Server Domain",
+      "description": "Verified control of every DNS/IP SAN authorized by the relying-party trust domain; no verified organization identity claim.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/1/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-MANAGED-TRUST-1.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10.2",
+      "parentOid": "1.3.6.1.4.1.65553.2.1.10",
+      "arc": 2,
+      "kind": "identifier",
+      "secondaryIdentifier": "server-organization",
+      "title": "Server Organization",
+      "description": "Verified organization identity, authorized requester and verified control of every DNS/IP SAN.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/2/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-MANAGED-TRUST-1.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10.3",
+      "parentOid": "1.3.6.1.4.1.65553.2.1.10",
+      "arc": 3,
+      "kind": "identifier",
+      "secondaryIdentifier": "mailbox-signature",
+      "title": "Mailbox Signature",
+      "description": "Verified mailbox control and signing authorization; no verified organization identity claim.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/3/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-MANAGED-TRUST-1.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10.4",
+      "parentOid": "1.3.6.1.4.1.65553.2.1.10",
+      "arc": 4,
+      "kind": "identifier",
+      "secondaryIdentifier": "organization-mail-signature",
+      "title": "Organization Mail Signature",
+      "description": "Verified organization and mailbox control, employment or sponsorship link and signing authorization.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/4/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-MANAGED-TRUST-1.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10.5",
+      "parentOid": "1.3.6.1.4.1.65553.2.1.10",
+      "arc": 5,
+      "kind": "identifier",
+      "secondaryIdentifier": "mailbox-encryption",
+      "title": "Mailbox Encryption",
+      "description": "Verified mailbox control with approved recipient key registration for private email confidentiality. Key recovery is not asserted by this identifier.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/5/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-MANAGED-TRUST-1.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10.6",
+      "parentOid": "1.3.6.1.4.1.65553.2.1.10",
+      "arc": 6,
+      "kind": "identifier",
+      "secondaryIdentifier": "organization-mail-encryption",
+      "title": "Organization Mail Encryption",
+      "description": "Verified organization identity, mailbox control and person or role association with approved recipient key registration for private email confidentiality. Key recovery is not asserted by this identifier.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/6/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-MANAGED-TRUST-1.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10.7",
+      "parentOid": "1.3.6.1.4.1.65553.2.1.10",
+      "arc": 7,
+      "kind": "identifier",
+      "secondaryIdentifier": "organization-code-signing",
+      "title": "Organization Code Signing",
+      "description": "Verified publisher organization, project authorization and controlled signing key custody; no public trust or EV status asserted.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/7/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-MANAGED-TRUST-1.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10.8",
+      "parentOid": "1.3.6.1.4.1.65553.2.1.10",
+      "arc": 8,
+      "kind": "identifier",
+      "secondaryIdentifier": "managed-person-authentication",
+      "title": "Managed Person Authentication",
+      "description": "Unique person directory identity, approved account binding and proof of private-key possession for managed authentication.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/8/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-MANAGED-TRUST-1.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10.9",
+      "parentOid": "1.3.6.1.4.1.65553.2.1.10",
+      "arc": 9,
+      "kind": "identifier",
+      "secondaryIdentifier": "managed-device-authentication",
+      "title": "Managed Device Authentication",
+      "description": "Unique managed device or workload inventory identity, approved owner and proof of private-key possession for managed authentication.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/9/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-MANAGED-TRUST-1.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.1.10.11",
+      "parentOid": "1.3.6.1.4.1.65553.2.1.10",
+      "arc": 11,
+      "kind": "identifier",
+      "secondaryIdentifier": "managed-timestamp-signing",
+      "title": "Managed Timestamp Signing",
+      "description": "Identifies an authorized private timestamp authority signer and its operator. Production timestamp issuance requires an operated TSA service with monitored time sources. This certificate-policy identifier alone does not assert an active RFC 3161 endpoint.",
+      "route": "/1.3.6.1.4.1.65553/2/1/10/11/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+        "governingPolicyRef": "POL-MANAGED-TRUST-1.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.14",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 14,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g6-server-ec384",
+      "title": "Youngdo G6 Secure Server EC384 Root",
+      "description": "Exact public-key trust anchor for the Youngdo G6 server hierarchy.",
+      "route": "/1.3.6.1.4.1.65553/2/2/14/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-ANCHORS",
+        "governingPolicyRef": "POL-TA-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.15",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 15,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g6-mail-ec384",
+      "title": "Youngdo G6 Secure Mail EC384 Root",
+      "description": "Exact public-key trust anchor for the Youngdo G6 mail hierarchy.",
+      "route": "/1.3.6.1.4.1.65553/2/2/15/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-ANCHORS",
+        "governingPolicyRef": "POL-TA-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.16",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 16,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g6-code-rsa4096",
+      "title": "Youngdo G6 Secure Code RSA4096 Root",
+      "description": "Exact public-key trust anchor for the Youngdo G6 code hierarchy.",
+      "route": "/1.3.6.1.4.1.65553/2/2/16/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-ANCHORS",
+        "governingPolicyRef": "POL-TA-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.17",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 17,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g6-identity-ec384",
+      "title": "Youngdo G6 Secure Identity EC384 Root",
+      "description": "Exact public-key trust anchor for the Youngdo G6 identity hierarchy.",
+      "route": "/1.3.6.1.4.1.65553/2/2/17/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-ANCHORS",
+        "governingPolicyRef": "POL-TA-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.18",
+      "parentOid": "1.3.6.1.4.1.65553.2.2",
+      "arc": 18,
+      "kind": "trust-anchor",
+      "secondaryIdentifier": "g6-timestamp-rsa4096",
+      "title": "Youngdo G6 Timestamp RSA4096 Root",
+      "description": "Exact public-key trust anchor for the Youngdo G6 timestamp hierarchy.",
+      "route": "/1.3.6.1.4.1.65553/2/2/18/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-ANCHORS",
+        "governingPolicyRef": "POL-TA-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.5.1",
+      "parentOid": "1.3.6.1.4.1.65553.2.5",
+      "arc": 1,
+      "kind": "trust-anchor-group",
+      "secondaryIdentifier": "youngdoG6Roots",
+      "title": "Youngdo G6 Root Group",
+      "description": "Versioned immutable collections of Youngdo G6 root trust-anchor identifiers.",
+      "route": "/1.3.6.1.4.1.65553/2/5/1/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-ANCHORS",
+        "governingPolicyRef": "POL-PKI-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.5.1.0",
+      "parentOid": "1.3.6.1.4.1.65553.2.5.1",
+      "arc": 0,
+      "kind": "trust-anchor-group-version",
+      "secondaryIdentifier": "version0",
+      "title": "Youngdo G6 Roots Version 0",
+      "description": "Initial set of five G6 roots: Server EC384, Mail EC384, Code RSA4096, Identity EC384 and Timestamp RSA4096.",
+      "route": "/1.3.6.1.4.1.65553/2/5/1/0/",
+      "allocation": {
+        "status": "assigned",
+        "assignedAt": "2026-10-15T10:23:16+08:00",
+        "recordedAt": "2026-10-15T10:23:16+08:00",
+        "authorityRef": "youngdo-pki-ra",
+        "decisionRef": "ALLOC-2026-1015-G6-ANCHORS",
+        "governingPolicyRef": "POL-PKI-2.0.0",
+        "delegationRef": "DLG-2026-0001"
+      }
     }
   ],
   "trustAnchors": [
@@ -943,9 +1408,304 @@
         "retiredAt": null,
         "supersededBy": null
       }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.14",
+      "subjectRfc4514": "CN=Youngdo G6 Secure Server EC384 Root,O=Youngdo Technologies Limited,C=GB",
+      "bindingStatus": "verified",
+      "publicKey": {
+        "encoding": "DER SubjectPublicKeyInfo",
+        "algorithm": "EC",
+        "bits": 384,
+        "spkiDerBase64": "MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEbb8RL0RRqQB1XZCgj4D63xY0kBXPlp7SpOsxi7t2O98RG0ckEt3VdoP8NL1VvvMXv/kUEGLu+71c/RcRqsgnzIozymUHx9gjezCWCyLrWHEQSPsbx6svi8UeVxkViQ0p",
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/server-root-ec384-01.spki.der",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "48cf63ee30a3757f3e2096741b4639bbc06eab1316288dc820bb00a7a0ca6574"
+        },
+        "sha384": "80610698048ccd408a77619e159adaeb4871a5a0624051f60ed7844571bf64da884c5abbae0132bd2d00d797fdd38ca1",
+        "namedCurve": "secp384r1"
+      },
+      "keyIdentifier": {
+        "type": "X.509 SubjectKeyIdentifier",
+        "value": "bf78cf804d59ac8010c44584e6cdc3c265018172",
+        "derivation": "RFC 5280 section 4.2.1.2 method 1; independently recalculated from the public key"
+      },
+      "constraints": {
+        "basicConstraints": {
+          "ca": true,
+          "pathLenConstraint": null
+        },
+        "keyUsage": [
+          "keyCertSign",
+          "cRLSign"
+        ],
+        "encodedExtendedKeyUsage": [],
+        "intendedPurpose": "server",
+        "signatureAlgorithm": "SHA384withECDSA",
+        "statusDistribution": "CRL only; no OCSP",
+        "certificatePolicies": [],
+        "enforcement": "Dedicated issuing-CA EKU and issuance profiles; relying-party trust-store purpose restrictions are deployment controls."
+      },
+      "certificates": [
+        {
+          "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/server-root-ec384-01.crt",
+          "pemUri": "https://oid.iks.moe/artifacts/g6/20261015/server-root-ec384-01.pem",
+          "sha256": "8b90393b903ec762ab85bc83b158b28382ad24399230ebb2b01a4fb38c7257b9",
+          "sha384": "43e7f9951c9ec1c95e4522b29cd8dd31a907fa4881c6f913d5f1f6d01b220fbce91ee2da3a89e7d0cdca7fa696f4750f",
+          "serialNumberHex": "66b38e065fd59ca7e2fc193ff5118630bb4bc109",
+          "notBefore": "2026-10-15T02:07:48+00:00",
+          "notAfter": "2041-10-11T02:07:47+00:00",
+          "signatureAlgorithmOid": "1.2.840.10045.4.3.3"
+        }
+      ],
+      "lifecycle": {
+        "operationalStatus": "active",
+        "activatedAt": "2026-10-15T10:23:16+08:00",
+        "retiredAt": null,
+        "supersededBy": null
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.15",
+      "subjectRfc4514": "CN=Youngdo G6 Secure Mail EC384 Root,O=Youngdo Technologies Limited,C=GB",
+      "bindingStatus": "verified",
+      "publicKey": {
+        "encoding": "DER SubjectPublicKeyInfo",
+        "algorithm": "EC",
+        "bits": 384,
+        "spkiDerBase64": "MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAENPemsM+29BJIp67dC59i1VGttz4hZ+q7ZjxulZoXEvy5uVbX5oFHeTy7InBJ1WMFnKELY5eaAOHM7+7zyDTI2sXsNSXgxSRdmhxZGm7KpL1iu11CL2ApGrAFGJ58l4u3",
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/mail-root-ec384-01.spki.der",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "6f6387b8ccacbe561b451e2f0448e86866db95bd25f416a8da2e6ed259273c77"
+        },
+        "sha384": "78db0313228a846110667617a3ba2c76f4d3375f3ae14d40bba1022b796caea62b176fd28b7fbb3b4a80b7217d3a3e0b",
+        "namedCurve": "secp384r1"
+      },
+      "keyIdentifier": {
+        "type": "X.509 SubjectKeyIdentifier",
+        "value": "e39f4ed6572a6ca3e16aaaa1f015986cafe6f6ad",
+        "derivation": "RFC 5280 section 4.2.1.2 method 1; independently recalculated from the public key"
+      },
+      "constraints": {
+        "basicConstraints": {
+          "ca": true,
+          "pathLenConstraint": null
+        },
+        "keyUsage": [
+          "keyCertSign",
+          "cRLSign"
+        ],
+        "encodedExtendedKeyUsage": [],
+        "intendedPurpose": "mail",
+        "signatureAlgorithm": "SHA384withECDSA",
+        "statusDistribution": "CRL only; no OCSP",
+        "certificatePolicies": [],
+        "enforcement": "Dedicated issuing-CA EKU and issuance profiles; relying-party trust-store purpose restrictions are deployment controls."
+      },
+      "certificates": [
+        {
+          "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/mail-root-ec384-01.crt",
+          "pemUri": "https://oid.iks.moe/artifacts/g6/20261015/mail-root-ec384-01.pem",
+          "sha256": "c7af7211b4ffaaf8879cc23dd42ca83e6bbc716647996171c9f915dd47a1cc39",
+          "sha384": "ab22bcde5d7350f9a79190d6e5d4fac16ae8e064cae576923024a6b780011dc23347dce11dd04f2b19551956bf061cc3",
+          "serialNumberHex": "3d8349e066040ea97f90c28cfd188c8eb8f3254b",
+          "notBefore": "2026-10-15T02:07:50+00:00",
+          "notAfter": "2041-10-11T02:07:49+00:00",
+          "signatureAlgorithmOid": "1.2.840.10045.4.3.3"
+        }
+      ],
+      "lifecycle": {
+        "operationalStatus": "active",
+        "activatedAt": "2026-10-15T10:23:16+08:00",
+        "retiredAt": null,
+        "supersededBy": null
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.16",
+      "subjectRfc4514": "CN=Youngdo G6 Secure Code RSA4096 Root,O=Youngdo Technologies Limited,C=GB",
+      "bindingStatus": "verified",
+      "publicKey": {
+        "encoding": "DER SubjectPublicKeyInfo",
+        "algorithm": "RSA",
+        "bits": 4096,
+        "spkiDerBase64": "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAjPZkZj54N2Ty+IAyJBlDq87EAeS78NLZjTMSJ58XerAESJAjyrS29sEIysGXPD1en06yGyZvjRDJx8p6bqNtbL5p8CNQIxSCMsBpL5k5NmIQlxoUNG0m1o+c4cR+1kKl1GJ982oro34Gu3Am6DCDlq2KsBJHMIVm3dtQKR3OAsVpNsWGrCi20Q5fpqcNzDzy/qUkEKZ/759xBDlTTHuC+GZwTj+8u+swlDgUKlx6bExjhCGyr2IKejvLjvMp+V79L1SkOinglpFalyKSUdpU1R7xIYARc6UtUlPIXswq5Wpu4P55H/POvP4jUxRc8MC+JadqiKCW6+x3JiEtxm2dXwhwK+EoqN6ULkMR6iMALofe2bH+FdBmOsCvdtYQ8UkH3PTXehmrTcCbQfQBVF6krrxIgf1YtDSVOQtNrNhveb/tKlE826Uud8D9R+diCM85RM3I/trqV/E3gnbw4H9bBfswdXt1o1Rn+vxZ+63pURS34E/hNVZFfMiKNFqZMoHUwIk4PYfudOMAkk1UuqLz9HkJ8x6M5PF7EJkPQtV2B9qvRN4tcUTQuHkUk5lQBCPJXlt+OJVSIZu7PVnpuQd6R9onOZNCTxtLON3YIewpi+nAaHZgEa8QvwGExQ3KsJALIAX8DwAXlvz0yygiTn1gXDdHZgPSuyGnVMGQaXO82MUCAwEAAQ==",
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/code-root-rsa4096-01.spki.der",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "ee838968d524f8b49e18f525c0d7ae8e6792b18580bf571a302f8700d21b0e96"
+        },
+        "sha384": "4804635c9ae83120d47193fd6fe92b943ca33d49c4eed2960a052446b02ae969c2b519c0d8229bfbdd0f1b2187065b8d"
+      },
+      "keyIdentifier": {
+        "type": "X.509 SubjectKeyIdentifier",
+        "value": "f15a5de093c1bad0b34a879987fc3705faf61986",
+        "derivation": "RFC 5280 section 4.2.1.2 method 1; independently recalculated from the public key"
+      },
+      "constraints": {
+        "basicConstraints": {
+          "ca": true,
+          "pathLenConstraint": null
+        },
+        "keyUsage": [
+          "keyCertSign",
+          "cRLSign"
+        ],
+        "encodedExtendedKeyUsage": [],
+        "intendedPurpose": "code",
+        "signatureAlgorithm": "SHA384WithRSA",
+        "statusDistribution": "CRL only; no OCSP",
+        "certificatePolicies": [],
+        "enforcement": "Dedicated issuing-CA EKU and issuance profiles; relying-party trust-store purpose restrictions are deployment controls."
+      },
+      "certificates": [
+        {
+          "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/code-root-rsa4096-01.crt",
+          "pemUri": "https://oid.iks.moe/artifacts/g6/20261015/code-root-rsa4096-01.pem",
+          "sha256": "b0c2d9b2fd913af3a2c2f1a318b3b2fcab139f8317e165190d48154760b98b0e",
+          "sha384": "ec70979e63495919f217d7cb5e6c012c6b5c06031ee8f564b6a0d1e6ddebbc59fdb0b16c216388a85e6df0a163e1c629",
+          "serialNumberHex": "1de95f746d3e19d628a73a0654f848d26f901520",
+          "notBefore": "2026-10-15T02:08:08+00:00",
+          "notAfter": "2041-10-11T02:08:07+00:00",
+          "signatureAlgorithmOid": "1.2.840.113549.1.1.12"
+        }
+      ],
+      "lifecycle": {
+        "operationalStatus": "active",
+        "activatedAt": "2026-10-15T10:23:16+08:00",
+        "retiredAt": null,
+        "supersededBy": null
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.17",
+      "subjectRfc4514": "CN=Youngdo G6 Secure Identity EC384 Root,O=Youngdo Technologies Limited,C=GB",
+      "bindingStatus": "verified",
+      "publicKey": {
+        "encoding": "DER SubjectPublicKeyInfo",
+        "algorithm": "EC",
+        "bits": 384,
+        "spkiDerBase64": "MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAE1NEz7yySYB0ZVrPpkv7s+KzTIRBEEcJZKqACkGnFh/wvLyF4NgcYxascpfh2abCmOJaIdVbhoNpfvfRcG6YYWrYi50ITPm1CgoWPEACjICZRRFra78ptR6xTyRenZfeH",
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/identity-root-ec384-01.spki.der",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "9d2e1a6cdb82b1f93f1f4fc30d1743fda321483feabe38df9e4f1644c095f748"
+        },
+        "sha384": "e6dd620ae5cc7a82cd8a8f566fe1289509ac9bfc1881a85515e9b3c938a0fdd6734e9533ef6d958f4c5deaf8e8eb3188",
+        "namedCurve": "secp384r1"
+      },
+      "keyIdentifier": {
+        "type": "X.509 SubjectKeyIdentifier",
+        "value": "3d3f3f1ae8b8b3026fd6985e815a4ff1f660d83f",
+        "derivation": "RFC 5280 section 4.2.1.2 method 1; independently recalculated from the public key"
+      },
+      "constraints": {
+        "basicConstraints": {
+          "ca": true,
+          "pathLenConstraint": null
+        },
+        "keyUsage": [
+          "keyCertSign",
+          "cRLSign"
+        ],
+        "encodedExtendedKeyUsage": [],
+        "intendedPurpose": "identity",
+        "signatureAlgorithm": "SHA384withECDSA",
+        "statusDistribution": "CRL only; no OCSP",
+        "certificatePolicies": [],
+        "enforcement": "Dedicated issuing-CA EKU and issuance profiles; relying-party trust-store purpose restrictions are deployment controls."
+      },
+      "certificates": [
+        {
+          "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/identity-root-ec384-01.crt",
+          "pemUri": "https://oid.iks.moe/artifacts/g6/20261015/identity-root-ec384-01.pem",
+          "sha256": "a5005cb1fcc64f2b69949556e9d5aee0debfb5df322ad1ed0e0a78e28a6ef669",
+          "sha384": "6f46c2faf603baea510581eb3af7d8c75083827d727fcb98fa51f3fffb857728d0c1d4da639b608f2412ad70f19cd5d7",
+          "serialNumberHex": "3dffbb297f61af2c87be0b70c087601cfe088d3f",
+          "notBefore": "2026-10-15T02:08:09+00:00",
+          "notAfter": "2041-10-11T02:08:08+00:00",
+          "signatureAlgorithmOid": "1.2.840.10045.4.3.3"
+        }
+      ],
+      "lifecycle": {
+        "operationalStatus": "active",
+        "activatedAt": "2026-10-15T10:23:16+08:00",
+        "retiredAt": null,
+        "supersededBy": null
+      }
+    },
+    {
+      "oid": "1.3.6.1.4.1.65553.2.2.18",
+      "subjectRfc4514": "CN=Youngdo G6 Timestamp RSA4096 Root,O=Youngdo Technologies Limited,C=GB",
+      "bindingStatus": "verified",
+      "publicKey": {
+        "encoding": "DER SubjectPublicKeyInfo",
+        "algorithm": "RSA",
+        "bits": 4096,
+        "spkiDerBase64": "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2TAZzVoIkt0W3G5Q1/LbfgcSEtEdgKWSlvkOJK3VL9ngrxKTgTYadC8qulJh7x4XgPdpJirBq8XthvUDMZV693wGVc2ulnYucJwjXEjRJtg0UsNClSHveBvOxlbBEywRNWHT+mOMOilJnVwT0RidvEWtB94BMMwIb043oYTKQogsmRzIbaO6Jv9KrroD/5isej9TcZz4ghBxuVVxN2sCS9NO8ed2obcA7I4EojZCeiDeTW+W2YKztb1BZvVWhjXC7sE0ubexUtUb/VaY1LMRRGvrYYVJDJ+eZ7QnKFXPbSsIB469YbMBRiRxzdy9BvKiTKwcM8KrxmoFuiLWJ5Ev7Bx/uF0ezh0RFLDmUkzSWOcmhiLPmkGIp/nv6LmDzLY/Cy9A+fE7a9ynlEZCS92Ky22eyXGEXZ0cHXQgRVS6LkuqC8uvDBq+GRyDQO0TTl4BQv4o1tAIifOpK76eAQRQJln2TcoPcuh54CKdcRzah/IWJ/snKDihx7wCbWOJTa7RcEo46e3qq2lJBfsNF2GWKu/PcVxBGEhVlNQJN8WzeQi/ZDYJZEFbJeC7B8JUxIzzk5YfheDid9rCVInVgFrKM7DG+H+YRSrOsGrEdJbUMYPr+Nb4jhc8VYshXNw9de1I3x4ZB5akUmxllrK35zVxGGwNTlQy6IE9t5zanU/yV18CAwEAAQ==",
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/timestamp-root-rsa4096-01.spki.der",
+        "digest": {
+          "algorithm": "SHA-256",
+          "value": "5fd4d8542db7753b05f7bc2a719c50dc493ae572811450315cca04cacadc0695"
+        },
+        "sha384": "bb82c16ab2ca86d3f56160eeb59d4a978eb2c41a7b3e98d06879ec214c97aea03953fc8cf32d4bb788784b2e11358540"
+      },
+      "keyIdentifier": {
+        "type": "X.509 SubjectKeyIdentifier",
+        "value": "36cb0833b8171fb09d898d0308e2b1ad3844067a",
+        "derivation": "RFC 5280 section 4.2.1.2 method 1; independently recalculated from the public key"
+      },
+      "constraints": {
+        "basicConstraints": {
+          "ca": true,
+          "pathLenConstraint": null
+        },
+        "keyUsage": [
+          "keyCertSign",
+          "cRLSign"
+        ],
+        "encodedExtendedKeyUsage": [],
+        "intendedPurpose": "timestamp",
+        "signatureAlgorithm": "SHA384WithRSA",
+        "statusDistribution": "CRL only; no OCSP",
+        "certificatePolicies": [],
+        "enforcement": "Dedicated issuing-CA EKU and issuance profiles; relying-party trust-store purpose restrictions are deployment controls."
+      },
+      "certificates": [
+        {
+          "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/timestamp-root-rsa4096-01.crt",
+          "pemUri": "https://oid.iks.moe/artifacts/g6/20261015/timestamp-root-rsa4096-01.pem",
+          "sha256": "a30568178547c279060d3afda4ed8706136ec7eea003444b70853b6d1052404e",
+          "sha384": "a28a8d10ba97059db028f0d13336ab6949701936156a1f8eaf09f19603d0751d3682c3ba7bec491e61f569246bf9dd58",
+          "serialNumberHex": "4cd00be662686a2e24c9b25c1d4e7fa32a5609a3",
+          "notBefore": "2026-10-15T02:08:16+00:00",
+          "notAfter": "2041-10-11T02:08:15+00:00",
+          "signatureAlgorithmOid": "1.2.840.113549.1.1.12"
+        }
+      ],
+      "lifecycle": {
+        "operationalStatus": "active",
+        "activatedAt": "2026-10-15T10:23:16+08:00",
+        "retiredAt": null,
+        "supersededBy": null
+      }
     }
   ],
-  "trustAnchorGroups": [],
+  "trustAnchorGroups": [
+    {
+      "oid": "1.3.6.1.4.1.65553.2.5.1.0",
+      "version": 0,
+      "members": [
+        "1.3.6.1.4.1.65553.2.2.14",
+        "1.3.6.1.4.1.65553.2.2.15",
+        "1.3.6.1.4.1.65553.2.2.16",
+        "1.3.6.1.4.1.65553.2.2.17",
+        "1.3.6.1.4.1.65553.2.2.18"
+      ]
+    }
+  ],
   "events": [
     {
       "id": "EVT-2026-0001",
@@ -978,12 +1738,44 @@
       "authorityRef": "youngdo-pki-ra",
       "decisionRef": "ALLOC-2026-0001",
       "summary": "Allocated 1.3.6.1.4.1.65553.2.5 for versioned trust-anchor groups."
+    },
+    {
+      "id": "EVT-2026-1015-G6-POLICY",
+      "type": "policy-adoption",
+      "occurredAt": "2026-10-15T10:23:16+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "decisionRef": "POL-2026-1015-MANAGED-TRUST",
+      "summary": "Adopted managedTrust policy definitions under the recorded single-operator exception."
+    },
+    {
+      "id": "EVT-2026-1015-G6-POLICIES",
+      "type": "allocation",
+      "occurredAt": "2026-10-15T10:23:16+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "decisionRef": "ALLOC-2026-1015-G6-POLICIES",
+      "summary": "Allocated the managedTrust family and ten private certificate-policy identifiers."
+    },
+    {
+      "id": "EVT-2026-1015-G6-ANCHORS",
+      "type": "allocation",
+      "occurredAt": "2026-10-15T10:23:16+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "decisionRef": "ALLOC-2026-1015-G6-ANCHORS",
+      "summary": "Allocated five G6 trust anchors and immutable group version 0 without modifying legacy assignments."
+    },
+    {
+      "id": "EVT-2026-1015-G6-BINDINGS",
+      "type": "trust-anchor-binding-verification",
+      "occurredAt": "2026-10-15T10:23:16+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "decisionRef": "BIND-2026-1015-G6-ANCHORS",
+      "summary": "Verified root SPKI/certificate digests and SKI using independent cryptographic implementations and recorded exact artifacts before activation."
     }
   ],
   "release": {
-    "id": "2026-09-10.1",
+    "id": "2026-10-15.1",
     "status": "candidate",
-    "publishedAt": "2026-09-10T00:00:00+08:00",
+    "publishedAt": "2026-10-15T10:23:16+08:00",
     "signingRequiredForAuthoritativeRelease": true,
     "signature": null
   }

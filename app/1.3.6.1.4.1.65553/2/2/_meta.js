@@ -13,5 +13,10 @@ export default {
     '10': '10 - 2026q1-codesign-e1',
     '11': '11 - 2026q1-smime-e1',
     '12': '12 - g5-iot-ec384',
-    '13': '13 - g5-iot-rsa4096'
+    '13': '13 - g5-iot-rsa4096',
+    '14': '14 - g6-server-ec384',
+    '15': '15 - g6-mail-ec384',
+    '16': '16 - g6-code-rsa4096',
+    '17': '17 - g6-identity-ec384',
+    '18': '18 - g6-timestamp-rsa4096'
 };

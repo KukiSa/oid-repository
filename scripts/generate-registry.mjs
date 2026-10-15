@@ -96,6 +96,74 @@ See the [machine-readable record](/registry/registry.json) for the complete bind
 `
 }
 
+function renderIdentifierPage(node) {
+    const policy = policies.get(node.allocation.governingPolicyRef)
+    return `---
+asIndexPage: true
+---
+
+{/* This file is generated from registry/registry.json. Do not edit it directly. */}
+
+# ${node.oid}: ${node.secondaryIdentifier} – ${node.title}
+
+${node.description}
+
+## Identifier Semantics
+
+This identifier records the stable semantics described above. A document revision or CA generation does not redefine the numeric OID.
+
+For the protocol field, issuance requirements and scope, see [${policy.id}](${policy.documentRoute}).
+
+## Registration Metadata
+
+- **Allocation status:** ${node.allocation.status}
+- **Registration authority:** ${node.allocation.authorityRef}
+- **Decision:** ${node.allocation.decisionRef}
+- **Recorded:** ${formatDate(node.allocation.recordedAt)}
+- **Governing policy:** [${policy.id}](${policy.documentRoute})
+
+See the [registry dataset](/registry/registry.json) for the complete registration record.
+`
+}
+
+function renderGroupVersionPage(node) {
+    const group = registry.trustAnchorGroups.find(record => record.oid === node.oid)
+    const policy = policies.get(node.allocation.governingPolicyRef)
+    const members = group.members.map(oid => {
+        const member = nodes.find(record => record.oid === oid)
+        return `- [${oid} — ${member.title}](${member.route})`
+    }).join('\n')
+    return `---
+asIndexPage: true
+---
+
+{/* This file is generated from registry/registry.json. Do not edit it directly. */}
+
+# ${node.oid}: ${node.title}
+
+${node.description}
+
+## Immutable Group Version
+
+- **Version:** ${group.version}
+- **Member count:** ${group.members.length}
+
+${members}
+
+Membership is immutable for this version. A future membership change requires a new contiguous version; this OID must not be reassigned.
+
+## Registration Metadata
+
+- **Allocation status:** ${node.allocation.status}
+- **Registration authority:** ${node.allocation.authorityRef}
+- **Decision:** ${node.allocation.decisionRef}
+- **Recorded:** ${formatDate(node.allocation.recordedAt)}
+- **Governing policy:** [${policy.id}](${policy.documentRoute})
+
+The machine-readable membership is available in the [registry dataset](/registry/registry.json).
+`
+}
+
 function renderMeta(node) {
     const children = (nodesByParent.get(node.oid) ?? []).sort((a, b) => a.arc - b.arc)
     const entries = children.map(child => `    '${child.arc}': '${child.arc} - ${child.secondaryIdentifier}'`)
@@ -103,13 +171,17 @@ function renderMeta(node) {
 }
 
 for (const node of nodes) {
-    if (node.kind === 'arc') {
+    if (node.kind === 'arc' || node.kind === 'trust-anchor-group') {
         outputs.set(appPathForRoute(node.route), renderArcPage(node))
         if ((nodesByParent.get(node.oid) ?? []).length) {
             outputs.set(appPathForRoute(node.route, '_meta.js'), renderMeta(node))
         }
     } else if (node.kind === 'trust-anchor') {
         outputs.set(appPathForRoute(node.route), renderTrustAnchorPage(node))
+    } else if (node.kind === 'identifier') {
+        outputs.set(appPathForRoute(node.route), renderIdentifierPage(node))
+    } else if (node.kind === 'trust-anchor-group-version') {
+        outputs.set(appPathForRoute(node.route), renderGroupVersionPage(node))
     }
 }
 

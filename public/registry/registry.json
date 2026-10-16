@@ -378,6 +378,31 @@
       ],
       "reviewException": "Single-operator exception under POL-ROOT-2.0.0 section 5: the repository operator explicitly authorized G6 PKI creation and OID registration in the maintenance request of 2026-10-15. The same accountable operator exercises the naming-authority and delegated-PKI-RA roles. This record does not assert approval by a second person. Bouncy Castle issuance and separate cryptography/OpenSSL checks verify the published key bindings.",
       "publicRationale": "Activate the five root bindings after validating exact SPKI DER, certificate signatures, key sizes/curves, SKI, names, constraints and certificate artifacts exported from the running EJBCA instance."
+    },
+    {
+      "id": "BIND-2026-1016-G6-CROSS-CERTIFICATES",
+      "type": "trust-anchor-certificate-artifact-verification",
+      "status": "approved",
+      "decidedAt": "2026-10-16T19:28:58+08:00",
+      "recordedAt": "2026-10-16T19:28:58+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "policyRef": "POL-TA-2.0.0",
+      "affectedOids": [
+        "1.3.6.1.4.1.65553.2.2.14",
+        "1.3.6.1.4.1.65553.2.2.15",
+        "1.3.6.1.4.1.65553.2.2.16",
+        "1.3.6.1.4.1.65553.2.2.17",
+        "1.3.6.1.4.1.65553.2.2.18"
+      ],
+      "approvals": [
+        {
+          "authorityRef": "youngdo-pki-ra",
+          "role": "delegated-registration-and-policy-authority",
+          "approvedAt": "2026-10-16T19:28:58+08:00"
+        }
+      ],
+      "reviewException": "Single-operator exception under POL-ROOT-2.0.0 section 5: the repository operator explicitly selected direct issuance of cross-certificates by Youngdo Root CA on 2026-10-16. The same accountable operator exercises the naming-authority and delegated-PKI-RA roles. No second person's approval is asserted. Native EJBCA self-signed request verification, separate cryptography extension/signature checks and OpenSSL chain verification were completed before this publication.",
+      "publicRationale": "Append five cross-certificate artifacts for the exact previously registered G6 root subjects and public keys. Preserve their original self-signed certificates, OID identity, lifecycle and immutable group version. Cross-certificates use SHA-384/RSA, pathLen=1, CRL-only status and expire no later than Youngdo Root CA on 2040-02-12."
     }
   ],
   "nodes": [
@@ -1457,6 +1482,26 @@
           "notBefore": "2026-10-15T02:07:48+00:00",
           "notAfter": "2041-10-11T02:07:47+00:00",
           "signatureAlgorithmOid": "1.2.840.10045.4.3.3"
+        },
+        {
+          "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/server-root-ec384-01-by-youngdo-root.crt",
+          "pemUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/server-root-ec384-01-by-youngdo-root.pem",
+          "sha256": "0217a7278fb0ca878d36c1ef674b81925c4b1fa8446f85845c83157e695c5d5c",
+          "sha384": "dc9a181331a8dc5eb45d898c3c3435381e7374ec9049aa80ff971e9c1b58ad79fcd713ed52ba76a22ba4c3b79e9479ad",
+          "serialNumberHex": "7dcaefca1026a2da3f8118c53195b8e7e402d87a",
+          "notBefore": "2026-10-16T11:15:33+00:00",
+          "notAfter": "2040-02-12T15:44:58+00:00",
+          "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+          "certificateRole": "cross-certificate",
+          "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+          "pathLenConstraint": 1,
+          "aiaCaIssuers": [
+            "http://aia.youngdo.net/r0.crt"
+          ],
+          "crlDistributionPoints": [
+            "http://crl.youngdo.net/r0.crl"
+          ],
+          "ocsp": []
         }
       ],
       "lifecycle": {
@@ -1514,6 +1559,26 @@
           "notBefore": "2026-10-15T02:07:50+00:00",
           "notAfter": "2041-10-11T02:07:49+00:00",
           "signatureAlgorithmOid": "1.2.840.10045.4.3.3"
+        },
+        {
+          "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/mail-root-ec384-01-by-youngdo-root.crt",
+          "pemUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/mail-root-ec384-01-by-youngdo-root.pem",
+          "sha256": "78d30d4ae75a447a85c92812a1ceef4d346991e7467d063ad143182cd6160372",
+          "sha384": "e335dc1cca14fb7a5ed16ea797f1463823e242edc13fd8a2c831b9c83a272d7f7b3f9721debd4b695088350021f8194b",
+          "serialNumberHex": "5792c70dcd114c5d90b1377d3f52c6f1d977c702",
+          "notBefore": "2026-10-16T11:15:33+00:00",
+          "notAfter": "2040-02-12T15:44:58+00:00",
+          "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+          "certificateRole": "cross-certificate",
+          "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+          "pathLenConstraint": 1,
+          "aiaCaIssuers": [
+            "http://aia.youngdo.net/r0.crt"
+          ],
+          "crlDistributionPoints": [
+            "http://crl.youngdo.net/r0.crl"
+          ],
+          "ocsp": []
         }
       ],
       "lifecycle": {
@@ -1570,6 +1635,26 @@
           "notBefore": "2026-10-15T02:08:08+00:00",
           "notAfter": "2041-10-11T02:08:07+00:00",
           "signatureAlgorithmOid": "1.2.840.113549.1.1.12"
+        },
+        {
+          "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/code-root-rsa4096-01-by-youngdo-root.crt",
+          "pemUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/code-root-rsa4096-01-by-youngdo-root.pem",
+          "sha256": "ec91f6cf74121a8eb6423c266794ae66fb3766138839b6c476bb9eb83e1e90aa",
+          "sha384": "ffcf39a9ddb4b7e8df420ab6b05879b78e9874f4ff2ffb629578ac65ff25f9c66151d21001efada83d85fcbfc031c6c2",
+          "serialNumberHex": "6b3ee88bbaf04b70a166c9964081ed8c21acb786",
+          "notBefore": "2026-10-16T11:15:33+00:00",
+          "notAfter": "2040-02-12T15:44:58+00:00",
+          "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+          "certificateRole": "cross-certificate",
+          "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+          "pathLenConstraint": 1,
+          "aiaCaIssuers": [
+            "http://aia.youngdo.net/r0.crt"
+          ],
+          "crlDistributionPoints": [
+            "http://crl.youngdo.net/r0.crl"
+          ],
+          "ocsp": []
         }
       ],
       "lifecycle": {
@@ -1627,6 +1712,26 @@
           "notBefore": "2026-10-15T02:08:09+00:00",
           "notAfter": "2041-10-11T02:08:08+00:00",
           "signatureAlgorithmOid": "1.2.840.10045.4.3.3"
+        },
+        {
+          "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/identity-root-ec384-01-by-youngdo-root.crt",
+          "pemUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/identity-root-ec384-01-by-youngdo-root.pem",
+          "sha256": "63810d73721c823d3eedb592dc0fced80ba532baabf2ecc023e69ef53c89bbfc",
+          "sha384": "53a4806bfd48fe14a951bd9b39835b053ba29882b1caba6ce71141b48b4fceb536c56be0e57774c4e289bd256d225159",
+          "serialNumberHex": "3f602087bb7d0813da0a465599175384a959f37f",
+          "notBefore": "2026-10-16T11:15:34+00:00",
+          "notAfter": "2040-02-12T15:44:58+00:00",
+          "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+          "certificateRole": "cross-certificate",
+          "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+          "pathLenConstraint": 1,
+          "aiaCaIssuers": [
+            "http://aia.youngdo.net/r0.crt"
+          ],
+          "crlDistributionPoints": [
+            "http://crl.youngdo.net/r0.crl"
+          ],
+          "ocsp": []
         }
       ],
       "lifecycle": {
@@ -1683,6 +1788,26 @@
           "notBefore": "2026-10-15T02:08:16+00:00",
           "notAfter": "2041-10-11T02:08:15+00:00",
           "signatureAlgorithmOid": "1.2.840.113549.1.1.12"
+        },
+        {
+          "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/timestamp-root-rsa4096-01-by-youngdo-root.crt",
+          "pemUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/timestamp-root-rsa4096-01-by-youngdo-root.pem",
+          "sha256": "6dc7060bd3f7688c8cc5e19eea6a3aaa8fd0e4e57ef7b3a9d39d34a43132018e",
+          "sha384": "dd5d7eaa7ed138113227fba963d37eb4d0df68c44c1b0aa5e21d559b1868106379844a1ee9e391b33edbf2d423189507",
+          "serialNumberHex": "66877526d82f2039aea4cd60dfadc0ec3a0f4912",
+          "notBefore": "2026-10-16T11:15:34+00:00",
+          "notAfter": "2040-02-12T15:44:58+00:00",
+          "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+          "certificateRole": "cross-certificate",
+          "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+          "pathLenConstraint": 1,
+          "aiaCaIssuers": [
+            "http://aia.youngdo.net/r0.crt"
+          ],
+          "crlDistributionPoints": [
+            "http://crl.youngdo.net/r0.crl"
+          ],
+          "ocsp": []
         }
       ],
       "lifecycle": {
@@ -1770,12 +1895,20 @@
       "authorityRef": "youngdo-pki-ra",
       "decisionRef": "BIND-2026-1015-G6-ANCHORS",
       "summary": "Verified root SPKI/certificate digests and SKI using independent cryptographic implementations and recorded exact artifacts before activation."
+    },
+    {
+      "id": "EVT-2026-1016-G6-CROSS-CERTIFICATES",
+      "type": "trust-anchor-certificate-artifact-verification",
+      "occurredAt": "2026-10-16T19:28:58+08:00",
+      "authorityRef": "youngdo-pki-ra",
+      "decisionRef": "BIND-2026-1016-G6-CROSS-CERTIFICATES",
+      "summary": "Appended five verified cross-certificates with unchanged SPKI and SKI, and published six modern and six old-root-compatible issuing-CA chains. No OID, trust-anchor identity or effective policy is reassigned."
     }
   ],
   "release": {
-    "id": "2026-10-15.1",
+    "id": "2026-10-16.1",
     "status": "candidate",
-    "publishedAt": "2026-10-15T10:23:16+08:00",
+    "publishedAt": "2026-10-16T19:28:58+08:00",
     "signingRequiredForAuthoritativeRelease": true,
     "signature": null
   }

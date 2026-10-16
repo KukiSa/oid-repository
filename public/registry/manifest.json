@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "releaseId": "2026-10-15.1",
+  "releaseId": "2026-10-16.1",
   "releaseStatus": "candidate",
-  "publishedAt": "2026-10-15T10:23:16+08:00",
+  "publishedAt": "2026-10-16T19:28:58+08:00",
   "signatureRequiredForAuthoritativeRelease": true,
   "artifacts": [
     {
       "path": "registry.json",
-      "sha256": "8f488d09ecbaa4ce7a94fb777a4c358623511a2630cb56bd7c9a78c7748d4743",
-      "bytes": 69832
+      "sha256": "966d366d51bb2acf7fb9cb86101ee7d0fce1d8cbcf873cc7e4301c03b7f8cc5e",
+      "bytes": 77392
     },
     {
       "path": "registry.csv",

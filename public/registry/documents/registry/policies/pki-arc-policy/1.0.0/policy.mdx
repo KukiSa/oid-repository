@@ -1,0 +1,75 @@
+# 1.3.6.1.4.1.65553.2.0: policy – Youngdo Technologies Limited PKI Arc Policy
+
+## Part 0: Metadata
+
+**Base Arc:** `1.3.6.1.4.1.65553.2` (pki)
+
+**Current Node:** `1.3.6.1.4.1.65553.2.0` (policy)
+
+**Document Identifier:** `1.3.6.1.4.1.65553.2.0` (policy)
+
+**Version:** 1.0.0
+
+**Published Date:** April 16, 2026
+
+### Preamble & Definitions
+In this document, "Sub-arc" refers to a path that permits the inclusion of further subordinate branches; "Child Node" refers to an endpoint that contains no further subordinate branches.
+
+* This node is utilized to describe the definition of the current arc;
+* This node is utilized to describe the metadata of the current arc;
+* This node is utilized to describe the policies governing the child nodes of the current arc;
+* This node is utilized to describe the policies governing the sub-arcs of the current arc;
+* This document constitutes the node itself.
+
+---
+
+## Part 1: Global Policy
+
+**Scope:** The current arc itself, and any level of child nodes and sub-arcs residing under the current arc.
+
+**a. Definition of the Current Arc:**
+
+This arc is designated for the public key infrastructure (PKI) and trust services operated by Youngdo Technologies Limited. Management authority for this arc is delegated from the Signaliks Private Enterprise Number (PEN).
+
+**b. Metadata of the Current Arc:**
+
+The designated contact person is Ayako Hu. The prescribed method of communication is via email at `pki@youngdo.net`.
+
+**c. Policy for Child Nodes at Any Level under the Current Arc:**
+
+Allocation and usage are strictly prohibited unless explicitly described in a formalized policy document.
+
+**d. Policy for Sub-arcs at Any Level under the Current Arc:**
+
+Same as above.
+
+**e. Policy for Policy Documents at Any Level under the Current Arc:**
+
+Such documents shall not contravene the provisions set forth by their direct superior policy or the Global Policy document of the Signaliks Base Arc (`1.3.6.1.4.1.65553.0`).
+
+**f. Supplementary Provisions:**
+* Any sub-arc at any level under the current arc must not terminate with `.0`.
+* For any child node at any level under the current arc, a designation terminating in `.0` shall be restricted exclusively to the following purposes: describing the definition of the residing arc, describing the metadata of the residing arc, describing the allocation policy for the child nodes within the residing arc, and describing the allocation policy for the sub-arcs within the residing arc.
+
+---
+
+## Part 2: Local Policy
+
+**Scope:** The immediate child nodes and immediate sub-arcs of the current arc.
+
+**a. Allocation of Immediate Sub-arcs under the Current Arc:**
+
+* **`.1 – policies`:** This arc is designated to identify the Certificate Policy (CP) and Certification Practice Statement (CPS) of Youngdo Technologies Limited Trust Services.
+* **`.2 – authorities`:** This arc is designated for Trust Anchor IDs. It serves as the parent arc for all "trust anchors" (CA keypairs), which can be utilized in the Trust Anchor Identifiers and Merkle Tree Certificates internet draft standards. OIDs in this arc are assigned approximately chronologically by issuance date.
+* **`.3 – validation`:** This arc is designated to identify the validation level of Youngdo Technologies Limited Trust Services.
+* **`.4 – private`:** This arc is designated for the private use of Youngdo Technologies Limited.
+
+Except for the specified allocations above, no other sub-arc allocations are granted at the current level.
+
+**b. Allocation of Immediate Child Nodes under the Current Arc:**
+
+* **`.0 – policy`:** Youngdo Technologies Limited PKI Arc Policy.
+
+Except for the specified allocation above, no other child node allocations are granted at the current level.
+
+*End of Document.*

@@ -5,6 +5,7 @@ import nextra from 'nextra'
  */
 const nextConfig = {
     output: 'export',
+    trailingSlash: true,
     images: {
         unoptimized: true
     },

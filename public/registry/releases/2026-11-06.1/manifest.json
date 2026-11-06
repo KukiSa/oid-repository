@@ -1,0 +1,874 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "2026-11-06.1",
+  "releaseStatus": "candidate",
+  "publishedAt": "2026-11-06T00:00:00+08:00",
+  "signatureRequiredForAuthoritativeRelease": true,
+  "signing": null,
+  "artifacts": [
+    {
+      "path": "documents/registry/instruments/DLG-2026-0001.md",
+      "scope": "package",
+      "sha256": "3bf198c8797869e3cc75c261f0521f585eed742e6f705b79f56c3deb138fc729",
+      "bytes": 1523
+    },
+    {
+      "path": "documents/registry/instruments/REG-G6-20261015.md",
+      "scope": "package",
+      "sha256": "8304a3075aa2945ef5aa4462d2bc6a0be530d99c4dc7d97fefbc0e17908a8e62",
+      "bytes": 1467
+    },
+    {
+      "path": "documents/registry/instruments/REG-G6-20261016-R2.md",
+      "scope": "package",
+      "sha256": "3854b5f7021fe7e183f1b38d0e68edd886a023ff95ab0dc9d15a3ab90d9366a3",
+      "bytes": 2750
+    },
+    {
+      "path": "documents/registry/instruments/REG-G6-20261016.md",
+      "scope": "package",
+      "sha256": "62e34f22156723d752ee76e678a89fc6ea08103d6fdecdbc0682307e75061a39",
+      "bytes": 2376
+    },
+    {
+      "path": "documents/registry/policies/archive/README.md",
+      "scope": "package",
+      "sha256": "af10a3a9cde58c561f11b0e29a284f3ae2786fd9b1b1678b941916065cfe0296",
+      "bytes": 1354
+    },
+    {
+      "path": "documents/registry/policies/managed-trust-certificate-policies/1.0.0/policy.mdx",
+      "scope": "package",
+      "sha256": "f5990b8d8f6155fdc656b0e6d5c8783b01b215d98256267f72cf1f5501d3a2fc",
+      "bytes": 4775
+    },
+    {
+      "path": "documents/registry/policies/pki-arc-policy/1.0.0/policy.mdx",
+      "scope": "package",
+      "sha256": "e7135f6de5043e54a1fede4e624371c81ca7613c92365500663085aa3a7d3a28",
+      "bytes": 3758
+    },
+    {
+      "path": "documents/registry/policies/pki-arc-policy/2.0.0/policy.mdx",
+      "scope": "package",
+      "sha256": "7819759c22a8cf4f312411d1cbaa5da0af9e5b5b8a90fbab35637995abf35ca4",
+      "bytes": 3392
+    },
+    {
+      "path": "documents/registry/policies/root-registry-policy/1.0.1/policy.mdx",
+      "scope": "package",
+      "sha256": "bec3ec0f310f12a355edf74ed9283c874b3b49d95769e6702f8cc59e541c8207",
+      "bytes": 3502
+    },
+    {
+      "path": "documents/registry/policies/root-registry-policy/2.0.0/policy.mdx",
+      "scope": "package",
+      "sha256": "a0244c752afb1705f0b1ecb9d7b8d23ed1434483976c66d59caf8e6498494cf4",
+      "bytes": 5840
+    },
+    {
+      "path": "documents/registry/policies/trust-anchor-arc-policy/1.0.0/policy.mdx",
+      "scope": "package",
+      "sha256": "1efef6723dd8afe7eab414deecd1ebc26663c7e584c31968659522f136ce7c8a",
+      "bytes": 5179
+    },
+    {
+      "path": "documents/registry/policies/trust-anchor-arc-policy/2.0.0/policy.mdx",
+      "scope": "package",
+      "sha256": "4a7b348757fdf3d8fb55976e99c5a968376094851dc28d46635db2e905464dd3",
+      "bytes": 3643
+    },
+    {
+      "path": "registry.csv",
+      "scope": "package",
+      "sha256": "c25fedb00a4e398bf6cc64dd8e174372d4e33d8b3b3237ba1e878fd7e2ac545e",
+      "bytes": 8055
+    },
+    {
+      "path": "registry.json",
+      "scope": "package",
+      "sha256": "a55b899403477aada2eecd84540bc0327ac363fcec759561e004db3394d4c8ce",
+      "bytes": 90752
+    },
+    {
+      "path": "schema/manifest.schema.json",
+      "scope": "package",
+      "sha256": "90195effd4d4be6d1a25d12312fbc643e206a4502ce5aed088f8b5d3cf3aff5d",
+      "bytes": 1524
+    },
+    {
+      "path": "schema/registry.schema.json",
+      "scope": "package",
+      "sha256": "d4df07ea1bb9361cf4b1de8862bcec136ea9b7762c9547d3c91e4e8874df6989",
+      "bytes": 20601
+    },
+    {
+      "path": "artifacts/g6/20261015/code-root-rsa4096-01.crt",
+      "scope": "public",
+      "sha256": "b0c2d9b2fd913af3a2c2f1a318b3b2fcab139f8317e165190d48154760b98b0e",
+      "bytes": 1465
+    },
+    {
+      "path": "artifacts/g6/20261015/code-root-rsa4096-01.pem",
+      "scope": "public",
+      "sha256": "c625e94c1447947469ada0e9bd7bc67b97c32f48c4c07616945987d29c87c645",
+      "bytes": 2041
+    },
+    {
+      "path": "artifacts/g6/20261015/code-root-rsa4096-01.spki.der",
+      "scope": "public",
+      "sha256": "ee838968d524f8b49e18f525c0d7ae8e6792b18580bf571a302f8700d21b0e96",
+      "bytes": 550
+    },
+    {
+      "path": "artifacts/g6/20261015/code-signing-issuing-rsa4096-2026-01.crt",
+      "scope": "public",
+      "sha256": "8c788cecc13eae48479eba10ed42a72df4c190cd386e7f6a2045b658cbc5f117",
+      "bytes": 1673
+    },
+    {
+      "path": "artifacts/g6/20261015/code-signing-issuing-rsa4096-2026-01.pem",
+      "scope": "public",
+      "sha256": "b9cd093808582bbe3c413daad550d1e4ee29b481875438437e89873fc5b8efa0",
+      "bytes": 2321
+    },
+    {
+      "path": "artifacts/g6/20261015/code-signing-issuing-rsa4096-2026-01.spki.der",
+      "scope": "public",
+      "sha256": "806af7051a75962e5bc2fcf84bdfaf988b186ad283982269125a76cfda898f62",
+      "bytes": 550
+    },
+    {
+      "path": "artifacts/g6/20261015/identity-device-issuing-ec384-2026-01.crt",
+      "scope": "public",
+      "sha256": "ea51221fd042a6dbd8a8823a857a2a37699c32c6aebf0b2321e47713d24b00d6",
+      "bytes": 834
+    },
+    {
+      "path": "artifacts/g6/20261015/identity-device-issuing-ec384-2026-01.pem",
+      "scope": "public",
+      "sha256": "9f0bdfe784a663dd8edec136ab532c8f62897225c58ab0c92efc090752db9594",
+      "bytes": 1184
+    },
+    {
+      "path": "artifacts/g6/20261015/identity-device-issuing-ec384-2026-01.spki.der",
+      "scope": "public",
+      "sha256": "2e7c37a253457e284b01bc55dfa81bde06d9efe0c1d274a17e81c9aa226fba08",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/g6/20261015/identity-person-issuing-ec384-2026-01.crt",
+      "scope": "public",
+      "sha256": "90a1dbb15dfb49d57c3bd81c7106c08dc5c5c0367d6b84f171787961f23bd28b",
+      "bytes": 833
+    },
+    {
+      "path": "artifacts/g6/20261015/identity-person-issuing-ec384-2026-01.pem",
+      "scope": "public",
+      "sha256": "97acd4da48a728c9575708679a484c875122249fc91bbbfc80eb05c5fff9fdb1",
+      "bytes": 1184
+    },
+    {
+      "path": "artifacts/g6/20261015/identity-person-issuing-ec384-2026-01.spki.der",
+      "scope": "public",
+      "sha256": "7aa86e34e7b3c47de40aa329cdf91bfa54952b682e6acea687f8bab4fc4ae2ff",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/g6/20261015/identity-root-ec384-01.crt",
+      "scope": "public",
+      "sha256": "a5005cb1fcc64f2b69949556e9d5aee0debfb5df322ad1ed0e0a78e28a6ef669",
+      "bytes": 622
+    },
+    {
+      "path": "artifacts/g6/20261015/identity-root-ec384-01.pem",
+      "scope": "public",
+      "sha256": "fc33d986d83efd2bc27d983378ff25019b9fa980a248bc3948b840640125dbdc",
+      "bytes": 899
+    },
+    {
+      "path": "artifacts/g6/20261015/identity-root-ec384-01.spki.der",
+      "scope": "public",
+      "sha256": "9d2e1a6cdb82b1f93f1f4fc30d1743fda321483feabe38df9e4f1644c095f748",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/g6/20261015/mail-root-ec384-01.crt",
+      "scope": "public",
+      "sha256": "c7af7211b4ffaaf8879cc23dd42ca83e6bbc716647996171c9f915dd47a1cc39",
+      "bytes": 615
+    },
+    {
+      "path": "artifacts/g6/20261015/mail-root-ec384-01.pem",
+      "scope": "public",
+      "sha256": "b5f249798007d743d695b5b95d31f771de8dcfc8bafaa99602b31ebcf4f0755a",
+      "bytes": 887
+    },
+    {
+      "path": "artifacts/g6/20261015/mail-root-ec384-01.spki.der",
+      "scope": "public",
+      "sha256": "6f6387b8ccacbe561b451e2f0448e86866db95bd25f416a8da2e6ed259273c77",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/g6/20261015/server-root-ec384-01.crt",
+      "scope": "public",
+      "sha256": "8b90393b903ec762ab85bc83b158b28382ad24399230ebb2b01a4fb38c7257b9",
+      "bytes": 618
+    },
+    {
+      "path": "artifacts/g6/20261015/server-root-ec384-01.pem",
+      "scope": "public",
+      "sha256": "6087d21215806f766f96ff2af1654c7b8b114997cd4b6238f36fc715cdbfa2fb",
+      "bytes": 891
+    },
+    {
+      "path": "artifacts/g6/20261015/server-root-ec384-01.spki.der",
+      "scope": "public",
+      "sha256": "48cf63ee30a3757f3e2096741b4639bbc06eab1316288dc820bb00a7a0ca6574",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/g6/20261015/smime-issuing-ec384-2026-01.crt",
+      "scope": "public",
+      "sha256": "47960735855f4e7edb9665274d8ce16b6a66081dff3d87efb29de79425c3e033",
+      "bytes": 858
+    },
+    {
+      "path": "artifacts/g6/20261015/smime-issuing-ec384-2026-01.pem",
+      "scope": "public",
+      "sha256": "acabcb5c9642aa1600a682d878af542b7c9165d35980dc8f2f75d2e38053bebe",
+      "bytes": 1216
+    },
+    {
+      "path": "artifacts/g6/20261015/smime-issuing-ec384-2026-01.spki.der",
+      "scope": "public",
+      "sha256": "fec7e70b886256d1d4f6b0faad01a0c26280c943d6f0167d2b5321947edc93a1",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/g6/20261015/timestamp-issuing-rsa4096-2026-01.crt",
+      "scope": "public",
+      "sha256": "8c83de7edf92665c728bf27e797532a4622bcb7689c404c178c65809869269b8",
+      "bytes": 1678
+    },
+    {
+      "path": "artifacts/g6/20261015/timestamp-issuing-rsa4096-2026-01.pem",
+      "scope": "public",
+      "sha256": "e4c18e17dc2b12b3a34b24335066b612e1cc4d2c33e9e94b3e7238b55ab328b0",
+      "bytes": 2329
+    },
+    {
+      "path": "artifacts/g6/20261015/timestamp-issuing-rsa4096-2026-01.spki.der",
+      "scope": "public",
+      "sha256": "1c97cb9b96cb66d6f2fd1e783360c62da80cf8e92fc55371ceb09716f8600c41",
+      "bytes": 550
+    },
+    {
+      "path": "artifacts/g6/20261015/timestamp-root-rsa4096-01.crt",
+      "scope": "public",
+      "sha256": "a30568178547c279060d3afda4ed8706136ec7eea003444b70853b6d1052404e",
+      "bytes": 1461
+    },
+    {
+      "path": "artifacts/g6/20261015/timestamp-root-rsa4096-01.pem",
+      "scope": "public",
+      "sha256": "49218d67514ce37bb541f1ca933b4570f45a6b90d33f9dc4256becac3bb76dc9",
+      "bytes": 2033
+    },
+    {
+      "path": "artifacts/g6/20261015/timestamp-root-rsa4096-01.spki.der",
+      "scope": "public",
+      "sha256": "5fd4d8542db7753b05f7bc2a719c50dc493ae572811450315cca04cacadc0695",
+      "bytes": 550
+    },
+    {
+      "path": "artifacts/g6/20261015/tls-issuing-ec384-2026-01.crt",
+      "scope": "public",
+      "sha256": "3a8ea96f8672955cdd32590878c339d05207765edbb95b325d434db9569fec62",
+      "bytes": 831
+    },
+    {
+      "path": "artifacts/g6/20261015/tls-issuing-ec384-2026-01.pem",
+      "scope": "public",
+      "sha256": "4d911e5b59924ce3065869cc6c2e459345cb95291b3029726b355f7e848f3a21",
+      "bytes": 1180
+    },
+    {
+      "path": "artifacts/g6/20261015/tls-issuing-ec384-2026-01.spki.der",
+      "scope": "public",
+      "sha256": "3187bb869f474646948d08ead0054fca2f2953283ad05016b3469a97243d06b5",
+      "bytes": 120
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/code-signing-issuing-rsa4096-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "122a8b1a54504117f6245fcabf4041130cb93b224a9b1e2c8c11a4520f159ffd",
+      "bytes": 6614
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/code-signing-issuing-rsa4096-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "a6f1e27d82643670c4a4e3595fb168a5eb1d8c3b6bc73a80603d6f8edc7c47ba",
+      "bytes": 4553
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/code-signing-issuing-rsa4096-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "01ed4faee3dd56e879fad5addaa4b2fb7a6b1a121338264c9b70971ca737e8fa",
+      "bytes": 4317
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/identity-device-issuing-ec384-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "34a338c4097603352b7aea64383c08def63879e7f7fb4f341bde5d99205c6236",
+      "bytes": 4892
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/identity-device-issuing-ec384-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "a2a6bb35695daa98d91619a73552537971427b20a32ef9a3c293ff28027f1be7",
+      "bytes": 2831
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/identity-device-issuing-ec384-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "eb8bf0925dd05304cf36d8c6aa0097fb7fd800b86b61f649a038796b2d92e3f2",
+      "bytes": 2039
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/identity-person-issuing-ec384-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "fe83849f5474a6da3ed01177069263e69daa82a171910c386d43dffa03f3258e",
+      "bytes": 4892
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/identity-person-issuing-ec384-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "980fb986e4368ef04a110ed45c6abb9775ef6d16d587ab94639dddedb3d0e7f2",
+      "bytes": 2831
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/identity-person-issuing-ec384-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "717f2d233a413a8134690eb65b4b0b6e417c3e0e61c96cdea9903c46afc93685",
+      "bytes": 2039
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/smime-issuing-ec384-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "8645e4729b2294bce11f0716bc5b3ed2479c4cbebe7152383cf79d86ee5ca379",
+      "bytes": 4924
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/smime-issuing-ec384-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "512f573f5d965a06ad90129f64cb36afd4be7bc3db125c8254d05e300c4a03e9",
+      "bytes": 2863
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/smime-issuing-ec384-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "990cb555309c0212a706046005f312ad32de99a7a9d075a1606b06fec19b6da1",
+      "bytes": 2059
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/timestamp-issuing-rsa4096-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "65fe33191c71c7ba29d0780bc741386f9f1ea837d7289b8da9360f7b4f73a790",
+      "bytes": 6618
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/timestamp-issuing-rsa4096-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "dee9c66ecf110924a9d237469946a0bbcd80016fefa7924ffce40d704f85c5dd",
+      "bytes": 4557
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/timestamp-issuing-rsa4096-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "ec3be5526090c75c7820143162ce7cbde040981ea008c3795f1ed0c876d22ccb",
+      "bytes": 4317
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/tls-issuing-ec384-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "1f99e23f49d85b7bad31ca203288af5580c1443759a6d5a1e27f44e689a53174",
+      "bytes": 4892
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/tls-issuing-ec384-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "6cf08de6d0402d32de857e0e580a09fc5532fb0a2c14f26f7abc7a670029197e",
+      "bytes": 2831
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/chains/tls-issuing-ec384-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "f7ca2545683cbea7f981a65c666d19e4e2292515876556f9ca07a53f4f892c56",
+      "bytes": 2027
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/code-root-rsa4096-01.crl",
+      "scope": "public",
+      "sha256": "02eec5c49e4f47526534938bbc4efd4b7de90e89dc3d2875093c776023280414",
+      "bytes": 736
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/code-signing-issuing-rsa4096-2026-01.crl",
+      "scope": "public",
+      "sha256": "8440d9c465222c11354289473f78cb28d9a02ac3f27c17cc62cc70ca13a5e0e2",
+      "bytes": 740
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/identity-device-issuing-ec384-2026-01.crl",
+      "scope": "public",
+      "sha256": "4406d6fd56a43bd19178c5518ae8c2266885ec2f2dbf6a770fc8808922c3a293",
+      "bytes": 323
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/identity-person-issuing-ec384-2026-01.crl",
+      "scope": "public",
+      "sha256": "485029bed62dd1b4720535c545d82cbaf1231622b70d03c34917931e240b2386",
+      "bytes": 323
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/identity-root-ec384-01.crl",
+      "scope": "public",
+      "sha256": "02617fbf68717bd058e9311ef442c2ff12ba8b8abf915125d68eeabbb4ad397c",
+      "bytes": 321
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/mail-root-ec384-01.crl",
+      "scope": "public",
+      "sha256": "7ec2c924800686b42dc37a1c00433e9a1a529995ad5f76808b845ac2adddc35f",
+      "bytes": 317
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/server-root-ec384-01.crl",
+      "scope": "public",
+      "sha256": "b0e6f2c90ba2c793df8ce5e58445ee17351940de63be4398b107947bfe53f0d1",
+      "bytes": 319
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/smime-issuing-ec384-2026-01.crl",
+      "scope": "public",
+      "sha256": "256e8827005730a1d92fc618bd47cba1095a06746b8d7192cb85c5d2f13343c2",
+      "bytes": 315
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/timestamp-issuing-rsa4096-2026-01.crl",
+      "scope": "public",
+      "sha256": "0db924dc4f9b4028657ca7d8ad071d15bc78995c80ac57e32afe342f047eb520",
+      "bytes": 737
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/timestamp-root-rsa4096-01.crl",
+      "scope": "public",
+      "sha256": "5842c4c25c8d6048a747ebe5947f77060d84854235117424cf93a6ce111ab830",
+      "bytes": 734
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/crls/tls-issuing-ec384-2026-01.crl",
+      "scope": "public",
+      "sha256": "d8106cad3074367886ee0418d08317afa22e42e84c14b9528b89b815ee2d48da",
+      "bytes": 313
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/cross/code-root-rsa4096-01-by-youngdo-root.crt",
+      "scope": "public",
+      "sha256": "1810622a8dd513e49a0e657624d6eb9098d951ad77aacd4340eabf0f2f5c2c6c",
+      "bytes": 1607
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/cross/code-root-rsa4096-01-by-youngdo-root.pem",
+      "scope": "public",
+      "sha256": "b78e2520ea9e35b0fafb1c231b44ba1b0234910419438b6674eee1c1efc758c6",
+      "bytes": 2232
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/cross/identity-root-ec384-01-by-youngdo-root.crt",
+      "scope": "public",
+      "sha256": "843a93ea9d6fe0afde30e7c8199d7c2ebc28834761914cf2bf46dc3cb103165e",
+      "bytes": 1175
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/cross/identity-root-ec384-01-by-youngdo-root.pem",
+      "scope": "public",
+      "sha256": "e4156287b99d014f96cb99a57a0b0985b63c4486d6e6e80fd5cfa79b9f3d8f49",
+      "bytes": 1647
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/cross/mail-root-ec384-01-by-youngdo-root.crt",
+      "scope": "public",
+      "sha256": "ec42af3396fd0915faf24514c9f4e653337b553f848f71bb67a103ec5bf55bea",
+      "bytes": 1175
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/cross/mail-root-ec384-01-by-youngdo-root.pem",
+      "scope": "public",
+      "sha256": "302dd684cb177198c7308ac37da25bb75c06200624115b1091e18fc5970f4484",
+      "bytes": 1647
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/cross/server-root-ec384-01-by-youngdo-root.crt",
+      "scope": "public",
+      "sha256": "c94fa00b3a9e44f0002485abe9ba84507aa9ec79144c2be41fb726cbf52f7ada",
+      "bytes": 1177
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/cross/server-root-ec384-01-by-youngdo-root.pem",
+      "scope": "public",
+      "sha256": "5a7ceaddbd8ddc3e36782adc001793810b2bc0e248e485b7697aa33745bb9a2e",
+      "bytes": 1651
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/cross/timestamp-root-rsa4096-01-by-youngdo-root.crt",
+      "scope": "public",
+      "sha256": "793bf1586e63e871de62c9ccb50089c387a2f2355bd7a4d46da397ee12f92407",
+      "bytes": 1605
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/cross/timestamp-root-rsa4096-01-by-youngdo-root.pem",
+      "scope": "public",
+      "sha256": "ee797613f163ae88faa47c82cee141cfbe14c0ac8e4413e8de8b1bbed5caaa07",
+      "bytes": 2228
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/g6-cross-certificates.pem",
+      "scope": "public",
+      "sha256": "bf3ff783f84300c6523430a44d362c90fb617f57e953161aad4b83a92ed98dba",
+      "bytes": 9405
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/g6-self-signed-roots.pem",
+      "scope": "public",
+      "sha256": "29c4faa8bbdb54caf47fe4849eb0ca30fb0a2a0faa45b2ba887161dbf2ac243e",
+      "bytes": 6529
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/code-signing-issuing-rsa4096-2026-01.crt",
+      "scope": "public",
+      "sha256": "8c788cecc13eae48479eba10ed42a72df4c190cd386e7f6a2045b658cbc5f117",
+      "bytes": 1673
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/code-signing-issuing-rsa4096-2026-01.pem",
+      "scope": "public",
+      "sha256": "b9cd093808582bbe3c413daad550d1e4ee29b481875438437e89873fc5b8efa0",
+      "bytes": 2321
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/identity-device-issuing-ec384-2026-01.crt",
+      "scope": "public",
+      "sha256": "ea51221fd042a6dbd8a8823a857a2a37699c32c6aebf0b2321e47713d24b00d6",
+      "bytes": 834
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/identity-device-issuing-ec384-2026-01.pem",
+      "scope": "public",
+      "sha256": "9f0bdfe784a663dd8edec136ab532c8f62897225c58ab0c92efc090752db9594",
+      "bytes": 1184
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/identity-person-issuing-ec384-2026-01.crt",
+      "scope": "public",
+      "sha256": "90a1dbb15dfb49d57c3bd81c7106c08dc5c5c0367d6b84f171787961f23bd28b",
+      "bytes": 833
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/identity-person-issuing-ec384-2026-01.pem",
+      "scope": "public",
+      "sha256": "97acd4da48a728c9575708679a484c875122249fc91bbbfc80eb05c5fff9fdb1",
+      "bytes": 1184
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/smime-issuing-ec384-2026-01.crt",
+      "scope": "public",
+      "sha256": "47960735855f4e7edb9665274d8ce16b6a66081dff3d87efb29de79425c3e033",
+      "bytes": 858
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/smime-issuing-ec384-2026-01.pem",
+      "scope": "public",
+      "sha256": "acabcb5c9642aa1600a682d878af542b7c9165d35980dc8f2f75d2e38053bebe",
+      "bytes": 1216
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/timestamp-issuing-rsa4096-2026-01.crt",
+      "scope": "public",
+      "sha256": "8c83de7edf92665c728bf27e797532a4622bcb7689c404c178c65809869269b8",
+      "bytes": 1678
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/timestamp-issuing-rsa4096-2026-01.pem",
+      "scope": "public",
+      "sha256": "e4c18e17dc2b12b3a34b24335066b612e1cc4d2c33e9e94b3e7238b55ab328b0",
+      "bytes": 2329
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/tls-issuing-ec384-2026-01.crt",
+      "scope": "public",
+      "sha256": "3a8ea96f8672955cdd32590878c339d05207765edbb95b325d434db9569fec62",
+      "bytes": 831
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/issuers/tls-issuing-ec384-2026-01.pem",
+      "scope": "public",
+      "sha256": "4d911e5b59924ce3065869cc6c2e459345cb95291b3029726b355f7e848f3a21",
+      "bytes": 1180
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/roots/code-root-rsa4096-01.crt",
+      "scope": "public",
+      "sha256": "ff774c6fe51368fc5319f557683c3dd40bc212a2d7f1c400450c04478f88ea7b",
+      "bytes": 1432
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/roots/code-root-rsa4096-01.pem",
+      "scope": "public",
+      "sha256": "dad9548ccdcf7005070c4c209af3ffc33a631f64abc744ad82ea352704bdd8da",
+      "bytes": 1996
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/roots/identity-root-ec384-01.crt",
+      "scope": "public",
+      "sha256": "0be84d3660aadcf1a77f66bba33c41ff75b6f995eeb6a3b39548ba21a9075ac8",
+      "bytes": 590
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/roots/identity-root-ec384-01.pem",
+      "scope": "public",
+      "sha256": "4c3a2318657f7dac72989c38e9715abb5ceecb99ee687ec19477046ff05ab09e",
+      "bytes": 855
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/roots/mail-root-ec384-01.crt",
+      "scope": "public",
+      "sha256": "a420055d7d2306b468e911eebfdb410cf4902c7030d2ba86901482c1af004fea",
+      "bytes": 582
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/roots/mail-root-ec384-01.pem",
+      "scope": "public",
+      "sha256": "0942ac8f75c0e8655230224a37ddea139e21e382893ca582b20c57b96514f299",
+      "bytes": 843
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/roots/server-root-ec384-01.crt",
+      "scope": "public",
+      "sha256": "8c7b9bb68601c4d486e067be94286d6327e854c5b788cab4dfd220e6be271445",
+      "bytes": 585
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/roots/server-root-ec384-01.pem",
+      "scope": "public",
+      "sha256": "e399990f8b0cdee747ae13c2a45126cfde110459f1ec4574ad736582a7b44e38",
+      "bytes": 847
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/roots/timestamp-root-rsa4096-01.crt",
+      "scope": "public",
+      "sha256": "d2d9d90fa2315afd9104ae22c9f35278bc6e0b24b776e5e30943c9938d3253ad",
+      "bytes": 1428
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/roots/timestamp-root-rsa4096-01.pem",
+      "scope": "public",
+      "sha256": "e6f07d687e74c6e145a4520704ba5adb94534f0e3948d23323fe97242c6fc3f7",
+      "bytes": 1988
+    },
+    {
+      "path": "artifacts/g6/20261016-r2/youngdo-root-ca.pem",
+      "scope": "public",
+      "sha256": "21fb17cfd5e00602850d3515b99cd4e2bf2660555a19c0c64c91a70ab4cb57a0",
+      "bytes": 2061
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/code-signing-issuing-rsa4096-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "9f1d7a65bca2b7df821ccc28616444c6246f48be163db695561d64aae3f4408d",
+      "bytes": 6586
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/code-signing-issuing-rsa4096-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "be657420bbd3f11b55b10af023d81c9be991cc7a4e3ccabb6f9ede7e2021c663",
+      "bytes": 4525
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/code-signing-issuing-rsa4096-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "f3b6d5c10812cdf6ccff93bb0e0464f21bbff0aa7b3be918a186bbd6d70f4383",
+      "bytes": 4362
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/identity-device-issuing-ec384-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "dbab00400489b65aaefce263b51eb5c63791c36a0615bd567a25ba2b7072bee3",
+      "bytes": 4868
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/identity-device-issuing-ec384-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "050583c826427ee697af2f228ac13d34b1acc7db4ae8aa72e927dea17809181e",
+      "bytes": 2807
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/identity-device-issuing-ec384-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "1fa38c86c0cae97c936155ede27e9a9e60885cfddfb9e8842a96e24a0e056029",
+      "bytes": 2083
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/identity-person-issuing-ec384-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "03370c2e78dd960ae5040088a3232ce746407746e63ac16d0df8303fb6ee5b02",
+      "bytes": 4868
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/identity-person-issuing-ec384-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "86bc86f57fdc02287a7849b861838ed1fb85c1aeee72848f3cfdda513e658781",
+      "bytes": 2807
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/identity-person-issuing-ec384-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "5ecda2bd6c984aeb22d810d32371cb7894ac9d825fee3a2ee51ec9b0a33866c8",
+      "bytes": 2083
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/smime-issuing-ec384-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "9ab548ce80c896aa1ffff61e262b52b7d54ca34fe9ac21a42897b9c6eb3905d0",
+      "bytes": 4896
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/smime-issuing-ec384-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "b6f3baa248454164b1242a88ba46e826508157b55bed12c9c61472f5ae55b324",
+      "bytes": 2835
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/smime-issuing-ec384-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "3942934949a821d0068b7a7ba4d8d4022ab1a86d10c4405d018bce089872f690",
+      "bytes": 2103
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/timestamp-issuing-rsa4096-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "c1523b46631e28de3cb6652e9eee4640af197f33f8a9c4383fddd3dba4abc672",
+      "bytes": 6589
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/timestamp-issuing-rsa4096-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "172676b0bd1ff620c57d6b584b3ba1aee09aa8e6710f6c97045d03408cb56af5",
+      "bytes": 4528
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/timestamp-issuing-rsa4096-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "81a3c8d61950f902ddd95d53a18a1e281f24daa5c8fac149312336b2b9a26454",
+      "bytes": 4362
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/tls-issuing-ec384-2026-01-legacy-full.pem",
+      "scope": "public",
+      "sha256": "f0fcb60e3a858d306c31543150d66417adb131063b0bc99ab3085b73957dd57a",
+      "bytes": 4864
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/tls-issuing-ec384-2026-01-legacy-serving.pem",
+      "scope": "public",
+      "sha256": "ea5a466dff1a211e7ac78bffbbca25ce19838ff53262b2225966614fc5676db3",
+      "bytes": 2803
+    },
+    {
+      "path": "artifacts/g6/20261016/chains/tls-issuing-ec384-2026-01-modern.pem",
+      "scope": "public",
+      "sha256": "7aebe90fa2d26defb1d1beee095fff33713a1ae503ad64a87f9bde188c097efd",
+      "bytes": 2071
+    },
+    {
+      "path": "artifacts/g6/20261016/cross/code-root-rsa4096-01-by-youngdo-root.crt",
+      "scope": "public",
+      "sha256": "ec91f6cf74121a8eb6423c266794ae66fb3766138839b6c476bb9eb83e1e90aa",
+      "bytes": 1586
+    },
+    {
+      "path": "artifacts/g6/20261016/cross/code-root-rsa4096-01-by-youngdo-root.pem",
+      "scope": "public",
+      "sha256": "eff2da19b0c17e571fe855c53fa4e8c6440b6d5ab2508eea75460fb1c6c1f09a",
+      "bytes": 2204
+    },
+    {
+      "path": "artifacts/g6/20261016/cross/identity-root-ec384-01-by-youngdo-root.crt",
+      "scope": "public",
+      "sha256": "63810d73721c823d3eedb592dc0fced80ba532baabf2ecc023e69ef53c89bbfc",
+      "bytes": 1158
+    },
+    {
+      "path": "artifacts/g6/20261016/cross/identity-root-ec384-01-by-youngdo-root.pem",
+      "scope": "public",
+      "sha256": "70b871c831f3f6e551a2ed4fba8f2d46ff735fd25073f37336f334e19ffcf6f1",
+      "bytes": 1623
+    },
+    {
+      "path": "artifacts/g6/20261016/cross/mail-root-ec384-01-by-youngdo-root.crt",
+      "scope": "public",
+      "sha256": "78d30d4ae75a447a85c92812a1ceef4d346991e7467d063ad143182cd6160372",
+      "bytes": 1154
+    },
+    {
+      "path": "artifacts/g6/20261016/cross/mail-root-ec384-01-by-youngdo-root.pem",
+      "scope": "public",
+      "sha256": "e04fc93d52803de8c200ae44309f8c54f665a628ab48861d85456f7241aeeeef",
+      "bytes": 1619
+    },
+    {
+      "path": "artifacts/g6/20261016/cross/server-root-ec384-01-by-youngdo-root.crt",
+      "scope": "public",
+      "sha256": "0217a7278fb0ca878d36c1ef674b81925c4b1fa8446f85845c83157e695c5d5c",
+      "bytes": 1156
+    },
+    {
+      "path": "artifacts/g6/20261016/cross/server-root-ec384-01-by-youngdo-root.pem",
+      "scope": "public",
+      "sha256": "d7202383af0e8d989df821c3948a1289d9d62c44fe99cf965d1af5cd8a53bb50",
+      "bytes": 1623
+    },
+    {
+      "path": "artifacts/g6/20261016/cross/timestamp-root-rsa4096-01-by-youngdo-root.crt",
+      "scope": "public",
+      "sha256": "6dc7060bd3f7688c8cc5e19eea6a3aaa8fd0e4e57ef7b3a9d39d34a43132018e",
+      "bytes": 1584
+    },
+    {
+      "path": "artifacts/g6/20261016/cross/timestamp-root-rsa4096-01-by-youngdo-root.pem",
+      "scope": "public",
+      "sha256": "a83985bdf06c2b1755776963ba6d1ea9b3140653c712b0e59f6500e1779b1f04",
+      "bytes": 2199
+    },
+    {
+      "path": "artifacts/g6/20261016/g6-cross-certificates.pem",
+      "scope": "public",
+      "sha256": "868f39b783c6a35770be9689e042da1ed4a5fc0edc524c86912042577845178b",
+      "bytes": 9268
+    },
+    {
+      "path": "artifacts/g6/20261016/g6-self-signed-roots.pem",
+      "scope": "public",
+      "sha256": "e19afd9b097cf8b4a65f00103def1dcde509ae6f26eca72c7a4d993be5ce84b4",
+      "bytes": 6751
+    },
+    {
+      "path": "artifacts/g6/20261016/youngdo-root-ca.pem",
+      "scope": "public",
+      "sha256": "21fb17cfd5e00602850d3515b99cd4e2bf2660555a19c0c64c91a70ab4cb57a0",
+      "bytes": 2061
+    }
+  ]
+}

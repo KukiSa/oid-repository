@@ -1,0 +1,71 @@
+# 1.3.6.1.4.1.65553.0: policy – Signaliks OID Registry 1.3.6.1.4.1.65553 Policy
+
+## Part 0: Metadata
+
+**Base Arc:** `1.3.6.1.4.1.65553` (Signaliks)
+
+**Current Node:** `1.3.6.1.4.1.65553.0` (policy)
+
+**Document Identifier:** `1.3.6.1.4.1.65553.0` (policy)
+
+**Version:** 1.0.1
+
+**Published Date:** April 15, 2026
+
+### Preamble & Definitions
+In this document, "Sub-arc" refers to a path that permits the inclusion of further subordinate branches; "Child Node" refers to an endpoint that contains no further subordinate branches.
+
+* This node is utilized to describe the definition of the current arc;
+* This node is utilized to describe the metadata of the current arc;
+* This node is utilized to describe the policies governing the child nodes of the current arc;
+* This node is utilized to describe the policies governing the sub-arcs of the current arc;
+* This document constitutes the node itself.
+
+---
+
+## Part 1: Global Policy
+**Scope:** The current arc itself, and any level of child nodes and sub-arcs residing under the current arc.
+
+**a. Definition of the Current Arc:**
+
+This arc represents the Private Enterprise Number (PEN) assigned to Signaliks. It is allocated by the Internet Assigned Numbers Authority (IANA) and is subject to relevant governing policies.
+
+**b. Metadata of the Current Arc:**
+
+The designated contact person is Ayako Hu. The prescribed method of communication is via email at `contact@iks.moe`.
+
+**c. Policy for Child Nodes at Any Level under the Current Arc:**
+
+Allocation and usage are strictly prohibited unless explicitly described in a formalized policy document.
+
+**d. Policy for Sub-arcs at Any Level under the Current Arc:**
+
+Same as above.
+
+**e. Policy for Policy Documents at Any Level under the Current Arc:**
+
+Such documents shall not contravene the provisions set forth by their direct superior policy or this Global Policy document.
+
+**f. Supplementary Provisions:**
+* Any sub-arc at any level under the current arc must not terminate with `.0`.
+* For any child node at any level under the current arc, a designation terminating in `.0` shall be restricted exclusively to the following purposes: describing the definition of the residing arc, describing the metadata of the residing arc, describing the allocation policy for the child nodes within the residing arc, and describing the allocation policy for the sub-arcs within the residing arc.
+
+---
+
+## Part 2: Local Policy
+**Scope:** The immediate child nodes and immediate sub-arcs of the current arc.
+
+**a. Allocation of Immediate Sub-arcs under the Current Arc:**
+* **`.1 – ntwkmgnt`:** This arc is designated for identification requirements across the OSI model layers.
+* **`.2 – pki`:** This arc is designated to identify the certificate infrastructure and certification policies. Management authority, including the right to formulate subordinate policies, is hereby delegated to Youngdo Technologies Limited.
+* **`.3 – private`:** This arc is designated for processing non-universal, scenario-specific logic and authentication usages.
+* **`.4 – experimental`:** This arc is designated for experimental objects.
+
+Except for the specified allocations above, no other sub-arc allocations are granted at the current level.
+
+**b. Allocation of Immediate Child Nodes under the Current Arc:**
+* **`.0 – policy`:** Signaliks OID Registry 1.3.6.1.4.1.65553 Policy.
+
+Except for the specified allocation above, no other child node allocations are granted at the current level.
+
+*End of Document.*

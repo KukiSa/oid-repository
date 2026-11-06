@@ -1,0 +1,11 @@
+{
+  "$schema": "./schema/registry.schema.json",
+  "schemaVersion": "1.1.0",
+  "registry": {
+    "name": "Signaliks OID Registry",
+    "rootOid": "1.3.6.1.4.1.65553",
+    "pen": 65553,
+    "canonicalBaseUrl": "https://oid.iks.moe",
+    "governingPolicyRef": "POL-ROOT-2.0.0"
+  }
+}

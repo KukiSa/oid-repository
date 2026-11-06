@@ -1,0 +1,74 @@
+[
+  {
+    "id": "POL-ROOT-1.0.1",
+    "family": "root-registry-policy",
+    "revision": "1.0.1",
+    "status": "superseded",
+    "publishedAt": "2026-04-15T00:00:00+08:00",
+    "effectiveAt": "2026-04-15T00:00:00+08:00",
+    "supersededBy": "POL-ROOT-2.0.0",
+    "sourceCommit": "a53a12de6faa7b0db10dacf8cc26ed28028ed9bc",
+    "sha256": "bec3ec0f310f12a355edf74ed9283c874b3b49d95769e6702f8cc59e541c8207"
+  },
+  {
+    "id": "POL-ROOT-2.0.0",
+    "family": "root-registry-policy",
+    "revision": "2.0.0",
+    "status": "effective",
+    "publishedAt": "2026-09-10T00:00:00+08:00",
+    "effectiveAt": "2026-09-10T00:00:00+08:00",
+    "documentRoute": "/1.3.6.1.4.1.65553/0/",
+    "supersedes": "POL-ROOT-1.0.1"
+  },
+  {
+    "id": "POL-PKI-1.0.0",
+    "family": "pki-arc-policy",
+    "revision": "1.0.0",
+    "status": "superseded",
+    "publishedAt": "2026-04-16T00:00:00+08:00",
+    "effectiveAt": "2026-04-16T00:00:00+08:00",
+    "supersededBy": "POL-PKI-2.0.0",
+    "sourceCommit": "a53a12de6faa7b0db10dacf8cc26ed28028ed9bc",
+    "sha256": "e7135f6de5043e54a1fede4e624371c81ca7613c92365500663085aa3a7d3a28"
+  },
+  {
+    "id": "POL-PKI-2.0.0",
+    "family": "pki-arc-policy",
+    "revision": "2.0.0",
+    "status": "effective",
+    "publishedAt": "2026-09-10T00:00:00+08:00",
+    "effectiveAt": "2026-09-10T00:00:00+08:00",
+    "documentRoute": "/1.3.6.1.4.1.65553/2/0/",
+    "supersedes": "POL-PKI-1.0.0"
+  },
+  {
+    "id": "POL-TA-1.0.0",
+    "family": "trust-anchor-arc-policy",
+    "revision": "1.0.0",
+    "status": "superseded",
+    "publishedAt": "2026-04-16T00:00:00+08:00",
+    "effectiveAt": "2026-04-16T00:00:00+08:00",
+    "supersededBy": "POL-TA-2.0.0",
+    "sourceCommit": "a53a12de6faa7b0db10dacf8cc26ed28028ed9bc",
+    "sha256": "1efef6723dd8afe7eab414deecd1ebc26663c7e584c31968659522f136ce7c8a"
+  },
+  {
+    "id": "POL-TA-2.0.0",
+    "family": "trust-anchor-arc-policy",
+    "revision": "2.0.0",
+    "status": "effective",
+    "publishedAt": "2026-09-10T00:00:00+08:00",
+    "effectiveAt": "2026-09-10T00:00:00+08:00",
+    "documentRoute": "/1.3.6.1.4.1.65553/2/2/0/",
+    "supersedes": "POL-TA-1.0.0"
+  },
+  {
+    "id": "POL-MANAGED-TRUST-1.0.0",
+    "family": "managed-trust-certificate-policies",
+    "revision": "1.0.0",
+    "status": "effective",
+    "publishedAt": "2026-10-15T10:23:16+08:00",
+    "effectiveAt": "2026-10-15T10:23:16+08:00",
+    "documentRoute": "/1.3.6.1.4.1.65553/2/1/10/policy/"
+  }
+]

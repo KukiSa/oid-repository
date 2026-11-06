@@ -1,0 +1,55 @@
+# 1.3.6.1.4.1.65553.2.0 – Youngdo PKI Arc Policy
+
+## Document Control
+
+- **Policy reference:** `POL-PKI-2.0.0`
+- **Revision:** 2.0.0
+- **Status:** Effective
+- **Published and effective:** September 10, 2026
+- **Supersedes:** `POL-PKI-1.0.0`
+- **Delegation:** `DLG-2026-0001`
+- **Registration authority:** Youngdo PKI Registration Authority
+
+## 1. Scope
+
+This policy governs allocations under `1.3.6.1.4.1.65553.2` for PKI and trust services operated by Youngdo Technologies Limited. It is subordinate to `POL-ROOT-2.0.0` and to the limits of delegation `DLG-2026-0001`.
+
+No allocation is authorized merely because a numeric value is unused. Every allocation must appear in the structured registry with an approved decision and this or a more specific effective policy.
+
+## 2. Allocated Sub-Arcs
+
+The structured registry authorizes these immediate sub-arcs:
+
+- `1.3.6.1.4.1.65553.2.1` — stable Certificate Policy identifiers;
+- `1.3.6.1.4.1.65553.2.2` — individual trust-anchor identifiers;
+- `1.3.6.1.4.1.65553.2.3` — explicitly defined validation-profile identifiers;
+- `1.3.6.1.4.1.65553.2.4` — private-use identifiers, without any implication of confidentiality;
+- `1.3.6.1.4.1.65553.2.5` — immutable, versioned trust-anchor groups.
+
+The policy-document node `1.3.6.1.4.1.65553.2.0` is retained as a legacy allocation identifying this policy family. Other immediate values remain unallocated.
+
+## 3. Certificate Policies and Practice Documents
+
+An OID under `.2.1` identifies stable certificate-policy semantics, not a mutable document edition. Each CP or CPS edition must have its own immutable document revision and effective time. A CPS document may be linked to a policy OID without receiving a separate OID unless a registration decision explicitly requires one.
+
+## 4. Trust Anchors
+
+Individual trust anchors under `.2.2` are governed by `POL-TA-2.0.0`. A trust-anchor OID must be bound to an exact public key and associated trust data before its operational state may become `active`.
+
+Trust-anchor groups are allocated under `.2.5`, separately from individual anchors. Each group is an arc, and each immutable version appends a non-negative integer version component. Version `0` is valid. An existing group version must not be redefined; membership changes require a new version.
+
+## 5. Validation Profiles
+
+Before any allocation under `.2.3`, a subordinate policy must define the profile's machine-readable semantics, intended protocol field, conformance requirements, and relationship to certificate-policy OIDs. A marketing label or assurance claim alone is insufficient.
+
+## 6. Private Use
+
+Allocations under `.2.4` remain globally unique OIDs even when their semantics are private. The word “private” does not imply that published names, values, or protocol use are confidential.
+
+## 7. Decisions, Incidents, and Audit
+
+New allocations, identity changes, policy changes, and delegation changes require registration decisions. Trust-anchor compromise must result in an object lifecycle event and, when a replacement key is introduced, a new OID. The compromised OID remains permanently registered.
+
+The Registration Authority must periodically reconcile registry data against authoritative PKI ceremony records and published cryptographic artifacts. Unknown legacy fields must remain marked unverified until that reconciliation is completed.
+
+*End of Policy.*

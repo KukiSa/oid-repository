@@ -2,8 +2,6 @@ name: Registry integrity
 
 on:
   pull_request:
-  push:
-    branches: [master]
 
 permissions:
   contents: read
@@ -12,11 +10,13 @@ jobs:
   validate-and-build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
-      - run: corepack enable
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: pnpm build

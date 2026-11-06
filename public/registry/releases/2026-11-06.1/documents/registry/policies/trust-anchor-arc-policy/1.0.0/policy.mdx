@@ -1,0 +1,83 @@
+# 1.3.6.1.4.1.65553.2.2.0: policy – Youngdo Technologies Limited Trust Services Anchor Identifier Arc Policy
+
+## Part 0: Metadata
+
+**Base Arc:** `1.3.6.1.4.1.65553.2.2` (authority)
+
+**Current Node:** `1.3.6.1.4.1.65553.2.2.0` (policy)
+
+**Document Identifier:** `1.3.6.1.4.1.65553.2.2.0` (policy)
+
+**Version:** 1.0.0
+
+**Published Date:** April 16, 2026
+
+### Preamble & Definitions
+In this document, "Sub-arc" refers to a path that permits the inclusion of further subordinate branches; "Child Node" refers to an endpoint that contains no further subordinate branches.
+
+* This node is utilized to describe the definition of the current arc;
+* This node is utilized to describe the metadata of the current arc;
+* This node is utilized to describe the policies governing the child nodes of the current arc;
+* This node is utilized to describe the policies governing the sub-arcs of the current arc;
+* This document constitutes the node itself.
+
+---
+
+## Part 1: Global Policy
+
+**Scope:** The current arc itself, and any level of child nodes and sub-arcs residing under the current arc.
+
+**a. Definition of the Current Arc:**
+
+This arc is designated to identify the Trust Anchor IDs of Youngdo Technologies Limited Trust Services. It serves as the parent arc for all "trust anchors" (CA keypairs) utilized within the PKI infrastructure, which can be referenced in the Trust Anchor Identifiers and Merkle Tree Certificates internet draft standards.
+
+**b. Metadata of the Current Arc:**
+
+The designated contact person is Ayako Hu. The prescribed method of communication is via email at `pki@youngdo.net`.
+
+**c. Policy for Child Nodes at Any Level under the Current Arc:**
+
+Allocation and usage are strictly prohibited unless explicitly described in a formalized policy document. OIDs in this arc shall be assigned approximately chronologically by issuance date.
+
+**d. Policy for Sub-arcs at Any Level under the Current Arc:**
+
+Same as above.
+
+**e. Policy for Policy Documents at Any Level under the Current Arc:**
+
+Such documents shall not contravene the provisions set forth by their direct superior policy (`1.3.6.1.4.1.65553.2.0`) or the Global Policy document of the Signaliks Base Arc (`1.3.6.1.4.1.65553.0`).
+
+**f. Supplementary Provisions:**
+* Any sub-arc at any level under the current arc must not terminate with `.0`.
+* For any child node at any level under the current arc, a designation terminating in `.0` shall be restricted exclusively to the following purposes: describing the definition of the residing arc, describing the metadata of the residing arc, describing the allocation policy for the child nodes within the residing arc, and describing the allocation policy for the sub-arcs within the residing arc.
+
+---
+
+## Part 2: Local Policy
+
+**Scope:** The immediate child nodes and immediate sub-arcs of the current arc.
+
+**a. Allocation of Immediate Sub-arcs under the Current Arc:**
+
+There are currently no allocations under this arc.
+
+**b. Allocation of Immediate Child Nodes under the Current Arc:**
+
+* **`.0 – policy`:** Youngdo Technologies Limited Trust Services Anchor Identifier Arc Policy.
+* **`.1 – root-r1`:** This node is designated for the Trust Anchor: `CN=Youngdo Root CA,OU=Trust Services,O=Youngdo, Inc.,ST=Shanghai,C=CN`.
+* **`.2 – g5-tls-r1`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 TLS Root CA - R1,O=Youngdo Technologies Limited,C=GB`.
+* **`.3 – g5-tls-e1`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 TLS Root CA - E1,O=Youngdo Technologies Limited,C=GB`.
+* **`.4 – g5-codesign-r1`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 Code Signing Root CA - R1,O=Youngdo Technologies Limited,C=GB`.
+* **`.5 – g5-codesign-e1`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 Code Signing Root CA - E1,O=Youngdo Technologies Limited,C=GB`.
+* **`.6 – g5-smime-r1`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 SMIME Root CA - R1,O=Youngdo Technologies Limited,C=GB`.
+* **`.7 – g5-smime-e1`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 SMIME Root CA - E1,O=Youngdo Technologies Limited,C=GB`.
+* **`.8 – 2026q1-tls-e1`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 TLS E1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB`.
+* **`.9 – 2026q1-tls-r1`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 TLS R1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB`.
+* **`.10 – 2026q1-codesign-e1`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 Code Signing E1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB`.
+* **`.11 – 2026q1-smime-e1`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 SMIME E1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB`.
+* **`.12 – g5-iot-ec384`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 IoT Root EC384,O=Youngdo Technologies Limited,C=GB`.
+* **`.13 – g5-iot-rsa4096`:** This node is designated for the Trust Anchor: `CN=Youngdo G5 IoT Root RSA4096,O=Youngdo Technologies Limited,C=GB`.
+
+Except for the specified allocations above, no other child node allocations are granted at the current level.
+
+*End of Document.*

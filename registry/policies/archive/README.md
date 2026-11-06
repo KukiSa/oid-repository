@@ -1,6 +1,6 @@
 # Superseded Policy Revisions
 
-The initial policy revisions remain recoverable as immutable Git objects from commit `a53a12de6faa7b0db10dacf8cc26ed28028ed9bc`:
+The initial policy revisions have been recovered byte-for-byte into ordinary versioned policy source directories. Their original Git provenance is commit `a53a12de6faa7b0db10dacf8cc26ed28028ed9bc`:
 
 | Policy | Revision | Path at source commit | SHA-256 |
 | --- | --- | --- | --- |
@@ -14,4 +14,6 @@ For example:
 git show a53a12de6faa7b0db10dacf8cc26ed28028ed9bc:app/1.3.6.1.4.1.65553/0/page.mdx
 ```
 
-Future superseded revisions must be stored as ordinary immutable release artifacts rather than relying only on Git history.
+The recovered bodies are `../root-registry-policy/1.0.1/policy.mdx`, `../pki-arc-policy/1.0.0/policy.mdx`, and `../trust-anchor-arc-policy/1.0.0/policy.mdx`. Their SHA-256 digests match the records above. All seven policy revisions now have a versioned source body and are included as documents in version 2 release packages.
+
+Published revision bodies are immutable. Add a new revision directory for future changes; keep the former body as an ordinary release document rather than relying only on Git history.

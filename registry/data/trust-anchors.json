@@ -1,0 +1,760 @@
+[
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.1",
+    "subjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo, Inc.,ST=Shanghai,C=CN",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.2",
+    "subjectRfc4514": "CN=Youngdo G5 TLS Root CA - R1,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.3",
+    "subjectRfc4514": "CN=Youngdo G5 TLS Root CA - E1,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.4",
+    "subjectRfc4514": "CN=Youngdo G5 Code Signing Root CA - R1,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.5",
+    "subjectRfc4514": "CN=Youngdo G5 Code Signing Root CA - E1,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.6",
+    "subjectRfc4514": "CN=Youngdo G5 SMIME Root CA - R1,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.7",
+    "subjectRfc4514": "CN=Youngdo G5 SMIME Root CA - E1,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.8",
+    "subjectRfc4514": "CN=Youngdo G5 TLS E1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.9",
+    "subjectRfc4514": "CN=Youngdo G5 TLS R1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.10",
+    "subjectRfc4514": "CN=Youngdo G5 Code Signing E1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.11",
+    "subjectRfc4514": "CN=Youngdo G5 SMIME E1 CA - 2026Q1,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.12",
+    "subjectRfc4514": "CN=Youngdo G5 IoT Root EC384,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.13",
+    "subjectRfc4514": "CN=Youngdo G5 IoT Root RSA4096,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "legacy-unverified",
+    "publicKey": null,
+    "keyIdentifier": null,
+    "constraints": null,
+    "certificates": [],
+    "lifecycle": {
+      "operationalStatus": "unknown",
+      "activatedAt": null,
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.14",
+    "subjectRfc4514": "CN=Youngdo G6 Secure Server EC384 Root,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "verified",
+    "publicKey": {
+      "encoding": "DER SubjectPublicKeyInfo",
+      "algorithm": "EC",
+      "bits": 384,
+      "spkiDerBase64": "MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEbb8RL0RRqQB1XZCgj4D63xY0kBXPlp7SpOsxi7t2O98RG0ckEt3VdoP8NL1VvvMXv/kUEGLu+71c/RcRqsgnzIozymUHx9gjezCWCyLrWHEQSPsbx6svi8UeVxkViQ0p",
+      "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/server-root-ec384-01.spki.der",
+      "digest": {
+        "algorithm": "SHA-256",
+        "value": "48cf63ee30a3757f3e2096741b4639bbc06eab1316288dc820bb00a7a0ca6574"
+      },
+      "sha384": "80610698048ccd408a77619e159adaeb4871a5a0624051f60ed7844571bf64da884c5abbae0132bd2d00d797fdd38ca1",
+      "namedCurve": "secp384r1"
+    },
+    "keyIdentifier": {
+      "type": "X.509 SubjectKeyIdentifier",
+      "value": "bf78cf804d59ac8010c44584e6cdc3c265018172",
+      "derivation": "RFC 5280 section 4.2.1.2 method 1; independently recalculated from the public key"
+    },
+    "constraints": {
+      "basicConstraints": {
+        "ca": true,
+        "pathLenConstraint": null
+      },
+      "keyUsage": [
+        "keyCertSign",
+        "cRLSign"
+      ],
+      "encodedExtendedKeyUsage": [],
+      "intendedPurpose": "server",
+      "signatureAlgorithm": "SHA384withECDSA",
+      "statusDistribution": "CRL only; no OCSP",
+      "certificatePolicies": [],
+      "enforcement": "Dedicated issuing-CA EKU and issuance profiles; relying-party trust-store purpose restrictions are deployment controls."
+    },
+    "certificates": [
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/server-root-ec384-01.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261015/server-root-ec384-01.pem",
+        "sha256": "8b90393b903ec762ab85bc83b158b28382ad24399230ebb2b01a4fb38c7257b9",
+        "sha384": "43e7f9951c9ec1c95e4522b29cd8dd31a907fa4881c6f913d5f1f6d01b220fbce91ee2da3a89e7d0cdca7fa696f4750f",
+        "serialNumberHex": "66b38e065fd59ca7e2fc193ff5118630bb4bc109",
+        "notBefore": "2026-10-15T02:07:48+00:00",
+        "notAfter": "2041-10-11T02:07:47+00:00",
+        "signatureAlgorithmOid": "1.2.840.10045.4.3.3"
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/server-root-ec384-01-by-youngdo-root.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/server-root-ec384-01-by-youngdo-root.pem",
+        "sha256": "0217a7278fb0ca878d36c1ef674b81925c4b1fa8446f85845c83157e695c5d5c",
+        "sha384": "dc9a181331a8dc5eb45d898c3c3435381e7374ec9049aa80ff971e9c1b58ad79fcd713ed52ba76a22ba4c3b79e9479ad",
+        "serialNumberHex": "7dcaefca1026a2da3f8118c53195b8e7e402d87a",
+        "notBefore": "2026-10-16T11:15:33+00:00",
+        "notAfter": "2040-02-12T15:44:58+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "cross-certificate",
+        "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+        "pathLenConstraint": 1,
+        "aiaCaIssuers": [
+          "http://aia.youngdo.net/r0.crt"
+        ],
+        "crlDistributionPoints": [
+          "http://crl.youngdo.net/r0.crl"
+        ],
+        "ocsp": []
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/roots/server-root-ec384-01.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/roots/server-root-ec384-01.pem",
+        "sha256": "8c7b9bb68601c4d486e067be94286d6327e854c5b788cab4dfd220e6be271445",
+        "sha384": "04ef649028175ac41ca788551f765f36b8d4c56ce9a9a3edf4ee5f2a85334964351dbe0732b90a202a29f2668c928093",
+        "serialNumberHex": "4c4ab3c6b8f9114c7d71acbc6540d1648dfbce99",
+        "notBefore": "2026-10-16T13:31:38+00:00",
+        "notAfter": "2041-10-12T13:31:37+00:00",
+        "signatureAlgorithmOid": "1.2.840.10045.4.3.3",
+        "certificateRole": "self-signed-root",
+        "revision": "20261016-r2",
+        "issuerSubjectRfc4514": "CN=Youngdo G6 Secure Server EC384 Root,O=Youngdo Technologies Limited,C=GB",
+        "authorityKeyIdentifierPresent": false,
+        "subjectKeyIdentifier": "bf78cf804d59ac8010c44584e6cdc3c265018172",
+        "encodedExtendedKeyUsage": [],
+        "ocsp": []
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/cross/server-root-ec384-01-by-youngdo-root.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/cross/server-root-ec384-01-by-youngdo-root.pem",
+        "sha256": "c94fa00b3a9e44f0002485abe9ba84507aa9ec79144c2be41fb726cbf52f7ada",
+        "sha384": "349d31baa92cd34be5efc6de447ffc4311e1a8d301d8b032fa4ddf9270d8e153f9103fa0b4ebf4188aa78830ddfdc215",
+        "serialNumberHex": "1206524ca63c04e6fca8b6379707d377083fcd1f",
+        "notBefore": "2026-10-16T13:31:52+00:00",
+        "notAfter": "2040-02-12T15:44:58+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "cross-certificate",
+        "revision": "20261016-r2",
+        "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+        "authorityKeyIdentifierPresent": true,
+        "subjectKeyIdentifier": "bf78cf804d59ac8010c44584e6cdc3c265018172",
+        "encodedExtendedKeyUsage": [
+          "1.3.6.1.5.5.7.3.1"
+        ],
+        "ocsp": []
+      }
+    ],
+    "lifecycle": {
+      "operationalStatus": "active",
+      "activatedAt": "2026-10-15T10:23:16+08:00",
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.15",
+    "subjectRfc4514": "CN=Youngdo G6 Secure Mail EC384 Root,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "verified",
+    "publicKey": {
+      "encoding": "DER SubjectPublicKeyInfo",
+      "algorithm": "EC",
+      "bits": 384,
+      "spkiDerBase64": "MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAENPemsM+29BJIp67dC59i1VGttz4hZ+q7ZjxulZoXEvy5uVbX5oFHeTy7InBJ1WMFnKELY5eaAOHM7+7zyDTI2sXsNSXgxSRdmhxZGm7KpL1iu11CL2ApGrAFGJ58l4u3",
+      "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/mail-root-ec384-01.spki.der",
+      "digest": {
+        "algorithm": "SHA-256",
+        "value": "6f6387b8ccacbe561b451e2f0448e86866db95bd25f416a8da2e6ed259273c77"
+      },
+      "sha384": "78db0313228a846110667617a3ba2c76f4d3375f3ae14d40bba1022b796caea62b176fd28b7fbb3b4a80b7217d3a3e0b",
+      "namedCurve": "secp384r1"
+    },
+    "keyIdentifier": {
+      "type": "X.509 SubjectKeyIdentifier",
+      "value": "e39f4ed6572a6ca3e16aaaa1f015986cafe6f6ad",
+      "derivation": "RFC 5280 section 4.2.1.2 method 1; independently recalculated from the public key"
+    },
+    "constraints": {
+      "basicConstraints": {
+        "ca": true,
+        "pathLenConstraint": null
+      },
+      "keyUsage": [
+        "keyCertSign",
+        "cRLSign"
+      ],
+      "encodedExtendedKeyUsage": [],
+      "intendedPurpose": "mail",
+      "signatureAlgorithm": "SHA384withECDSA",
+      "statusDistribution": "CRL only; no OCSP",
+      "certificatePolicies": [],
+      "enforcement": "Dedicated issuing-CA EKU and issuance profiles; relying-party trust-store purpose restrictions are deployment controls."
+    },
+    "certificates": [
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/mail-root-ec384-01.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261015/mail-root-ec384-01.pem",
+        "sha256": "c7af7211b4ffaaf8879cc23dd42ca83e6bbc716647996171c9f915dd47a1cc39",
+        "sha384": "ab22bcde5d7350f9a79190d6e5d4fac16ae8e064cae576923024a6b780011dc23347dce11dd04f2b19551956bf061cc3",
+        "serialNumberHex": "3d8349e066040ea97f90c28cfd188c8eb8f3254b",
+        "notBefore": "2026-10-15T02:07:50+00:00",
+        "notAfter": "2041-10-11T02:07:49+00:00",
+        "signatureAlgorithmOid": "1.2.840.10045.4.3.3"
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/mail-root-ec384-01-by-youngdo-root.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/mail-root-ec384-01-by-youngdo-root.pem",
+        "sha256": "78d30d4ae75a447a85c92812a1ceef4d346991e7467d063ad143182cd6160372",
+        "sha384": "e335dc1cca14fb7a5ed16ea797f1463823e242edc13fd8a2c831b9c83a272d7f7b3f9721debd4b695088350021f8194b",
+        "serialNumberHex": "5792c70dcd114c5d90b1377d3f52c6f1d977c702",
+        "notBefore": "2026-10-16T11:15:33+00:00",
+        "notAfter": "2040-02-12T15:44:58+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "cross-certificate",
+        "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+        "pathLenConstraint": 1,
+        "aiaCaIssuers": [
+          "http://aia.youngdo.net/r0.crt"
+        ],
+        "crlDistributionPoints": [
+          "http://crl.youngdo.net/r0.crl"
+        ],
+        "ocsp": []
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/roots/mail-root-ec384-01.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/roots/mail-root-ec384-01.pem",
+        "sha256": "a420055d7d2306b468e911eebfdb410cf4902c7030d2ba86901482c1af004fea",
+        "sha384": "5f6e7b1c72ecdad70c84f51cbbac477444c9f757d65f86a493e295c3f96bfc50b6e22193c893ce0a64b9adca1bdb15ce",
+        "serialNumberHex": "439e3f1f5b1834700e812b3556767328fee504d7",
+        "notBefore": "2026-10-16T13:31:39+00:00",
+        "notAfter": "2041-10-12T13:31:38+00:00",
+        "signatureAlgorithmOid": "1.2.840.10045.4.3.3",
+        "certificateRole": "self-signed-root",
+        "revision": "20261016-r2",
+        "issuerSubjectRfc4514": "CN=Youngdo G6 Secure Mail EC384 Root,O=Youngdo Technologies Limited,C=GB",
+        "authorityKeyIdentifierPresent": false,
+        "subjectKeyIdentifier": "e39f4ed6572a6ca3e16aaaa1f015986cafe6f6ad",
+        "encodedExtendedKeyUsage": [],
+        "ocsp": []
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/cross/mail-root-ec384-01-by-youngdo-root.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/cross/mail-root-ec384-01-by-youngdo-root.pem",
+        "sha256": "ec42af3396fd0915faf24514c9f4e653337b553f848f71bb67a103ec5bf55bea",
+        "sha384": "8fbff5c86076e31f6c8328287202bb8a8ff6e1301a109bd565e472527c0a274324db31e246c0c7d0eedb98425818895f",
+        "serialNumberHex": "3094bb8f552087547f978079f61707a24b483627",
+        "notBefore": "2026-10-16T13:31:52+00:00",
+        "notAfter": "2040-02-12T15:44:58+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "cross-certificate",
+        "revision": "20261016-r2",
+        "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+        "authorityKeyIdentifierPresent": true,
+        "subjectKeyIdentifier": "e39f4ed6572a6ca3e16aaaa1f015986cafe6f6ad",
+        "encodedExtendedKeyUsage": [
+          "1.3.6.1.5.5.7.3.4"
+        ],
+        "ocsp": []
+      }
+    ],
+    "lifecycle": {
+      "operationalStatus": "active",
+      "activatedAt": "2026-10-15T10:23:16+08:00",
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.16",
+    "subjectRfc4514": "CN=Youngdo G6 Secure Code RSA4096 Root,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "verified",
+    "publicKey": {
+      "encoding": "DER SubjectPublicKeyInfo",
+      "algorithm": "RSA",
+      "bits": 4096,
+      "spkiDerBase64": "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAjPZkZj54N2Ty+IAyJBlDq87EAeS78NLZjTMSJ58XerAESJAjyrS29sEIysGXPD1en06yGyZvjRDJx8p6bqNtbL5p8CNQIxSCMsBpL5k5NmIQlxoUNG0m1o+c4cR+1kKl1GJ982oro34Gu3Am6DCDlq2KsBJHMIVm3dtQKR3OAsVpNsWGrCi20Q5fpqcNzDzy/qUkEKZ/759xBDlTTHuC+GZwTj+8u+swlDgUKlx6bExjhCGyr2IKejvLjvMp+V79L1SkOinglpFalyKSUdpU1R7xIYARc6UtUlPIXswq5Wpu4P55H/POvP4jUxRc8MC+JadqiKCW6+x3JiEtxm2dXwhwK+EoqN6ULkMR6iMALofe2bH+FdBmOsCvdtYQ8UkH3PTXehmrTcCbQfQBVF6krrxIgf1YtDSVOQtNrNhveb/tKlE826Uud8D9R+diCM85RM3I/trqV/E3gnbw4H9bBfswdXt1o1Rn+vxZ+63pURS34E/hNVZFfMiKNFqZMoHUwIk4PYfudOMAkk1UuqLz9HkJ8x6M5PF7EJkPQtV2B9qvRN4tcUTQuHkUk5lQBCPJXlt+OJVSIZu7PVnpuQd6R9onOZNCTxtLON3YIewpi+nAaHZgEa8QvwGExQ3KsJALIAX8DwAXlvz0yygiTn1gXDdHZgPSuyGnVMGQaXO82MUCAwEAAQ==",
+      "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/code-root-rsa4096-01.spki.der",
+      "digest": {
+        "algorithm": "SHA-256",
+        "value": "ee838968d524f8b49e18f525c0d7ae8e6792b18580bf571a302f8700d21b0e96"
+      },
+      "sha384": "4804635c9ae83120d47193fd6fe92b943ca33d49c4eed2960a052446b02ae969c2b519c0d8229bfbdd0f1b2187065b8d"
+    },
+    "keyIdentifier": {
+      "type": "X.509 SubjectKeyIdentifier",
+      "value": "f15a5de093c1bad0b34a879987fc3705faf61986",
+      "derivation": "RFC 5280 section 4.2.1.2 method 1; independently recalculated from the public key"
+    },
+    "constraints": {
+      "basicConstraints": {
+        "ca": true,
+        "pathLenConstraint": null
+      },
+      "keyUsage": [
+        "keyCertSign",
+        "cRLSign"
+      ],
+      "encodedExtendedKeyUsage": [],
+      "intendedPurpose": "code",
+      "signatureAlgorithm": "SHA384WithRSA",
+      "statusDistribution": "CRL only; no OCSP",
+      "certificatePolicies": [],
+      "enforcement": "Dedicated issuing-CA EKU and issuance profiles; relying-party trust-store purpose restrictions are deployment controls."
+    },
+    "certificates": [
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/code-root-rsa4096-01.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261015/code-root-rsa4096-01.pem",
+        "sha256": "b0c2d9b2fd913af3a2c2f1a318b3b2fcab139f8317e165190d48154760b98b0e",
+        "sha384": "ec70979e63495919f217d7cb5e6c012c6b5c06031ee8f564b6a0d1e6ddebbc59fdb0b16c216388a85e6df0a163e1c629",
+        "serialNumberHex": "1de95f746d3e19d628a73a0654f848d26f901520",
+        "notBefore": "2026-10-15T02:08:08+00:00",
+        "notAfter": "2041-10-11T02:08:07+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12"
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/code-root-rsa4096-01-by-youngdo-root.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/code-root-rsa4096-01-by-youngdo-root.pem",
+        "sha256": "ec91f6cf74121a8eb6423c266794ae66fb3766138839b6c476bb9eb83e1e90aa",
+        "sha384": "ffcf39a9ddb4b7e8df420ab6b05879b78e9874f4ff2ffb629578ac65ff25f9c66151d21001efada83d85fcbfc031c6c2",
+        "serialNumberHex": "6b3ee88bbaf04b70a166c9964081ed8c21acb786",
+        "notBefore": "2026-10-16T11:15:33+00:00",
+        "notAfter": "2040-02-12T15:44:58+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "cross-certificate",
+        "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+        "pathLenConstraint": 1,
+        "aiaCaIssuers": [
+          "http://aia.youngdo.net/r0.crt"
+        ],
+        "crlDistributionPoints": [
+          "http://crl.youngdo.net/r0.crl"
+        ],
+        "ocsp": []
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/roots/code-root-rsa4096-01.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/roots/code-root-rsa4096-01.pem",
+        "sha256": "ff774c6fe51368fc5319f557683c3dd40bc212a2d7f1c400450c04478f88ea7b",
+        "sha384": "015efd633d576a9bb5d64bab2135d69dbfcafb5643f46e2dc3c766ae6e71aeccfd516d2d916e1f887b55100eda1499e3",
+        "serialNumberHex": "3d8b883fb699748f36dcb298a4db7b72c0e060f5",
+        "notBefore": "2026-10-16T13:31:40+00:00",
+        "notAfter": "2041-10-12T13:31:39+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "self-signed-root",
+        "revision": "20261016-r2",
+        "issuerSubjectRfc4514": "CN=Youngdo G6 Secure Code RSA4096 Root,O=Youngdo Technologies Limited,C=GB",
+        "authorityKeyIdentifierPresent": false,
+        "subjectKeyIdentifier": "f15a5de093c1bad0b34a879987fc3705faf61986",
+        "encodedExtendedKeyUsage": [],
+        "ocsp": []
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/cross/code-root-rsa4096-01-by-youngdo-root.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/cross/code-root-rsa4096-01-by-youngdo-root.pem",
+        "sha256": "1810622a8dd513e49a0e657624d6eb9098d951ad77aacd4340eabf0f2f5c2c6c",
+        "sha384": "818b884e6fca3e3fda6468e43bdcc65c013f9acbc243e283a8cb698bccdafea82e034d58fb1b258c58661fc67739a3e9",
+        "serialNumberHex": "433dbd1ec3d262587ed824d59b0d20cd1d009724",
+        "notBefore": "2026-10-16T13:31:52+00:00",
+        "notAfter": "2040-02-12T15:44:58+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "cross-certificate",
+        "revision": "20261016-r2",
+        "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+        "authorityKeyIdentifierPresent": true,
+        "subjectKeyIdentifier": "f15a5de093c1bad0b34a879987fc3705faf61986",
+        "encodedExtendedKeyUsage": [
+          "1.3.6.1.5.5.7.3.3"
+        ],
+        "ocsp": []
+      }
+    ],
+    "lifecycle": {
+      "operationalStatus": "active",
+      "activatedAt": "2026-10-15T10:23:16+08:00",
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.17",
+    "subjectRfc4514": "CN=Youngdo G6 Secure Identity EC384 Root,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "verified",
+    "publicKey": {
+      "encoding": "DER SubjectPublicKeyInfo",
+      "algorithm": "EC",
+      "bits": 384,
+      "spkiDerBase64": "MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAE1NEz7yySYB0ZVrPpkv7s+KzTIRBEEcJZKqACkGnFh/wvLyF4NgcYxascpfh2abCmOJaIdVbhoNpfvfRcG6YYWrYi50ITPm1CgoWPEACjICZRRFra78ptR6xTyRenZfeH",
+      "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/identity-root-ec384-01.spki.der",
+      "digest": {
+        "algorithm": "SHA-256",
+        "value": "9d2e1a6cdb82b1f93f1f4fc30d1743fda321483feabe38df9e4f1644c095f748"
+      },
+      "sha384": "e6dd620ae5cc7a82cd8a8f566fe1289509ac9bfc1881a85515e9b3c938a0fdd6734e9533ef6d958f4c5deaf8e8eb3188",
+      "namedCurve": "secp384r1"
+    },
+    "keyIdentifier": {
+      "type": "X.509 SubjectKeyIdentifier",
+      "value": "3d3f3f1ae8b8b3026fd6985e815a4ff1f660d83f",
+      "derivation": "RFC 5280 section 4.2.1.2 method 1; independently recalculated from the public key"
+    },
+    "constraints": {
+      "basicConstraints": {
+        "ca": true,
+        "pathLenConstraint": null
+      },
+      "keyUsage": [
+        "keyCertSign",
+        "cRLSign"
+      ],
+      "encodedExtendedKeyUsage": [],
+      "intendedPurpose": "identity",
+      "signatureAlgorithm": "SHA384withECDSA",
+      "statusDistribution": "CRL only; no OCSP",
+      "certificatePolicies": [],
+      "enforcement": "Dedicated issuing-CA EKU and issuance profiles; relying-party trust-store purpose restrictions are deployment controls."
+    },
+    "certificates": [
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/identity-root-ec384-01.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261015/identity-root-ec384-01.pem",
+        "sha256": "a5005cb1fcc64f2b69949556e9d5aee0debfb5df322ad1ed0e0a78e28a6ef669",
+        "sha384": "6f46c2faf603baea510581eb3af7d8c75083827d727fcb98fa51f3fffb857728d0c1d4da639b608f2412ad70f19cd5d7",
+        "serialNumberHex": "3dffbb297f61af2c87be0b70c087601cfe088d3f",
+        "notBefore": "2026-10-15T02:08:09+00:00",
+        "notAfter": "2041-10-11T02:08:08+00:00",
+        "signatureAlgorithmOid": "1.2.840.10045.4.3.3"
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/identity-root-ec384-01-by-youngdo-root.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/identity-root-ec384-01-by-youngdo-root.pem",
+        "sha256": "63810d73721c823d3eedb592dc0fced80ba532baabf2ecc023e69ef53c89bbfc",
+        "sha384": "53a4806bfd48fe14a951bd9b39835b053ba29882b1caba6ce71141b48b4fceb536c56be0e57774c4e289bd256d225159",
+        "serialNumberHex": "3f602087bb7d0813da0a465599175384a959f37f",
+        "notBefore": "2026-10-16T11:15:34+00:00",
+        "notAfter": "2040-02-12T15:44:58+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "cross-certificate",
+        "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+        "pathLenConstraint": 1,
+        "aiaCaIssuers": [
+          "http://aia.youngdo.net/r0.crt"
+        ],
+        "crlDistributionPoints": [
+          "http://crl.youngdo.net/r0.crl"
+        ],
+        "ocsp": []
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/roots/identity-root-ec384-01.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/roots/identity-root-ec384-01.pem",
+        "sha256": "0be84d3660aadcf1a77f66bba33c41ff75b6f995eeb6a3b39548ba21a9075ac8",
+        "sha384": "a466191a26029107659283148bb1835f6910d7626d69719bf2450e769511e095c39f859be339aea8f882cac820b66b0a",
+        "serialNumberHex": "16a3e8fa25ee48e9240d35e81c1672c1b48047b6",
+        "notBefore": "2026-10-16T13:31:38+00:00",
+        "notAfter": "2041-10-12T13:31:37+00:00",
+        "signatureAlgorithmOid": "1.2.840.10045.4.3.3",
+        "certificateRole": "self-signed-root",
+        "revision": "20261016-r2",
+        "issuerSubjectRfc4514": "CN=Youngdo G6 Secure Identity EC384 Root,O=Youngdo Technologies Limited,C=GB",
+        "authorityKeyIdentifierPresent": false,
+        "subjectKeyIdentifier": "3d3f3f1ae8b8b3026fd6985e815a4ff1f660d83f",
+        "encodedExtendedKeyUsage": [],
+        "ocsp": []
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/cross/identity-root-ec384-01-by-youngdo-root.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/cross/identity-root-ec384-01-by-youngdo-root.pem",
+        "sha256": "843a93ea9d6fe0afde30e7c8199d7c2ebc28834761914cf2bf46dc3cb103165e",
+        "sha384": "76464a30adbbff954a12a563b2ec54f2ee22eed8fb67058e1fc3d05134e4b811d42ac0d9f82c52c2683fb7b312871178",
+        "serialNumberHex": "4a8801f8345049317e7464d1d8cfa2b051bfb838",
+        "notBefore": "2026-10-16T13:31:52+00:00",
+        "notAfter": "2040-02-12T15:44:58+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "cross-certificate",
+        "revision": "20261016-r2",
+        "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+        "authorityKeyIdentifierPresent": true,
+        "subjectKeyIdentifier": "3d3f3f1ae8b8b3026fd6985e815a4ff1f660d83f",
+        "encodedExtendedKeyUsage": [
+          "2.5.29.37.0"
+        ],
+        "ocsp": []
+      }
+    ],
+    "lifecycle": {
+      "operationalStatus": "active",
+      "activatedAt": "2026-10-15T10:23:16+08:00",
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  },
+  {
+    "oid": "1.3.6.1.4.1.65553.2.2.18",
+    "subjectRfc4514": "CN=Youngdo G6 Timestamp RSA4096 Root,O=Youngdo Technologies Limited,C=GB",
+    "bindingStatus": "verified",
+    "publicKey": {
+      "encoding": "DER SubjectPublicKeyInfo",
+      "algorithm": "RSA",
+      "bits": 4096,
+      "spkiDerBase64": "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2TAZzVoIkt0W3G5Q1/LbfgcSEtEdgKWSlvkOJK3VL9ngrxKTgTYadC8qulJh7x4XgPdpJirBq8XthvUDMZV693wGVc2ulnYucJwjXEjRJtg0UsNClSHveBvOxlbBEywRNWHT+mOMOilJnVwT0RidvEWtB94BMMwIb043oYTKQogsmRzIbaO6Jv9KrroD/5isej9TcZz4ghBxuVVxN2sCS9NO8ed2obcA7I4EojZCeiDeTW+W2YKztb1BZvVWhjXC7sE0ubexUtUb/VaY1LMRRGvrYYVJDJ+eZ7QnKFXPbSsIB469YbMBRiRxzdy9BvKiTKwcM8KrxmoFuiLWJ5Ev7Bx/uF0ezh0RFLDmUkzSWOcmhiLPmkGIp/nv6LmDzLY/Cy9A+fE7a9ynlEZCS92Ky22eyXGEXZ0cHXQgRVS6LkuqC8uvDBq+GRyDQO0TTl4BQv4o1tAIifOpK76eAQRQJln2TcoPcuh54CKdcRzah/IWJ/snKDihx7wCbWOJTa7RcEo46e3qq2lJBfsNF2GWKu/PcVxBGEhVlNQJN8WzeQi/ZDYJZEFbJeC7B8JUxIzzk5YfheDid9rCVInVgFrKM7DG+H+YRSrOsGrEdJbUMYPr+Nb4jhc8VYshXNw9de1I3x4ZB5akUmxllrK35zVxGGwNTlQy6IE9t5zanU/yV18CAwEAAQ==",
+      "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/timestamp-root-rsa4096-01.spki.der",
+      "digest": {
+        "algorithm": "SHA-256",
+        "value": "5fd4d8542db7753b05f7bc2a719c50dc493ae572811450315cca04cacadc0695"
+      },
+      "sha384": "bb82c16ab2ca86d3f56160eeb59d4a978eb2c41a7b3e98d06879ec214c97aea03953fc8cf32d4bb788784b2e11358540"
+    },
+    "keyIdentifier": {
+      "type": "X.509 SubjectKeyIdentifier",
+      "value": "36cb0833b8171fb09d898d0308e2b1ad3844067a",
+      "derivation": "RFC 5280 section 4.2.1.2 method 1; independently recalculated from the public key"
+    },
+    "constraints": {
+      "basicConstraints": {
+        "ca": true,
+        "pathLenConstraint": null
+      },
+      "keyUsage": [
+        "keyCertSign",
+        "cRLSign"
+      ],
+      "encodedExtendedKeyUsage": [],
+      "intendedPurpose": "timestamp",
+      "signatureAlgorithm": "SHA384WithRSA",
+      "statusDistribution": "CRL only; no OCSP",
+      "certificatePolicies": [],
+      "enforcement": "Dedicated issuing-CA EKU and issuance profiles; relying-party trust-store purpose restrictions are deployment controls."
+    },
+    "certificates": [
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261015/timestamp-root-rsa4096-01.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261015/timestamp-root-rsa4096-01.pem",
+        "sha256": "a30568178547c279060d3afda4ed8706136ec7eea003444b70853b6d1052404e",
+        "sha384": "a28a8d10ba97059db028f0d13336ab6949701936156a1f8eaf09f19603d0751d3682c3ba7bec491e61f569246bf9dd58",
+        "serialNumberHex": "4cd00be662686a2e24c9b25c1d4e7fa32a5609a3",
+        "notBefore": "2026-10-15T02:08:16+00:00",
+        "notAfter": "2041-10-11T02:08:15+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12"
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/timestamp-root-rsa4096-01-by-youngdo-root.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016/cross/timestamp-root-rsa4096-01-by-youngdo-root.pem",
+        "sha256": "6dc7060bd3f7688c8cc5e19eea6a3aaa8fd0e4e57ef7b3a9d39d34a43132018e",
+        "sha384": "dd5d7eaa7ed138113227fba963d37eb4d0df68c44c1b0aa5e21d559b1868106379844a1ee9e391b33edbf2d423189507",
+        "serialNumberHex": "66877526d82f2039aea4cd60dfadc0ec3a0f4912",
+        "notBefore": "2026-10-16T11:15:34+00:00",
+        "notAfter": "2040-02-12T15:44:58+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "cross-certificate",
+        "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+        "pathLenConstraint": 1,
+        "aiaCaIssuers": [
+          "http://aia.youngdo.net/r0.crt"
+        ],
+        "crlDistributionPoints": [
+          "http://crl.youngdo.net/r0.crl"
+        ],
+        "ocsp": []
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/roots/timestamp-root-rsa4096-01.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/roots/timestamp-root-rsa4096-01.pem",
+        "sha256": "d2d9d90fa2315afd9104ae22c9f35278bc6e0b24b776e5e30943c9938d3253ad",
+        "sha384": "ca7196aa51c5ccaedbbc3316903386c08c959a360650ec4cb37a83791db2f4d8a05a863ea3c22804a90bd5babbf96ebd",
+        "serialNumberHex": "60c9838b68d4a000b05e282fc729e5fa69694495",
+        "notBefore": "2026-10-16T13:31:36+00:00",
+        "notAfter": "2041-10-12T13:31:35+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "self-signed-root",
+        "revision": "20261016-r2",
+        "issuerSubjectRfc4514": "CN=Youngdo G6 Timestamp RSA4096 Root,O=Youngdo Technologies Limited,C=GB",
+        "authorityKeyIdentifierPresent": false,
+        "subjectKeyIdentifier": "36cb0833b8171fb09d898d0308e2b1ad3844067a",
+        "encodedExtendedKeyUsage": [],
+        "ocsp": []
+      },
+      {
+        "artifactUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/cross/timestamp-root-rsa4096-01-by-youngdo-root.crt",
+        "pemUri": "https://oid.iks.moe/artifacts/g6/20261016-r2/cross/timestamp-root-rsa4096-01-by-youngdo-root.pem",
+        "sha256": "793bf1586e63e871de62c9ccb50089c387a2f2355bd7a4d46da397ee12f92407",
+        "sha384": "22292521011cd078fc75bcd4db1f642fe5b7e2d2d7f954e887cb4060c75c2b70c618d7250043f799c01581284824a26d",
+        "serialNumberHex": "d83e9e675183821582dccb3811c7af81e3ec3d7",
+        "notBefore": "2026-10-16T13:31:51+00:00",
+        "notAfter": "2040-02-12T15:44:58+00:00",
+        "signatureAlgorithmOid": "1.2.840.113549.1.1.12",
+        "certificateRole": "cross-certificate",
+        "revision": "20261016-r2",
+        "issuerSubjectRfc4514": "CN=Youngdo Root CA,OU=Trust Services,O=Youngdo\\, Inc.,ST=Shanghai,C=CN",
+        "authorityKeyIdentifierPresent": true,
+        "subjectKeyIdentifier": "36cb0833b8171fb09d898d0308e2b1ad3844067a",
+        "encodedExtendedKeyUsage": [
+          "1.3.6.1.5.5.7.3.8"
+        ],
+        "ocsp": []
+      }
+    ],
+    "lifecycle": {
+      "operationalStatus": "active",
+      "activatedAt": "2026-10-15T10:23:16+08:00",
+      "retiredAt": null,
+      "supersededBy": null
+    }
+  }
+]

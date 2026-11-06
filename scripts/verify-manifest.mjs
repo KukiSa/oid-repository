@@ -1,27 +1,15 @@
-import {readFile} from 'node:fs/promises'
 import path from 'node:path'
-import {repositoryRoot, verifyManifestSignature} from './registry-lib.mjs'
+import {repositoryRoot} from '../lib/registry/paths.mjs'
+import {verifyRelease} from '../lib/registry/release.mjs'
+import {options, run, trustedPublicKey} from '../lib/registry/cli.mjs'
 
-function option(name) {
-    const index = process.argv.indexOf(name)
-    return index === -1 ? null : process.argv[index + 1]
-}
-
-const publicKeyPath = option('--public-key')
-const signaturePath = option('--signature') ?? 'public/registry/manifest.sig.json'
-if (!publicKeyPath) {
-    console.error('Usage: node scripts/verify-manifest.mjs --public-key <trusted-ed25519-public-key.pem> [--signature <signature.json>]')
-    process.exit(2)
-}
-
-const [manifest, signatureText, publicKey] = await Promise.all([
-    readFile(path.join(repositoryRoot, 'public/registry/manifest.json')),
-    readFile(path.resolve(signaturePath), 'utf8'),
-    readFile(path.resolve(publicKeyPath), 'utf8')
-])
-const envelope = JSON.parse(signatureText)
-if (!verifyManifestSignature(manifest, envelope, publicKey)) {
-    console.error('Registry manifest signature verification failed.')
-    process.exit(1)
-}
-console.log(`Registry manifest signature is valid for publication key ${envelope.publicKeySpkiSha256}.`)
+await run(async () => {
+    const args = options(['--public-key', '--directory', '--signature'])
+    const publicKey = await trustedPublicKey(args)
+    if (!publicKey) throw new Error('Usage: registry:verify-signature --public-key <trusted-public-key.pem> [--directory <release>] [--signature <signature.json>]')
+    const directory = path.resolve(args['--directory'] ?? path.join(repositoryRoot, 'public/registry'))
+    const signatureFile = args['--signature'] ? path.resolve(args['--signature']) : undefined
+    const errors = await verifyRelease(directory, {publicKey, requireSignature: true, signatureFile})
+    if (errors.length) throw new Error(errors.join('\n'))
+    console.log('Manifest signature and every release artifact are valid.')
+})

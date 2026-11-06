@@ -1,0 +1,22 @@
+[
+  {
+    "id": "iana-pen-ra",
+    "name": "Internet Assigned Numbers Authority",
+    "type": "external-registration-authority",
+    "contactUri": "https://www.iana.org/assignments/enterprise-numbers"
+  },
+  {
+    "id": "signaliks-root-ra",
+    "name": "Signaliks",
+    "type": "root-registration-authority",
+    "contactRole": "Signaliks OID Registration Authority",
+    "contactEmail": "contact@iks.moe"
+  },
+  {
+    "id": "youngdo-pki-ra",
+    "name": "Youngdo Technologies Limited",
+    "type": "delegated-registration-authority",
+    "contactRole": "Youngdo PKI Registration Authority",
+    "contactEmail": "pki@youngdo.net"
+  }
+]

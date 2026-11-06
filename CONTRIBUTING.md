@@ -16,9 +16,11 @@ Please search existing issues before opening a new one to avoid duplicates.
 
 An ordinary pull request is not a registration decision. Changes that allocate an OID, alter an identity-defining object binding, change a lifecycle state, amend a policy, or change a delegation require an approved decision under `GOVERNANCE.md` before they may be merged.
 
-Proposals may be submitted as Issues. Once approved, the canonical change is made in `registry/registry.json`; generated MDX, JSON, CSV, and manifest files are then regenerated with `pnpm registry:generate`.
+Proposals may be submitted as Issues. Once approved, edit the applicable collection in `registry/data/`. Policy source revisions live in `registry/policies/<family>/<revision>/policy.mdx`; administrative instruments live in `registry/instruments/`. Regenerate the assembled dataset, MDX, document downloads, JSON, CSV, and manifest with `pnpm registry:generate`.
 
 Generated files must not be edited directly.
+
+Before changing sealed publication content, assign a new candidate ID in `registry/data/release.json`. Published policy revisions, historical packages and certificate artifacts are immutable; add a new revision or URL. See `registry/releases/README.md` for the local prepare, verify and archive workflow.
 
 ## 3. Pull Requests & Dual-Licensing Policy
 

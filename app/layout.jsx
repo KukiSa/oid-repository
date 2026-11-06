@@ -31,9 +31,6 @@ export const metadata = {
 
 
 export default async function RootLayout({children}) {
-    const showBadge = process.env.SHOW_HOSTING_BADGE === 'true';
-    const platformName = process.env.HOSTING_PLATFORM_NAME;
-    const platformUrl = process.env.HOSTING_PLATFORM_URL;
     const navbar =
         <Navbar
             logo={<><span>Signaliks OID Repository</span></>}
@@ -43,11 +40,7 @@ export default async function RootLayout({children}) {
             © {new Date().getFullYear()} Signaliks.
             {' '}
             Powered by <Link href="https://nextra.site/" className="text-current no-underline hover:underline">Nextra</Link>
-            {showBadge && platformName && (
-                <span>
-                    &amp; <Link href={platformUrl || '#'} className="text-current no-underline hover:underline">{platformName}</Link>
-                </span>
-            )}.
+            .
             {' '}
             <Link href="/privacy-policy" className="text-current hover:underline">Privacy Policy</Link>
         </p></Footer>

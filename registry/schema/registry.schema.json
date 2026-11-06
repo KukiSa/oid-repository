@@ -3,138 +3,950 @@
   "$id": "https://oid.iks.moe/registry/schema/registry.schema.json",
   "title": "Signaliks OID Registry",
   "type": "object",
-  "required": ["schemaVersion", "registry", "authorities", "policies", "delegations", "decisions", "nodes", "trustAnchors", "trustAnchorGroups", "events", "release"],
+  "required": [
+    "schemaVersion",
+    "registry",
+    "authorities",
+    "policies",
+    "delegations",
+    "decisions",
+    "nodes",
+    "trustAnchors",
+    "trustAnchorGroups",
+    "events",
+    "release"
+  ],
   "properties": {
-    "$schema": {"type": "string"},
-    "schemaVersion": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
-    "registry": {"type": "object", "required": ["name", "rootOid", "pen", "canonicalBaseUrl", "governingPolicyRef"]},
-    "authorities": {"type": "array", "items": {"$ref": "#/$defs/authority"}},
-    "policies": {"type": "array", "items": {"$ref": "#/$defs/policy"}},
-    "delegations": {"type": "array", "items": {"$ref": "#/$defs/delegation"}},
-    "decisions": {"type": "array", "items": {"$ref": "#/$defs/decision"}},
-    "nodes": {"type": "array", "items": {"$ref": "#/$defs/node"}},
-    "trustAnchors": {"type": "array", "items": {"$ref": "#/$defs/trustAnchor"}},
-    "trustAnchorGroups": {"type": "array", "items": {"$ref": "#/$defs/trustAnchorGroup"}},
-    "events": {"type": "array", "items": {"$ref": "#/$defs/event"}},
-    "release": {"$ref": "#/$defs/release"}
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": "1.1.0"
+    },
+    "registry": {
+      "type": "object",
+      "required": [
+        "name",
+        "rootOid",
+        "pen",
+        "canonicalBaseUrl",
+        "governingPolicyRef"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rootOid": {
+          "$ref": "#/$defs/oid"
+        },
+        "pen": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "canonicalBaseUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "governingPolicyRef": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "authorities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/authority"
+      }
+    },
+    "policies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/policy"
+      }
+    },
+    "delegations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/delegation"
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/decision"
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    },
+    "trustAnchors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/trustAnchor"
+      }
+    },
+    "trustAnchorGroups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/trustAnchorGroup"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "release": {
+      "$ref": "#/$defs/release"
+    }
   },
   "additionalProperties": false,
   "$defs": {
-    "oid": {"type": "string", "pattern": "^(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*))+$"},
-    "instant": {"type": ["string", "null"], "format": "date-time"},
+    "oid": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)(\\.(0|[1-9][0-9]*))+$"
+    },
+    "instant": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
     "authority": {
       "type": "object",
-      "required": ["id", "name", "type"],
+      "required": [
+        "id",
+        "name",
+        "type"
+      ],
       "properties": {
-        "id": {"type": "string"}, "name": {"type": "string"}, "type": {"type": "string"},
-        "contactRole": {"type": "string"}, "contactEmail": {"type": "string", "format": "email"}, "contactUri": {"type": "string", "format": "uri"}
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "contactRole": {
+          "type": "string"
+        },
+        "contactEmail": {
+          "type": "string",
+          "format": "email"
+        },
+        "contactUri": {
+          "type": "string",
+          "format": "uri"
+        }
       },
       "additionalProperties": false
     },
     "policy": {
       "type": "object",
-      "required": ["id", "family", "revision", "status", "publishedAt", "effectiveAt"],
+      "required": [
+        "id",
+        "family",
+        "revision",
+        "status",
+        "publishedAt",
+        "effectiveAt"
+      ],
       "properties": {
-        "id": {"type": "string"}, "family": {"type": "string"}, "revision": {"type": "string"},
-        "status": {"enum": ["draft", "approved", "effective", "superseded", "withdrawn"]},
-        "publishedAt": {"$ref": "#/$defs/instant"}, "effectiveAt": {"$ref": "#/$defs/instant"},
-        "documentRoute": {"type": "string"}, "supersedes": {"type": "string"}, "supersededBy": {"type": "string"},
-        "sourceCommit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        "id": {
+          "type": "string"
+        },
+        "family": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "approved",
+            "effective",
+            "superseded",
+            "withdrawn"
+          ]
+        },
+        "publishedAt": {
+          "$ref": "#/$defs/instant"
+        },
+        "effectiveAt": {
+          "$ref": "#/$defs/instant"
+        },
+        "documentRoute": {
+          "type": "string"
+        },
+        "supersedes": {
+          "type": "string"
+        },
+        "supersededBy": {
+          "type": "string"
+        },
+        "sourceCommit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
       },
       "additionalProperties": false
     },
     "delegation": {
       "type": "object",
-      "required": ["id", "arc", "delegatorRef", "delegateRef", "status", "effectiveAt", "governingPolicyRef", "decisionRef", "permissions", "subdelegationAllowed", "instrumentPath"],
+      "required": [
+        "id",
+        "arc",
+        "delegatorRef",
+        "delegateRef",
+        "status",
+        "effectiveAt",
+        "governingPolicyRef",
+        "decisionRef",
+        "permissions",
+        "subdelegationAllowed",
+        "instrumentPath"
+      ],
       "properties": {
-        "id": {"type": "string"}, "arc": {"$ref": "#/$defs/oid"}, "delegatorRef": {"type": "string"}, "delegateRef": {"type": "string"},
-        "status": {"enum": ["proposed", "active", "suspended", "revoked", "expired"]},
-        "effectiveAt": {"$ref": "#/$defs/instant"}, "ratifiedAt": {"$ref": "#/$defs/instant"},
-        "governingPolicyRef": {"type": "string"}, "decisionRef": {"type": "string"}, "permissions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-        "subdelegationAllowed": {"type": "boolean"}, "instrumentPath": {"type": "string"}
+        "id": {
+          "type": "string"
+        },
+        "arc": {
+          "$ref": "#/$defs/oid"
+        },
+        "delegatorRef": {
+          "type": "string"
+        },
+        "delegateRef": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "active",
+            "suspended",
+            "revoked",
+            "expired"
+          ]
+        },
+        "effectiveAt": {
+          "$ref": "#/$defs/instant"
+        },
+        "ratifiedAt": {
+          "$ref": "#/$defs/instant"
+        },
+        "governingPolicyRef": {
+          "type": "string"
+        },
+        "decisionRef": {
+          "type": "string"
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "subdelegationAllowed": {
+          "type": "boolean"
+        },
+        "instrumentPath": {
+          "type": "string"
+        }
       },
       "additionalProperties": false
     },
     "decision": {
       "type": "object",
-      "required": ["id", "type", "status", "decidedAt", "recordedAt", "authorityRef", "policyRef", "affectedOids", "approvals", "publicRationale"],
+      "required": [
+        "id",
+        "type",
+        "status",
+        "decidedAt",
+        "recordedAt",
+        "authorityRef",
+        "policyRef",
+        "affectedOids",
+        "approvals",
+        "publicRationale"
+      ],
       "properties": {
-        "id": {"type": "string"}, "type": {"type": "string"}, "status": {"enum": ["proposed", "approved", "rejected", "recorded", "withdrawn"]},
-        "decidedAt": {"$ref": "#/$defs/instant"}, "recordedAt": {"$ref": "#/$defs/instant"},
-        "authorityRef": {"type": "string"}, "policyRef": {"type": ["string", "null"]},
-        "affectedOids": {"type": "array", "items": {"$ref": "#/$defs/oid"}, "minItems": 1, "uniqueItems": true},
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "approved",
+            "rejected",
+            "recorded",
+            "withdrawn"
+          ]
+        },
+        "decidedAt": {
+          "$ref": "#/$defs/instant"
+        },
+        "recordedAt": {
+          "$ref": "#/$defs/instant"
+        },
+        "authorityRef": {
+          "type": "string"
+        },
+        "policyRef": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "affectedOids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/oid"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
         "approvals": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["authorityRef", "role", "approvedAt"],
-            "properties": {"authorityRef": {"type": "string"}, "role": {"type": "string"}, "approvedAt": {"$ref": "#/$defs/instant"}},
+            "required": [
+              "authorityRef",
+              "role",
+              "approvedAt"
+            ],
+            "properties": {
+              "authorityRef": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "approvedAt": {
+                "$ref": "#/$defs/instant"
+              }
+            },
             "additionalProperties": false
           }
         },
-        "reviewException": {"type": "string"},
-        "publicRationale": {"type": "string"}
+        "reviewException": {
+          "type": "string"
+        },
+        "publicRationale": {
+          "type": "string"
+        }
       },
       "additionalProperties": false
     },
     "allocation": {
       "type": "object",
-      "required": ["status", "assignedAt", "recordedAt", "authorityRef", "decisionRef", "governingPolicyRef"],
+      "required": [
+        "status",
+        "assignedAt",
+        "recordedAt",
+        "authorityRef",
+        "decisionRef",
+        "governingPolicyRef"
+      ],
       "properties": {
-        "status": {"enum": ["reserved", "assigned", "deprecated"]}, "assignedAt": {"$ref": "#/$defs/instant"}, "recordedAt": {"$ref": "#/$defs/instant"},
-        "authorityRef": {"type": "string"}, "decisionRef": {"type": "string"}, "governingPolicyRef": {"type": "string"}, "delegationRef": {"type": "string"}
+        "status": {
+          "enum": [
+            "reserved",
+            "assigned",
+            "deprecated"
+          ]
+        },
+        "assignedAt": {
+          "$ref": "#/$defs/instant"
+        },
+        "recordedAt": {
+          "$ref": "#/$defs/instant"
+        },
+        "authorityRef": {
+          "type": "string"
+        },
+        "decisionRef": {
+          "type": "string"
+        },
+        "governingPolicyRef": {
+          "type": "string"
+        },
+        "delegationRef": {
+          "type": "string"
+        }
       },
       "additionalProperties": false
     },
     "node": {
       "type": "object",
-      "required": ["oid", "parentOid", "arc", "kind", "secondaryIdentifier", "title", "description", "route", "allocation"],
+      "required": [
+        "oid",
+        "parentOid",
+        "arc",
+        "kind",
+        "secondaryIdentifier",
+        "title",
+        "description",
+        "route",
+        "allocation"
+      ],
       "properties": {
-        "oid": {"$ref": "#/$defs/oid"}, "parentOid": {"$ref": "#/$defs/oid"}, "arc": {"type": "integer", "minimum": 0},
-        "kind": {"enum": ["arc", "policy-document", "trust-anchor", "trust-anchor-group", "trust-anchor-group-version", "identifier"]},
-        "secondaryIdentifier": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9-]*$"}, "title": {"type": "string"}, "description": {"type": "string"},
-        "route": {"type": "string", "pattern": "^/.+/$"}, "allocation": {"$ref": "#/$defs/allocation"}
+        "oid": {
+          "$ref": "#/$defs/oid"
+        },
+        "parentOid": {
+          "$ref": "#/$defs/oid"
+        },
+        "arc": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "enum": [
+            "arc",
+            "policy-document",
+            "trust-anchor",
+            "trust-anchor-group",
+            "trust-anchor-group-version",
+            "identifier"
+          ]
+        },
+        "secondaryIdentifier": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9-]*$"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "route": {
+          "type": "string",
+          "pattern": "^/.+/$"
+        },
+        "allocation": {
+          "$ref": "#/$defs/allocation"
+        }
       },
       "additionalProperties": false
     },
     "trustAnchor": {
       "type": "object",
-      "required": ["oid", "subjectRfc4514", "bindingStatus", "publicKey", "keyIdentifier", "constraints", "certificates", "lifecycle"],
+      "required": [
+        "oid",
+        "subjectRfc4514",
+        "bindingStatus",
+        "publicKey",
+        "keyIdentifier",
+        "constraints",
+        "certificates",
+        "lifecycle"
+      ],
       "properties": {
-        "oid": {"$ref": "#/$defs/oid"}, "subjectRfc4514": {"type": "string"},
-        "bindingStatus": {"enum": ["legacy-unverified", "verified"]},
-        "publicKey": {"type": ["object", "null"]}, "keyIdentifier": {"type": ["object", "null"]}, "constraints": {"type": ["object", "null"]},
-        "certificates": {"type": "array", "items": {"type": "object"}},
+        "oid": {
+          "$ref": "#/$defs/oid"
+        },
+        "subjectRfc4514": {
+          "type": "string"
+        },
+        "bindingStatus": {
+          "enum": [
+            "legacy-unverified",
+            "verified"
+          ]
+        },
+        "publicKey": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/publicKey"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "keyIdentifier": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/keyIdentifier"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "constraints": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/constraints"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "certificates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/certificate"
+          }
+        },
         "lifecycle": {
           "type": "object",
-          "required": ["operationalStatus", "activatedAt", "retiredAt", "supersededBy"],
+          "required": [
+            "operationalStatus",
+            "activatedAt",
+            "retiredAt",
+            "supersededBy"
+          ],
           "properties": {
-            "operationalStatus": {"enum": ["unknown", "planned", "active", "retired", "compromised", "superseded"]},
-            "activatedAt": {"$ref": "#/$defs/instant"}, "retiredAt": {"$ref": "#/$defs/instant"}, "supersededBy": {"type": ["string", "null"]}
+            "operationalStatus": {
+              "enum": [
+                "unknown",
+                "planned",
+                "active",
+                "retired",
+                "compromised",
+                "superseded"
+              ]
+            },
+            "activatedAt": {
+              "$ref": "#/$defs/instant"
+            },
+            "retiredAt": {
+              "$ref": "#/$defs/instant"
+            },
+            "supersededBy": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
           },
           "additionalProperties": false
         }
       },
-      "additionalProperties": false
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "bindingStatus": {
+                "const": "verified"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "publicKey": {
+                "not": {
+                  "type": "null"
+                }
+              },
+              "keyIdentifier": {
+                "not": {
+                  "type": "null"
+                }
+              },
+              "constraints": {
+                "not": {
+                  "type": "null"
+                }
+              },
+              "certificates": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
     },
     "trustAnchorGroup": {
       "type": "object",
-      "required": ["oid", "version", "members"],
-      "properties": {"oid": {"$ref": "#/$defs/oid"}, "version": {"type": "integer", "minimum": 0}, "members": {"type": "array", "items": {"$ref": "#/$defs/oid"}, "uniqueItems": true}},
+      "required": [
+        "oid",
+        "version",
+        "members"
+      ],
+      "properties": {
+        "oid": {
+          "$ref": "#/$defs/oid"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/oid"
+          },
+          "uniqueItems": true
+        }
+      },
       "additionalProperties": false
     },
     "event": {
       "type": "object",
-      "required": ["id", "type", "occurredAt", "authorityRef", "decisionRef", "summary"],
-      "properties": {"id": {"type": "string"}, "type": {"type": "string"}, "occurredAt": {"$ref": "#/$defs/instant"}, "authorityRef": {"type": "string"}, "decisionRef": {"type": "string"}, "summary": {"type": "string"}},
+      "required": [
+        "id",
+        "type",
+        "occurredAt",
+        "authorityRef",
+        "decisionRef",
+        "summary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "occurredAt": {
+          "$ref": "#/$defs/instant"
+        },
+        "authorityRef": {
+          "type": "string"
+        },
+        "decisionRef": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        }
+      },
       "additionalProperties": false
     },
     "release": {
       "type": "object",
-      "required": ["id", "status", "publishedAt", "signingRequiredForAuthoritativeRelease", "signature"],
+      "required": [
+        "id",
+        "status",
+        "publishedAt",
+        "signingRequiredForAuthoritativeRelease",
+        "signature"
+      ],
       "properties": {
-        "id": {"type": "string"}, "status": {"enum": ["candidate", "authoritative", "superseded"]}, "publishedAt": {"$ref": "#/$defs/instant"},
-        "signingRequiredForAuthoritativeRelease": {"type": "boolean"}, "signature": {"type": ["object", "null"]}
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}\\.[1-9][0-9]*$"
+        },
+        "status": {
+          "enum": [
+            "candidate",
+            "authoritative",
+            "superseded"
+          ]
+        },
+        "publishedAt": {
+          "$ref": "#/$defs/instant"
+        },
+        "signingRequiredForAuthoritativeRelease": {
+          "type": "boolean"
+        },
+        "signature": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "required": [
+                "algorithm",
+                "publicKeySpkiSha256",
+                "signaturePath"
+              ],
+              "properties": {
+                "algorithm": {
+                  "const": "Ed25519"
+                },
+                "publicKeySpkiSha256": {
+                  "$ref": "#/$defs/hex256"
+                },
+                "signaturePath": {
+                  "const": "manifest.sig.json"
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "hex256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "hex384": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{96}$"
+    },
+    "publicKey": {
+      "type": "object",
+      "required": [
+        "encoding",
+        "algorithm",
+        "bits",
+        "spkiDerBase64",
+        "artifactUri",
+        "digest"
+      ],
+      "properties": {
+        "encoding": {
+          "const": "DER SubjectPublicKeyInfo"
+        },
+        "algorithm": {
+          "enum": [
+            "EC",
+            "RSA",
+            "Ed25519",
+            "Ed448"
+          ]
+        },
+        "bits": {
+          "type": "integer",
+          "minimum": 128
+        },
+        "spkiDerBase64": {
+          "type": "string",
+          "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$",
+          "minLength": 4
+        },
+        "artifactUri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "digest": {
+          "type": "object",
+          "required": [
+            "algorithm",
+            "value"
+          ],
+          "properties": {
+            "algorithm": {
+              "const": "SHA-256"
+            },
+            "value": {
+              "$ref": "#/$defs/hex256"
+            }
+          },
+          "additionalProperties": false
+        },
+        "sha384": {
+          "$ref": "#/$defs/hex384"
+        },
+        "namedCurve": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "keyIdentifier": {
+      "type": "object",
+      "required": [
+        "type",
+        "value",
+        "derivation"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{2})+$"
+        },
+        "derivation": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "constraints": {
+      "type": "object",
+      "required": [
+        "basicConstraints",
+        "keyUsage"
+      ],
+      "properties": {
+        "basicConstraints": {
+          "type": "object",
+          "required": [
+            "ca",
+            "pathLenConstraint"
+          ],
+          "properties": {
+            "ca": {
+              "const": true
+            },
+            "pathLenConstraint": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "keyUsage": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "encodedExtendedKeyUsage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/oid"
+          },
+          "uniqueItems": true
+        },
+        "intendedPurpose": {
+          "type": "string"
+        },
+        "signatureAlgorithm": {
+          "type": "string"
+        },
+        "statusDistribution": {
+          "type": "string"
+        },
+        "certificatePolicies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/oid"
+          },
+          "uniqueItems": true
+        },
+        "enforcement": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "certificate": {
+      "type": "object",
+      "required": [
+        "artifactUri",
+        "sha256",
+        "serialNumberHex",
+        "notBefore",
+        "notAfter",
+        "signatureAlgorithmOid"
+      ],
+      "properties": {
+        "artifactUri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "pemUri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sha256": {
+          "$ref": "#/$defs/hex256"
+        },
+        "sha384": {
+          "$ref": "#/$defs/hex384"
+        },
+        "serialNumberHex": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]+$"
+        },
+        "notBefore": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "notAfter": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "signatureAlgorithmOid": {
+          "$ref": "#/$defs/oid"
+        },
+        "certificateRole": {
+          "enum": [
+            "self-signed-root",
+            "cross-certificate"
+          ]
+        },
+        "issuerSubjectRfc4514": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "string"
+        },
+        "pathLenConstraint": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "aiaCaIssuers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "uniqueItems": true
+        },
+        "crlDistributionPoints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "uniqueItems": true
+        },
+        "ocsp": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "uniqueItems": true
+        },
+        "authorityKeyIdentifierPresent": {
+          "type": "boolean"
+        },
+        "subjectKeyIdentifier": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{2})+$"
+        },
+        "encodedExtendedKeyUsage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/oid"
+          },
+          "uniqueItems": true
+        }
       },
       "additionalProperties": false
     }

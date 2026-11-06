@@ -1,4 +1,4 @@
-// This file is generated from registry/registry.json. Do not edit it directly.
+// This file is generated from registry/data/. Do not edit it directly.
 export default {
     '1': '1 - server-domain',
     '2': '2 - server-organization',

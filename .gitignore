@@ -19,6 +19,7 @@
 .idea/
 .vscode/
 *.pem
+!/public/artifacts/**/*.pem
 
 # debug
 npm-debug.log*

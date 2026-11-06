@@ -1,22 +1,25 @@
 import {readFile, writeFile} from 'node:fs/promises'
 import path from 'node:path'
-import {createManifestSignature, repositoryRoot} from './registry-lib.mjs'
+import {createPublicKey} from 'node:crypto'
+import {createManifestSignature} from '../lib/registry/signature.mjs'
+import {repositoryRoot} from '../lib/registry/paths.mjs'
+import {verifyRelease} from '../lib/registry/release.mjs'
+import {options, run} from '../lib/registry/cli.mjs'
 
-function option(name) {
-    const index = process.argv.indexOf(name)
-    return index === -1 ? null : process.argv[index + 1]
-}
-
-const keyPath = option('--key')
-const outputPath = option('--output') ?? 'public/registry/manifest.sig.json'
-if (!keyPath) {
-    console.error('Usage: node scripts/sign-manifest.mjs --key <offline-ed25519-private-key.pem> [--output <signature.json>]')
-    process.exit(2)
-}
-
-const manifestPath = path.join(repositoryRoot, 'public/registry/manifest.json')
-const manifest = await readFile(manifestPath)
-const privateKey = await readFile(path.resolve(keyPath), 'utf8')
-const envelope = createManifestSignature(manifest, privateKey)
-await writeFile(path.resolve(outputPath), `${JSON.stringify(envelope, null, 2)}\n`, {mode: 0o644})
-console.log(`Signed ${path.relative(repositoryRoot, manifestPath)}; publication-key SPKI SHA-256 is ${envelope.publicKeySpkiSha256}.`)
+await run(async () => {
+    const args = options(['--key', '--directory', '--output'])
+    if (!args['--key']) throw new Error('Usage: registry:sign --key <offline-private-key.pem> [--directory <release>] [--output <signature.json>]')
+    const directory = path.resolve(args['--directory'] ?? path.join(repositoryRoot, 'public/registry'))
+    const manifest = await readFile(path.join(directory, 'manifest.json'))
+    const metadata = JSON.parse(manifest)
+    const privateKey = await readFile(path.resolve(args['--key']))
+    const envelope = createManifestSignature(manifest, privateKey)
+    if (metadata.schemaVersion === 2 && metadata.signing?.publicKeySpkiSha256 !== envelope.publicKeySpkiSha256) {
+        throw new Error('Record the publication key fingerprint and signature path in registry/data/release.json before generating and signing')
+    }
+    const errors = await verifyRelease(directory, {publicKey: createPublicKey(privateKey), allowUnsignedPreparation: true})
+    if (errors.length) throw new Error(errors.join('\n'))
+    const output = path.resolve(args['--output'] ?? path.join(directory, 'manifest.sig.json'))
+    await writeFile(output, JSON.stringify(envelope, null, 2) + '\n', {mode: 0o644, flag: 'wx'})
+    console.log(`Signed manifest with publication key ${envelope.publicKeySpkiSha256}.`)
+})

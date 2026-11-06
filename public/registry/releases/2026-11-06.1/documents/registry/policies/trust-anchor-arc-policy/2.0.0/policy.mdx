@@ -1,0 +1,59 @@
+# 1.3.6.1.4.1.65553.2.2.0 – Individual Trust Anchor Identifier Policy
+
+## Document Control
+
+- **Policy reference:** `POL-TA-2.0.0`
+- **Revision:** 2.0.0
+- **Status:** Effective
+- **Published and effective:** September 10, 2026
+- **Supersedes:** `POL-TA-1.0.0`
+- **Superior policy:** `POL-PKI-2.0.0`
+- **Registration authority:** Youngdo PKI Registration Authority
+
+## 1. Scope
+
+This policy governs individual trust-anchor identifiers under `1.3.6.1.4.1.65553.2.2`. The arc does not contain trust-anchor groups; groups and their versions are allocated under `1.3.6.1.4.1.65553.2.5`.
+
+## 2. Identity Model
+
+A trust anchor is identified by its X.500 name, SubjectPublicKeyInfo, key identifier, and applicable certification-path controls. A certificate may be recorded as a representation of the trust anchor, but a Subject distinguished name alone is not a unique cryptographic identity.
+
+The identity-defining binding must include:
+
+- the complete SubjectPublicKeyInfo in a stable binary format or an immutable artifact reference;
+- a cryptographic digest with an explicitly named algorithm;
+- the key identifier and its derivation or source;
+- the trust-anchor name in canonical and human-readable forms;
+- any policy, name, path-length, or usage constraints enforced by relying parties;
+- supporting certificate artifacts, their digests, serial numbers, and validity periods, when certificates are used.
+
+## 3. Allocation and Activation
+
+Allocation and activation are separate decisions. A new OID may be reserved before a key ceremony, but its object state must remain `planned`. It may become `active` only after independent verification of the cryptographic binding and approval of the registration decision.
+
+An assigned OID must never be rebound to a different public key. Rekeying requires a new OID. Reissuance of a certificate around the same public key may be added to the existing record only if the trust-anchor name and effective constraints remain unchanged.
+
+## 4. Lifecycle
+
+Permitted operational states are `unknown`, `planned`, `active`, `retired`, `compromised`, and `superseded`.
+
+- `unknown` is used when the historic operational state cannot be substantiated.
+- `planned` identifies a verified binding not yet placed into service.
+- `active` requires a verified cryptographic binding.
+- `retired` means no new deployment is intended, while historical references remain valid.
+- `compromised` records an actual or suspected loss of key integrity.
+- `superseded` links an old trust anchor to its replacement without erasing the old registration.
+
+Removing trust from a relying-party store is an operational action; it does not delete or free the registered OID.
+
+## 5. Legacy Records
+
+OID values `.1` through `.13` were published before cryptographic binding fields were introduced. Decision `MIG-2026-0001` preserves those numeric assignments and their historic display names, but their bindings are marked `legacy-unverified` and operational state `unknown`.
+
+These records must not be represented as verified or active until the Registration Authority has reconciled them against authoritative SubjectPublicKeyInfo, key identifiers, constraints, and certificate artifacts. Completing that reconciliation is a metadata-verification event; changing the public key would instead require a new OID.
+
+## 6. Publication
+
+The structured registry is authoritative for binding and lifecycle fields. Generated pages are informational projections. Each authoritative release must include a manifest covering the registry, schema, and exported views and must satisfy the signing requirements of `POL-ROOT-2.0.0`.
+
+*End of Policy.*

@@ -1,0 +1,45 @@
+# Managed Private PKI Certificate Policies 1.0.0
+
+## Document Control
+
+- Policy reference: `POL-MANAGED-TRUST-1.0.0`
+- Status: Effective
+- Effective date: 2026-10-15
+- Policy authority: Youngdo PKI Registration Authority
+- Superior policy: [POL-PKI-2.0.0](/1.3.6.1.4.1.65553/2/0/)
+- Adoption decision: `POL-2026-1015-MANAGED-TRUST`
+
+## Scope and Protocol Field
+
+The identifiers below are stable certificate-policy semantics for a privately distributed trust domain. They are encoded as `certificatePolicies.policyIdentifier` in X.509 certificates. They do not assert CA/B Forum DV/OV/EV status, public root-program membership, hardware-backed keys, or certification under a government identity-card scheme.
+
+Root and issuing CA keys are software keys managed by EJBCA. The G6 operating parameters authorized for this deployment are 15-year roots, 5-year issuing CAs and 2-year subscriber certificate profiles, expressed using EJBCA relative validity notation. Status distribution uses CRLs; OCSP is not configured. Certificate expiry remains bounded by the issuer's expiry.
+
+## Identifier Definitions
+
+| OID | Stable semantics |
+| --- | --- |
+| `1.3.6.1.4.1.65553.2.1.10.1` | Verified control of every DNS/IP SAN authorized by the relying-party trust domain; no verified organization identity claim. |
+| `1.3.6.1.4.1.65553.2.1.10.2` | Verified organization identity, authorized requester and verified control of every DNS/IP SAN. |
+| `1.3.6.1.4.1.65553.2.1.10.3` | Verified mailbox control and signing authorization; no verified organization identity claim. |
+| `1.3.6.1.4.1.65553.2.1.10.4` | Verified organization and mailbox control, employment or sponsorship link and signing authorization. |
+| `1.3.6.1.4.1.65553.2.1.10.5` | Verified mailbox control with approved recipient key registration for private email confidentiality. Key recovery is not asserted by this identifier. |
+| `1.3.6.1.4.1.65553.2.1.10.6` | Verified organization identity, mailbox control and person or role association with approved recipient key registration for private email confidentiality. Key recovery is not asserted by this identifier. |
+| `1.3.6.1.4.1.65553.2.1.10.7` | Verified publisher organization, project authorization and controlled signing key custody; no public trust or EV status asserted. |
+| `1.3.6.1.4.1.65553.2.1.10.8` | Unique person directory identity, approved account binding and proof of private-key possession for managed authentication. |
+| `1.3.6.1.4.1.65553.2.1.10.9` | Unique managed device or workload inventory identity, approved owner and proof of private-key possession for managed authentication. |
+| `1.3.6.1.4.1.65553.2.1.10.11` | Identifies an authorized private timestamp authority signer and its operator. Production timestamp issuance requires an operated TSA service with monitored time sources. This certificate-policy identifier alone does not assert an active RFC 3161 endpoint. |
+
+## Issuance and Enforcement
+
+Issuing CAs and profiles are separated into TLS, S/MIME, code signing, person authentication, device authentication and timestamp signing. Every subscriber certificate carries the policy applicable to its actual authorized use. Applications must validate the chain, identity/SAN, KU/EKU, certificate time and applicable revocation information; the presence of an OID alone is not proof of compliance.
+
+The operator verifies the authorization and identity evidence described by the selected identifier before enrollment. DN, KU, extension, validity and serial-number overrides are disabled in the corresponding G6 certificate profiles. Root and subordinate certificates use critical CA Basic Constraints and keyCertSign/cRLSign; subscriber certificates must have CA=false and no path length constraint.
+
+Mail signing and mail encryption use distinct keys and certificates. Code signing certificates do not assert platform distribution approval. Timestamp signer certificates have only the critical timeStamping EKU; operating a real RFC 3161 endpoint requires a separately deployed TSA and configured timestamp-token policy.
+
+These identifiers do not promise key escrow, recovery services or a particular hardware protection level. A new document revision may clarify unchanged semantics, while material changes to the identity or assurance promise require a new identifier. OIDs remain permanently allocated after a profile or key is retired.
+
+## Review and Publication Record
+
+The repository operator authorized the allocation and implementation in the 2026-10-15 maintenance request. The registration decisions record the single-operator exception permitted by POL-ROOT-2.0.0 section 5; no approval by a second person is asserted. The registry release remains candidate until separately governed publication-signature requirements are met.

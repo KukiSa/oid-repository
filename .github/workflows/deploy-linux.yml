@@ -1,0 +1,112 @@
+name: Build and deploy static origins
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      host:
+        description: Target host or IP. Falls back to vars/secrets.LINUX_DEPLOY_HOST.
+        required: false
+        type: string
+      ssh_port:
+        description: SSH port. Falls back to vars/secrets.LINUX_DEPLOY_PORT or 22.
+        required: false
+        type: string
+      ssh_user:
+        description: SSH user. Falls back to vars/secrets.LINUX_DEPLOY_USER.
+        required: false
+        type: string
+      deploy_path:
+        description: Directory to clear and extract into. Falls back to vars/secrets.LINUX_DEPLOY_PATH.
+        required: false
+        type: string
+      targets:
+        description: JSON array of deploy targets. Overrides single-target settings.
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: oid-production-linux
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.server_url == 'https://github.com'
+    runs-on: ubuntu-latest
+    environment: production-linux
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Provision trusted registry publication key when configured
+        env:
+          PUBLIC_KEY_PEM: ${{ vars.REGISTRY_PUBLIC_KEY_PEM }}
+        run: |
+          if [[ -n "$PUBLIC_KEY_PEM" ]]; then
+            printf '%s\n' "$PUBLIC_KEY_PEM" > "$RUNNER_TEMP/registry-public-key.pem"
+            printf 'REGISTRY_PUBLIC_KEY_FILE=%s\n' "$RUNNER_TEMP/registry-public-key.pem" >> "$GITHUB_ENV"
+          fi
+      - run: pnpm check
+      - name: Export, index, precompress and verify
+        run: pnpm build
+      - name: Pack static output
+        run: bash scripts/deploy/pack-site.sh "$RUNNER_TEMP/oid-site.tar.zst"
+      - name: Resolve deployment settings
+        env:
+          INPUT_DEPLOY_HOST: ${{ inputs.host }}
+          INPUT_DEPLOY_PORT: ${{ inputs.ssh_port }}
+          INPUT_DEPLOY_USER: ${{ inputs.ssh_user }}
+          INPUT_DEPLOY_PATH: ${{ inputs.deploy_path }}
+          INPUT_DEPLOY_TARGETS: ${{ inputs.targets }}
+          VAR_DEPLOY_HOST: ${{ vars.LINUX_DEPLOY_HOST }}
+          VAR_DEPLOY_PORT: ${{ vars.LINUX_DEPLOY_PORT }}
+          VAR_DEPLOY_USER: ${{ vars.LINUX_DEPLOY_USER }}
+          VAR_DEPLOY_PATH: ${{ vars.LINUX_DEPLOY_PATH }}
+          VAR_DEPLOY_TARGETS: ${{ vars.LINUX_DEPLOY_TARGETS }}
+          SECRET_DEPLOY_HOST: ${{ secrets.LINUX_DEPLOY_HOST }}
+          SECRET_DEPLOY_PORT: ${{ secrets.LINUX_DEPLOY_PORT }}
+          SECRET_DEPLOY_USER: ${{ secrets.LINUX_DEPLOY_USER }}
+          SECRET_DEPLOY_PATH: ${{ secrets.LINUX_DEPLOY_PATH }}
+          SECRET_DEPLOY_TARGETS: ${{ secrets.LINUX_DEPLOY_TARGETS }}
+        run: node scripts/deploy/resolve-targets.mjs
+      - name: Configure deployment SSH key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.LINUX_DEPLOY_SSH_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.LINUX_DEPLOY_KNOWN_HOSTS }}
+        run: |
+          if [[ -z "$SSH_PRIVATE_KEY" ]]; then
+            echo 'Missing production-linux secret: LINUX_DEPLOY_SSH_KEY' >&2
+            exit 1
+          fi
+          install -m 700 -d "$RUNNER_TEMP/oid-ssh"
+          printf '%s\n' "$SSH_PRIVATE_KEY" > "$RUNNER_TEMP/oid-ssh/key"
+          chmod 600 "$RUNNER_TEMP/oid-ssh/key"
+          if [[ -n "$SSH_KNOWN_HOSTS" ]]; then
+            printf '%s\n' "$SSH_KNOWN_HOSTS" > "$RUNNER_TEMP/oid-ssh/known_hosts"
+          else
+            : > "$RUNNER_TEMP/oid-ssh/known_hosts"
+            while IFS=$'\t' read -r port host; do
+              ssh-keyscan -p "$port" "$host" >> "$RUNNER_TEMP/oid-ssh/known_hosts"
+            done < <(node --input-type=module -e 'import fs from "node:fs"; for (const target of JSON.parse(fs.readFileSync(process.env.DEPLOY_TARGETS_FILE))) console.log(`${target.port}\t${target.host}`);')
+          fi
+          chmod 600 "$RUNNER_TEMP/oid-ssh/known_hosts"
+      - name: Deploy to origins
+        env:
+          SSH_KEY_FILE: ${{ runner.temp }}/oid-ssh/key
+          SSH_KNOWN_HOSTS_FILE: ${{ runner.temp }}/oid-ssh/known_hosts
+          SITE_ARCHIVE: ${{ runner.temp }}/oid-site.tar.zst
+        run: bash scripts/deploy/deploy-to-targets.sh
+      - name: Remove runner key
+        if: always()
+        run: rm -f -- "$RUNNER_TEMP/oid-ssh/key"

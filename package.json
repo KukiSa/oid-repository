@@ -10,16 +10,21 @@
   "scripts": {
     "predev": "pnpm registry:generate",
     "dev": "next dev --turbopack",
-    "prebuild": "pnpm registry:validate && pnpm registry:check",
+    "prebuild": "pnpm registry:validate && pnpm registry:check && pnpm registry:verify-release --all",
     "build": "next build --turbopack",
-    "postbuild": "pagefind --site .next/server/app --output-path out/_pagefind",
+    "postbuild": "pagefind --site out --output-path out/_pagefind && pnpm out:precompress && pnpm out:verify",
+    "out:precompress": "node scripts/precompress-static.mjs",
+    "out:verify": "node scripts/verify-static-output.mjs",
     "registry:validate": "node scripts/validate-registry.mjs",
     "registry:generate": "node scripts/generate-registry.mjs",
     "registry:check": "node scripts/generate-registry.mjs --check",
     "registry:sign": "node scripts/sign-manifest.mjs",
     "registry:verify-signature": "node scripts/verify-manifest.mjs",
-    "test": "node --test",
-    "check": "pnpm registry:validate && pnpm registry:check && pnpm test"
+    "registry:release": "node scripts/prepare-release.mjs",
+    "registry:archive": "node scripts/archive-release.mjs",
+    "registry:verify-release": "node scripts/verify-release.mjs",
+    "test": "node --test test/registry/*.test.mjs test/deployment/*.test.mjs",
+    "check": "pnpm registry:validate && pnpm registry:check && pnpm registry:verify-release --all && pnpm test"
   },
   "keywords": [],
   "author": "",
@@ -36,6 +41,8 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "pagefind": "^1.5.2"
   }
 }
